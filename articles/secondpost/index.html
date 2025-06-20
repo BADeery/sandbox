@@ -11,8 +11,8 @@
 		<style>/* This is an arbitrary CSS string added to the bundle */
 /* Defaults */
 :root {
-	--font-family: 'Courier New', Courier, monospace;
-	--font-family-monospace:  Courier, monospace;
+	--font-family: 'Courier Prime', Courier Prime, monospace;
+	--font-family-monospace:  Courier Prime, monospace;
 }
 
 /* Theme colors */
@@ -60,6 +60,9 @@ body {
 	font-family: var(--font-family);
 	color: var(--text-color);
 	background-color: var(--background-color);
+	font-weight: 450;
+	font-size: 1rem;
+	line-height: 1;
 }
 html {
 	overflow-y: scroll;
@@ -319,18 +322,33 @@ header {
   border: 1px solid var(--text-color-link-visited); 
   border-radius: 1rem;
   padding: 1.25rem;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-  aspect-ratio: 1 / 1; /* ✅ Keeps it square */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07); /* Softer and more modern */
+  
   height: auto;
   min-height: 240px;
   width: 100%;
-  align-items: flex-start;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  transition: transform 0.2s ease;
+
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
   overflow: hidden;
+
+  /* Optional subtle hover lift */
+  will-change: transform;
 }
+.article-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+
+.article-card h2 a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem; /* space between icon and title */
+}
+
 
 .article-card:hover {
   transform: translateY(-4px);
@@ -355,14 +373,6 @@ header {
 .description,
 .post-date {
   color: var(--text-color);
-}
-
-
-
-.icon {
-  font-size: 1.2rem;
-  margin-right: 0.4rem;
-  vertical-align: middle;
 }
 /**
  * okaidia theme for JavaScript, CSS and HTML
@@ -532,7 +542,7 @@ pre[class*="language-diff-"] {
 	text-decoration: none; /* override del, ins, mark defaults */
 	color: inherit; /* override del, ins, mark defaults */
 }</style>
-		
+
 	</head>
 	<body>
 		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
@@ -549,11 +559,18 @@ pre[class*="language-diff-"] {
 		</header>
 
 		<main id="main">
-  			<heading-anchors>
-    		
+			
 
 
-<h1 id="my-second-post">My Second Post</h1>
+<h1 id="my-second-post">
+  <span style="display: inline-flex; align-items: center; gap: 0.9rem;">
+    
+      <i data-lucide="brain"></i>
+    
+    My Second Post
+  </span>
+</h1>
+
 
 <ul class="post-metadata">
 	<li><time datetime="20-Jun-2025">20 06 2025</time></li>
@@ -571,7 +588,6 @@ pre[class*="language-diff-"] {
 <ul class="links-nextprev"><li class="links-nextprev-prev">← Previous<br> <a href="/sandbox/articles/fourthpost/">My Fourth Post</a></li><li class="links-nextprev-next">Next →<br><a href="/sandbox/articles/sixthpost/">My Sixth Post</a></li>
 </ul>
 
-  			</heading-anchors>
 		</main>
 
 		<footer>
@@ -579,8 +595,9 @@ pre[class*="language-diff-"] {
 				
 			</p>
 		</footer>
-
-		<!-- This page `/articles/secondpost/` was built on 2025-06-20T11:04:19.985Z -->
-		<script type="module" src="/sandbox/dist/xbxy_EL6cU.js"></script>
+		<script src="https://unpkg.com/lucide@latest"></script>
+		
+		<!-- This page `/articles/secondpost/` was built on 2025-06-20T13:10:13.635Z -->
+		<script type="module" src="/sandbox/dist/V6OKUKOoxV.js"></script>
 	</body>
 </html>

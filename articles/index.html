@@ -11,8 +11,8 @@
 		<style>/* This is an arbitrary CSS string added to the bundle */
 /* Defaults */
 :root {
-	--font-family: 'Courier New', Courier, monospace;
-	--font-family-monospace:  Courier, monospace;
+	--font-family: 'Courier Prime', Courier Prime, monospace;
+	--font-family-monospace:  Courier Prime, monospace;
 }
 
 /* Theme colors */
@@ -60,6 +60,9 @@ body {
 	font-family: var(--font-family);
 	color: var(--text-color);
 	background-color: var(--background-color);
+	font-weight: 450;
+	font-size: 1rem;
+	line-height: 1;
 }
 html {
 	overflow-y: scroll;
@@ -319,18 +322,33 @@ header {
   border: 1px solid var(--text-color-link-visited); 
   border-radius: 1rem;
   padding: 1.25rem;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-  aspect-ratio: 1 / 1; /* ✅ Keeps it square */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07); /* Softer and more modern */
+  
   height: auto;
   min-height: 240px;
   width: 100%;
-  align-items: flex-start;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  transition: transform 0.2s ease;
+
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
   overflow: hidden;
+
+  /* Optional subtle hover lift */
+  will-change: transform;
 }
+.article-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+
+.article-card h2 a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem; /* space between icon and title */
+}
+
 
 .article-card:hover {
   transform: translateY(-4px);
@@ -355,16 +373,8 @@ header {
 .description,
 .post-date {
   color: var(--text-color);
-}
-
-
-
-.icon {
-  font-size: 1.2rem;
-  margin-right: 0.4rem;
-  vertical-align: middle;
 }</style>
-		
+
 	</head>
 	<body>
 		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
@@ -381,8 +391,7 @@ header {
 		</header>
 
 		<main id="main">
-  			<heading-anchors>
-    		
+			
   <section class="articles">
     <h1 id="articles">Articles</h1>
     
@@ -390,8 +399,14 @@ header {
       
         <article class="article-card">
           <h2 id="my-third-post">
-            <a href="/sandbox/articles/thirdpost/">My Third Post</a>
+            <a href="/sandbox/articles/thirdpost/">
+              
+                <i data-lucide="brain"></i>
+              
+              My Third Post
+            </a>
           </h2>
+
           
             <p class="excerpt">This is a short description of what the post is about.</p>
           
@@ -402,8 +417,14 @@ header {
       
         <article class="article-card">
           <h2 id="my-sixth-post">
-            <a href="/sandbox/articles/sixthpost/">My Sixth Post</a>
+            <a href="/sandbox/articles/sixthpost/">
+              
+                <i data-lucide="biceps-flexed"></i>
+              
+              My Sixth Post
+            </a>
           </h2>
+
           
             <p class="excerpt">This is a short description for the sixth post.</p>
           
@@ -414,8 +435,14 @@ header {
       
         <article class="article-card">
           <h2 id="my-second-post">
-            <a href="/sandbox/articles/secondpost/">My Second Post</a>
+            <a href="/sandbox/articles/secondpost/">
+              
+                <i data-lucide="brain"></i>
+              
+              My Second Post
+            </a>
           </h2>
+
           
             <p class="excerpt">This is a short description of what the post is about.</p>
           
@@ -426,8 +453,14 @@ header {
       
         <article class="article-card">
           <h2 id="my-fourth-post">
-            <a href="/sandbox/articles/fourthpost/">My Fourth Post</a>
+            <a href="/sandbox/articles/fourthpost/">
+              
+                <i data-lucide="brain"></i>
+              
+              My Fourth Post
+            </a>
           </h2>
+
           
             <p class="excerpt">This is a short description of what the post is about.</p>
           
@@ -438,8 +471,14 @@ header {
       
         <article class="article-card">
           <h2 id="my-first-post">
-            <a href="/sandbox/articles/firstpost/">My First Post</a>
+            <a href="/sandbox/articles/firstpost/">
+              
+                <i data-lucide="brain"></i>
+              
+              My First Post
+            </a>
           </h2>
+
           
             <p class="excerpt">This is a short description of what the post is about.</p>
           
@@ -450,10 +489,34 @@ header {
       
         <article class="article-card">
           <h2 id="my-fifth-post">
-            <a href="/sandbox/articles/fifthpost/">My Fifth Post</a>
+            <a href="/sandbox/articles/fifthpost/">
+              
+                <i data-lucide="brain"></i>
+              
+              My Fifth Post
+            </a>
           </h2>
+
           
             <p class="excerpt">This is a short description of what the post is about.</p>
+          
+          
+            <p class="post-date">20-Jun-2025</p>
+          
+        </article>
+      
+        <article class="article-card">
+          <h2 id="beneath-the-systems">
+            <a href="/sandbox/articles/Core Profile What You Boil Down To 1/">
+              
+                <i data-lucide="hamburger"></i>
+              
+              Beneath the Systems
+            </a>
+          </h2>
+
+          
+            <p class="excerpt">This is a personal profile</p>
           
           
             <p class="post-date">20-Jun-2025</p>
@@ -463,7 +526,6 @@ header {
     </div>
   </section>
 
-  			</heading-anchors>
 		</main>
 
 		<footer>
@@ -471,8 +533,9 @@ header {
 				
 			</p>
 		</footer>
-
-		<!-- This page `/articles/` was built on 2025-06-20T11:04:19.981Z -->
-		<script type="module" src="/sandbox/dist/xbxy_EL6cU.js"></script>
+		<script src="https://unpkg.com/lucide@latest"></script>
+		
+		<!-- This page `/articles/` was built on 2025-06-20T13:10:13.631Z -->
+		<script type="module" src="/sandbox/dist/V6OKUKOoxV.js"></script>
 	</body>
 </html>
