@@ -17,7 +17,10 @@ jobs:
           node-version: 20
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci
+
+      - name: Ensure Eleventy is installed correctly
+        run: npx @11ty/eleventy --version
 
       - name: Build site
         run: npm run build

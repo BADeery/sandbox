@@ -1,0 +1,31 @@
+name: Debug Eleventy Build
+
+on:
+  push:
+    branches: [debug-eleventy]
+
+jobs:
+  debug-build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Clean install to reset permissions
+        run: |
+          rm -rf node_modules package-lock.json
+          npm cache clean --force
+          npm install
+
+      - name: Check Eleventy binary permissions
+        run: |
+          ls -l node_modules/.bin
+          ls -l node_modules/@11ty/eleventy
+
+      - name: Try Eleventy build directly
+        run: npx eleventy
