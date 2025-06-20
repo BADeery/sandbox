@@ -4,7 +4,15 @@ layout: layouts/base.njk
 {# Only include the syntax highlighter CSS on blog posts, included with the CSS per-page bundle #}
 <style>{% include "node_modules/prismjs/themes/prism-okaidia.css" %}</style>
 <style>{% include "css/prism-diff.css" %}</style>
-<h1>{{ title }}</h1>
+<h1>
+  <span style="display: inline-flex; align-items: center; gap: 0.9rem;">
+    {% if icon %}
+      <i data-lucide="{{ icon }}"></i>
+    {% endif %}
+    {{ title }}
+  </span>
+</h1>
+
 
 <ul class="post-metadata">
 	<li><time datetime="{{ page.date | htmlDateString }}">{{ page.date | auDate("dd MM yyyy") }}</time></li>

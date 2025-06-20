@@ -35,7 +35,7 @@
 		{#- <link rel="stylesheet" href="{% getBundleFileUrl "css" %}"> #}
 
 		{#- Add the heading-anchors web component to the JavaScript bundle #}
-		<script type="module">{% include "node_modules/@zachleat/heading-anchors/heading-anchors.js" %}</script>
+
 	</head>
 	<body>
 		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
@@ -55,9 +55,7 @@
 		</header>
 
 		<main id="main">
-  			<heading-anchors>
-    		{% block content %}{{ content | safe }}{% endblock %}
-  			</heading-anchors>
+			{% block content %}{{ content | safe }}{% endblock %}
 		</main>
 
 		<footer>
@@ -65,7 +63,10 @@
 				
 			</p>
 		</footer>
-
+		<script src="https://unpkg.com/lucide@latest"></script>
+		<script>
+  			lucide.createIcons();
+		</script>
 		<!-- This page `{{ page.url }}` was built on {% currentBuildDate %} -->
 		<script type="module" src="{% getBundleFileUrl "js" %}"></script>
 	</body>

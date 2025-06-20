@@ -11,8 +11,8 @@
 		<style>/* This is an arbitrary CSS string added to the bundle */
 /* Defaults */
 :root {
-	--font-family: 'Courier New', Courier, monospace;
-	--font-family-monospace:  Courier, monospace;
+	--font-family: 'Courier Prime', Courier Prime, monospace;
+	--font-family-monospace:  Courier Prime, monospace;
 }
 
 /* Theme colors */
@@ -60,6 +60,9 @@ body {
 	font-family: var(--font-family);
 	color: var(--text-color);
 	background-color: var(--background-color);
+	font-weight: 450;
+	font-size: 1rem;
+	line-height: 1;
 }
 html {
 	overflow-y: scroll;
@@ -319,18 +322,33 @@ header {
   border: 1px solid var(--text-color-link-visited); 
   border-radius: 1rem;
   padding: 1.25rem;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-  aspect-ratio: 1 / 1; /* ✅ Keeps it square */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07); /* Softer and more modern */
+  
   height: auto;
   min-height: 240px;
   width: 100%;
-  align-items: flex-start;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  transition: transform 0.2s ease;
+
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
   overflow: hidden;
+
+  /* Optional subtle hover lift */
+  will-change: transform;
 }
+.article-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+
+.article-card h2 a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem; /* space between icon and title */
+}
+
 
 .article-card:hover {
   transform: translateY(-4px);
@@ -355,37 +373,27 @@ header {
 .description,
 .post-date {
   color: var(--text-color);
-}
-
-
-
-.icon {
-  font-size: 1.2rem;
-  margin-right: 0.4rem;
-  vertical-align: middle;
 }</style>
-		
+
 	</head>
 	<body>
 		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
 
 		<header>
-			<a href="/" class="home-link">Welcome to the Sandbox</a>
+			<a href="/sandbox/" class="home-link">Welcome to the Sandbox</a>
 			<nav>
 				<h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
 				<ul class="nav">
-					<li class="nav-item"><a href="/" aria-current="page">Hello</a></li>
-					<li class="nav-item"><a href="/articles/">Articles</a></li>
+					<li class="nav-item"><a href="/sandbox/" aria-current="page">Hello</a></li>
+					<li class="nav-item"><a href="/sandbox/articles/">Articles</a></li>
 				</ul>
 			</nav>
 		</header>
 
 		<main id="main">
-  			<heading-anchors>
-    		<h1 id="hi-i-m-ben">Hi, I'm Ben.</h1>
+			<h1 id="hi-i-m-ben">Hi, I'm Ben.</h1>
 <p>I am a person that writes stuff.</p>
 
-  			</heading-anchors>
 		</main>
 
 		<footer>
@@ -393,8 +401,9 @@ header {
 				
 			</p>
 		</footer>
-
-		<!-- This page `/` was built on 2025-06-20T10:33:18.179Z -->
-		<script type="module" src="/dist/xbxy_EL6cU.js"></script>
+		<script src="https://unpkg.com/lucide@latest"></script>
+		
+		<!-- This page `/` was built on 2025-06-20T13:07:04.801Z -->
+		<script type="module" src="/sandbox/dist/V6OKUKOoxV.js"></script>
 	</body>
 </html>
