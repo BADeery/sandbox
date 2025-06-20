@@ -3,50 +3,38 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>This is my fourth post</title>
-		<meta name="description" content="This is a post on My Blog about touchpoints and circling wagons.">
-		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Eleventy Base Blog v9">
+		<title>My Sixth Post</title>
+		<meta name="description" content="This is a short description for the sixth post.">
 		
 		
 		
 		<style>/* This is an arbitrary CSS string added to the bundle */
 /* Defaults */
 :root {
-	--font-family: -apple-system, system-ui, sans-serif;
-	--font-family-monospace: Consolas, Menlo, Monaco, Andale Mono WT, Andale Mono, Lucida Console, Lucida Sans Typewriter, DejaVu Sans Mono, Bitstream Vera Sans Mono, Liberation Mono, Nimbus Mono L, Courier New, Courier, monospace;
+	--font-family: 'Courier New', Courier, monospace;
+	--font-family-monospace:  Courier, monospace;
 }
 
 /* Theme colors */
 :root {
-	--color-gray-20: #e0e0e0;
-	--color-gray-50: #C0C0C0;
-	--color-gray-90: #333;
-
-	--background-color: #fff;
-
-	--text-color: var(--color-gray-90);
-	--text-color-link: #082840;
-	--text-color-link-active: #5f2b48;
-	--text-color-link-visited: #17050F;
-
-	--syntax-tab-size: 2;
+  /* Light mode (default) */
+  --background-color: #ffffff;
+  --text-color: #2a2a2a;
+  --text-color-link: #082840;
+  --text-color-link-active: #5f2b48;
+  --text-color-link-visited: #17050F;
 }
 
 @media (prefers-color-scheme: dark) {
-	:root {
-		--color-gray-20: #e0e0e0;
-		--color-gray-50: #C0C0C0;
-		--color-gray-90: #dad8d8;
-
-		/* --text-color is assigned to --color-gray-_ above */
-		--text-color-link: #1493fb;
-		--text-color-link-active: #6969f7;
-		--text-color-link-visited: #a6a6f8;
-
-		--background-color: #15202b;
-	}
+  :root {
+    /* Dark mode overrides */
+    --background-color: #121212;
+    --text-color: #e0e0e0;
+    --text-color-link: #66d9ef;
+    --text-color-link-active: #f92672;
+    --text-color-link-visited: #ae81ff;
+  }
 }
-
 
 /* Global stylesheet */
 * {
@@ -57,9 +45,17 @@
 	navigation: auto;
 }
 
+@media (min-width: 1100px) {
+  .articles-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+
 html,
 body {
 	padding: 0;
+	max-width: 1000px;
 	margin: 0 auto;
 	font-family: var(--font-family);
 	color: var(--text-color);
@@ -67,9 +63,6 @@ body {
 }
 html {
 	overflow-y: scroll;
-}
-body {
-	max-width: 40em;
 }
 
 /* https://www.a11yproject.com/posts/how-to-hide-content/ */
@@ -307,6 +300,70 @@ header {
 .post-metadata time {
 	margin-right: 1em;
 }
+
+.articles {
+  padding: 0 2.2rem;
+}
+
+.articles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(260px, 1fr)); /* ← was too low before */
+  gap: 1.5rem;
+  margin-top: 2rem;
+  padding: 0;
+}
+
+.article-card {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  border: 1px solid var(--text-color-link-visited); 
+  border-radius: 1rem;
+  padding: 1.25rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  aspect-ratio: 1 / 1; /* ✅ Keeps it square */
+  height: auto;
+  min-height: 240px;
+  width: 100%;
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.2s ease;
+  overflow: hidden;
+}
+
+.article-card:hover {
+  transform: translateY(-4px);
+}
+
+.article-card h2 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+}
+
+.article-card a {
+  text-decoration: none;
+  color: var(--text-color-link);;
+}
+
+.article-card a:hover {
+  color: var(--text-color-link-active);
+  text-decoration: underline;
+}
+
+.description,
+.post-date {
+  color: var(--text-color);
+}
+
+
+
+.icon {
+  font-size: 1.2rem;
+  margin-right: 0.4rem;
+  vertical-align: middle;
+}
 /**
  * okaidia theme for JavaScript, CSS and HTML
  * Loosely based on Monokai textmate theme by http://www.monokai.nl/
@@ -481,49 +538,42 @@ pre[class*="language-diff-"] {
 		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
 
 		<header>
-			<a href="/" class="home-link">Eleventy Base Blog v9</a>
+			<a href="/" class="home-link">Welcome to the Sandbox</a>
 			<nav>
 				<h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
 				<ul class="nav">
-					<li class="nav-item"><a href="/">Home</a></li>
-					<li class="nav-item"><a href="/blog/">Archive</a></li>
-					<li class="nav-item"><a href="/about/">About</a></li>
-					<li class="nav-item"><a href="/feed/feed.xml">Feed</a></li>
+					<li class="nav-item"><a href="/">Hello</a></li>
+					<li class="nav-item"><a href="/articles/">Articles</a></li>
 				</ul>
 			</nav>
 		</header>
 
 		<main id="main">
-			<heading-anchors>
-				
+  			<heading-anchors>
+    		
 
 
-<h1 id="this-is-my-fourth-post">This is my fourth post</h1>
+<h1 id="my-sixth-post">My Sixth Post</h1>
 
 <ul class="post-metadata">
-	<li><time datetime="2018-09-30">30 September 2018</time></li>
-	<li><a href="/tags/second-tag/" class="post-tag">second tag</a></li>
+	<li><time datetime="20-Jun-2025">20 06 2025</time></li>
 </ul>
 
-<p>Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.</p>
-<p>Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring.</p>
-<picture><source type="image/avif" srcset="/blog/fourthpost/xbVnp_hAou-350.avif 350w"><source type="image/webp" srcset="/blog/fourthpost/xbVnp_hAou-350.webp 350w"><img loading="lazy" decoding="async" src="/blog/fourthpost/xbVnp_hAou-350.png" alt="A possum parent and two possum kids hanging from the iconic red balloon" width="350" height="685"></picture>
-<h2 id="section-header">Section Header</h2>
-<p>Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional clickthroughs from DevOps. Nanotechnology immersion along the information highway will close the loop on focusing solely on the bottom line.</p>
+<p>This is the full content of the sixth post. You can write <strong>markdown</strong> here just like any article.</p>
 
-<ul class="links-nextprev"><li class="links-nextprev-prev">← Previous<br> <a href="/blog/thirdpost/">This is my third post.</a></li>
+<ul class="links-nextprev"><li class="links-nextprev-prev">← Previous<br> <a href="/articles/secondpost/">My Second Post</a></li><li class="links-nextprev-next">Next →<br><a href="/articles/thirdpost/">My Third Post</a></li>
 </ul>
 
-			</heading-anchors>
+  			</heading-anchors>
 		</main>
 
 		<footer>
 			<p>
-				<em>Built with <a href="https://www.11ty.dev/">Eleventy v3.1.1</a></em>
+				
 			</p>
 		</footer>
 
-		<!-- This page `/blog/fourthpost/` was built on 2025-06-19T03:26:53.233Z -->
+		<!-- This page `/articles/sixthpost/` was built on 2025-06-20T10:48:52.398Z -->
 		<script type="module" src="/dist/xbxy_EL6cU.js"></script>
 	</body>
 </html>

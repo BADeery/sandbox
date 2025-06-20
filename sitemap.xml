@@ -2,47 +2,47 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
 	
 	<url>
-		<loc>https://example.com/blog/firstpost/</loc>
-		<lastmod>2018-05-01</lastmod>
+		<loc>https://badeery.github.io/articles/</loc>
+		<lastmod>20-Jun-2025</lastmod>
 	</url>
 	
 	<url>
-		<loc>https://example.com/blog/secondpost/</loc>
-		<lastmod>2018-07-04</lastmod>
+		<loc>https://badeery.github.io/articles/fifthpost/</loc>
+		<lastmod>20-Jun-2025</lastmod>
 	</url>
 	
 	<url>
-		<loc>https://example.com/blog/thirdpost/</loc>
-		<lastmod>2018-08-24</lastmod>
+		<loc>https://badeery.github.io/articles/firstpost/</loc>
+		<lastmod>20-Jun-2025</lastmod>
 	</url>
 	
 	<url>
-		<loc>https://example.com/blog/fourthpost/</loc>
-		<lastmod>2018-09-30</lastmod>
+		<loc>https://badeery.github.io/articles/fourthpost/</loc>
+		<lastmod>20-Jun-2025</lastmod>
 	</url>
 	
 	<url>
-		<loc>https://example.com/about/</loc>
-		<lastmod>2025-06-19</lastmod>
+		<loc>https://badeery.github.io/articles/secondpost/</loc>
+		<lastmod>20-Jun-2025</lastmod>
 	</url>
 	
 	<url>
-		<loc>https://example.com/blog/</loc>
-		<lastmod>2025-06-19</lastmod>
+		<loc>https://badeery.github.io/articles/sixthpost/</loc>
+		<lastmod>20-Jun-2025</lastmod>
 	</url>
 	
 	<url>
-		<loc>https://example.com/</loc>
-		<lastmod>2025-06-19</lastmod>
+		<loc>https://badeery.github.io/articles/thirdpost/</loc>
+		<lastmod>20-Jun-2025</lastmod>
 	</url>
 	
 	<url>
-		<loc>https://example.com/tags/</loc>
-		<lastmod>2025-06-19</lastmod>
+		<loc>https://badeery.github.io/</loc>
+		<lastmod>20-Jun-2025</lastmod>
 	</url>
 	
 	<url>
-		<loc>https://example.com/feed/feed.xml</loc>
-		<lastmod>2025-06-19</lastmod>
+		<loc>https://badeery.github.io/tags/</loc>
+		<lastmod>20-Jun-2025</lastmod>
 	</url>
 </urlset>
