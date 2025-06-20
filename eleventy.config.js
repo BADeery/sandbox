@@ -96,5 +96,5 @@ export const config = {
     data: "../_data",
     output: "_site",
   },
-  // pathPrefix: "/",
+  pathPrefix: "/sandbox", // 
 };
