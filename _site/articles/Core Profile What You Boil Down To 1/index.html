@@ -374,6 +374,67 @@ header {
 .post-date {
   color: var(--text-color);
 }
+
+.typewriter {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid var(--text-color);
+  width: 0;
+  animation:
+    typing 2s steps(20, end) forwards,
+    blink 0.5s step-end 4 2s,
+	hideCursor 0.01s forwards 4s; /* ✅ blinks 4 times */
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 14ch }
+}
+
+@keyframes blink {
+  0%, 100% { border-color: var(--text-color); }
+  50% {border-color: transparent; }
+}
+
+@keyframes hideCursor {
+	to {border-color: transparent; }
+}
+
+.l-shape-layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: auto 1fr;
+  gap: 1rem;
+  align-items: start;
+}
+
+.text-box {
+  grid-column: 1 / 2;
+  grid-row: 1 / 3; /* spans both rows */
+}
+
+.image-box {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+}
+
+.image-box img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 0.5rem;
+}
+
+img.fade-in {
+  opacity: 0;
+  transition: opacity 1s ease-in;
+  transition-delay: 2s;
+}
+
+img.fade-in.loaded {
+  opacity: 1;
+}
 /**
  * okaidia theme for JavaScript, CSS and HTML
  * Loosely based on Monokai textmate theme by http://www.monokai.nl/
@@ -548,7 +609,7 @@ pre[class*="language-diff-"] {
 		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
 
 		<header>
-			<a href="/sandbox/" class="home-link">Welcome to the Sandbox</a>
+			<a href="/sandbox/" class="home-link">The Sandbox</a>
 			<nav>
 				<h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
 				<ul class="nav">
@@ -574,6 +635,8 @@ pre[class*="language-diff-"] {
 
 <ul class="post-metadata">
 	<li><time datetime="20-Jun-2025">20 06 2025</time></li>
+	<li><a href="/sandbox/tags/personalprofile/" class="post-tag">PersonalProfile</a>, </li>
+	<li><a href="/sandbox/tags/aboutme/" class="post-tag">AboutMe</a></li>
 </ul>
 
 <p>#AboutMe #PersonalProfile #Personal</p>
@@ -697,7 +760,7 @@ they will never know what they’re missing.</p>
 		</footer>
 		<script src="https://unpkg.com/lucide@latest"></script>
 		
-		<!-- This page `/articles/Core Profile What You Boil Down To 1/` was built on 2025-06-20T13:07:04.828Z -->
+		<!-- This page `/articles/Core Profile What You Boil Down To 1/` was built on 2025-06-21T01:47:42.903Z -->
 		<script type="module" src="/sandbox/dist/V6OKUKOoxV.js"></script>
 	</body>
 </html>

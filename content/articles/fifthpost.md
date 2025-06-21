@@ -4,7 +4,9 @@ Date: 01-12-2020
 layout: layouts/post.njk
 description: This is a short description of what the post is about.
 icon: brain
-tags: posts
+tags:
+- posts
+- AboutMe
 ---
 
 Post body goes here...

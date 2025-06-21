@@ -3,7 +3,10 @@ title: Beneath the Systems
 layout: layouts/post.njk
 description: This is a personal profile
 icon: hamburger
-tags: posts
+tags: 
+- posts
+- PersonalProfile
+- AboutMe
 ---
 #AboutMe #PersonalProfile #Personal
 
