@@ -373,6 +373,67 @@ header {
 .description,
 .post-date {
   color: var(--text-color);
+}
+
+.typewriter {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid var(--text-color);
+  width: 0;
+  animation:
+    typing 2s steps(20, end) forwards,
+    blink 0.5s step-end 4 2s,
+	hideCursor 0.01s forwards 4s; /* ✅ blinks 4 times */
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 14ch }
+}
+
+@keyframes blink {
+  0%, 100% { border-color: var(--text-color); }
+  50% {border-color: transparent; }
+}
+
+@keyframes hideCursor {
+	to {border-color: transparent; }
+}
+
+.l-shape-layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: auto 1fr;
+  gap: 1rem;
+  align-items: start;
+}
+
+.text-box {
+  grid-column: 1 / 2;
+  grid-row: 1 / 3; /* spans both rows */
+}
+
+.image-box {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+}
+
+.image-box img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 0.5rem;
+}
+
+img.fade-in {
+  opacity: 0;
+  transition: opacity 1s ease-in;
+  transition-delay: 2s;
+}
+
+img.fade-in.loaded {
+  opacity: 1;
 }</style>
 
 	</head>
@@ -380,7 +441,7 @@ header {
 		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
 
 		<header>
-			<a href="/sandbox/" class="home-link">Welcome to the Sandbox</a>
+			<a href="/sandbox/" class="home-link">The Sandbox</a>
 			<nav>
 				<h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
 				<ul class="nav">
@@ -411,7 +472,7 @@ header {
             <p class="excerpt">This is a short description of what the post is about.</p>
           
           
-            <p class="post-date">20-Jun-2025</p>
+            <p class="post-date">21-Jun-2025</p>
           
         </article>
       
@@ -429,7 +490,7 @@ header {
             <p class="excerpt">This is a short description for the sixth post.</p>
           
           
-            <p class="post-date">20-Jun-2025</p>
+            <p class="post-date">21-Jun-2025</p>
           
         </article>
       
@@ -447,7 +508,7 @@ header {
             <p class="excerpt">This is a short description of what the post is about.</p>
           
           
-            <p class="post-date">20-Jun-2025</p>
+            <p class="post-date">21-Jun-2025</p>
           
         </article>
       
@@ -465,7 +526,7 @@ header {
             <p class="excerpt">This is a short description of what the post is about.</p>
           
           
-            <p class="post-date">20-Jun-2025</p>
+            <p class="post-date">21-Jun-2025</p>
           
         </article>
       
@@ -483,7 +544,7 @@ header {
             <p class="excerpt">This is a short description of what the post is about.</p>
           
           
-            <p class="post-date">20-Jun-2025</p>
+            <p class="post-date">21-Jun-2025</p>
           
         </article>
       
@@ -501,7 +562,7 @@ header {
             <p class="excerpt">This is a short description of what the post is about.</p>
           
           
-            <p class="post-date">20-Jun-2025</p>
+            <p class="post-date">21-Jun-2025</p>
           
         </article>
       
@@ -519,7 +580,7 @@ header {
             <p class="excerpt">This is a personal profile</p>
           
           
-            <p class="post-date">20-Jun-2025</p>
+            <p class="post-date">21-Jun-2025</p>
           
         </article>
       
@@ -535,7 +596,7 @@ header {
 		</footer>
 		<script src="https://unpkg.com/lucide@latest"></script>
 		
-		<!-- This page `/articles/` was built on 2025-06-20T13:10:13.631Z -->
+		<!-- This page `/articles/` was built on 2025-06-21T01:49:22.989Z -->
 		<script type="module" src="/sandbox/dist/V6OKUKOoxV.js"></script>
 	</body>
 </html>

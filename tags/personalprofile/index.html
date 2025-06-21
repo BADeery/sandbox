@@ -322,18 +322,26 @@ header {
   border: 1px solid var(--text-color-link-visited); 
   border-radius: 1rem;
   padding: 1.25rem;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-  aspect-ratio: 1 / 1; /* ✅ Keeps it square */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07); /* Softer and more modern */
+  
   height: auto;
   min-height: 240px;
   width: 100%;
-  align-items: flex-start;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  transition: transform 0.2s ease;
+
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
   overflow: hidden;
+
+  /* Optional subtle hover lift */
+  will-change: transform;
 }
+.article-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
 
 .article-card h2 a {
   display: inline-flex;
@@ -365,6 +373,67 @@ header {
 .description,
 .post-date {
   color: var(--text-color);
+}
+
+.typewriter {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid var(--text-color);
+  width: 0;
+  animation:
+    typing 2s steps(20, end) forwards,
+    blink 0.5s step-end 4 2s,
+	hideCursor 0.01s forwards 4s; /* ✅ blinks 4 times */
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 14ch }
+}
+
+@keyframes blink {
+  0%, 100% { border-color: var(--text-color); }
+  50% {border-color: transparent; }
+}
+
+@keyframes hideCursor {
+	to {border-color: transparent; }
+}
+
+.l-shape-layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: auto 1fr;
+  gap: 1rem;
+  align-items: start;
+}
+
+.text-box {
+  grid-column: 1 / 2;
+  grid-row: 1 / 3; /* spans both rows */
+}
+
+.image-box {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+}
+
+.image-box img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 0.5rem;
+}
+
+img.fade-in {
+  opacity: 0;
+  transition: opacity 1s ease-in;
+  transition-delay: 2s;
+}
+
+img.fade-in.loaded {
+  opacity: 1;
 }</style>
 
 	</head>
@@ -372,7 +441,7 @@ header {
 		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
 
 		<header>
-			<a href="/sandbox/" class="home-link">Welcome to the Sandbox</a>
+			<a href="/sandbox/" class="home-link">The Sandbox</a>
 			<nav>
 				<h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
 				<ul class="nav">
@@ -388,8 +457,8 @@ header {
 
 <ol reversed="" class="postlist" style="--postlist-index: 2">
 	<li class="postlist-item">
-		<a href="/sandbox/articles/Core Profile What You Boil Down To 1/" class="postlist-link">🧠 Core Profile — Beneath the Systems</a>
-		<time class="postlist-date" datetime="20-Jun-2025">20 06 2025</time>
+		<a href="/sandbox/articles/Core Profile What You Boil Down To 1/" class="postlist-link">Beneath the Systems</a>
+		<time class="postlist-date" datetime="21-Jun-2025">21 06 2025</time>
 	</li>
 </ol>
 
@@ -405,7 +474,7 @@ header {
 		</footer>
 		<script src="https://unpkg.com/lucide@latest"></script>
 		
-		<!-- This page `/tags/personalprofile/` was built on 2025-06-20T12:58:12.121Z -->
+		<!-- This page `/tags/personalprofile/` was built on 2025-06-21T01:49:22.985Z -->
 		<script type="module" src="/sandbox/dist/V6OKUKOoxV.js"></script>
 	</body>
 </html>
