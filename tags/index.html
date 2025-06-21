@@ -458,7 +458,14 @@ header {
     margin: 0 0 0 0;
     border-radius: .4rem;
     object-fit: cover;
-    shape-outside: margin-box; /* helps justify wrap correctly */
+    shape-outside: margin-box;
+    opacity: 0;
+    transition: opacity 2s ease;
+    transition-delay: 2s; /* helps justify wrap correctly */
+  }
+  
+  .inline-image img.loaded {
+  opacity: 1;
   }
 
   .mobile-intro-block {
@@ -516,7 +523,7 @@ header {
 		</footer>
 		<script src="https://unpkg.com/lucide@latest"></script>
 		
-		<!-- This page `/tags/` was built on 2025-06-21T12:45:59.181Z -->
+		<!-- This page `/tags/` was built on 2025-06-21T12:51:49.597Z -->
 		<script type="module" src="/sandbox/dist/V6OKUKOoxV.js"></script>
 	</body>
 </html>
