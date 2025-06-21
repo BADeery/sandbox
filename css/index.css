@@ -420,6 +420,9 @@ header {
   display: block;
   object-fit: cover;
   border-radius: .4rem;
+}
+
+.fade-in {
   opacity: 0;
   transition: opacity 2s ease;
   transition-delay: 2s;
@@ -447,14 +450,16 @@ header {
     margin: 0 0 0 0;
     border-radius: .4rem;
     object-fit: cover;
-    shape-outside: margin-box;
+    shape-outside: margin-box; /* helps justify wrap correctly */
+  }
+  .mobile-fade-in {
     opacity: 0;
     transition: opacity 2s ease;
-    transition-delay: 2s; /* helps justify wrap correctly */
+    transition-delay: 2s;
   }
-  
-  .inline-image img.loaded {
-  opacity: 1;
+
+  .mobile-fade-in.loaded {
+    opacity: 1;
   }
 
   .mobile-intro-block {

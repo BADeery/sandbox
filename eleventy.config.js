@@ -35,6 +35,9 @@ export default async function(eleventyConfig) {
   eleventyConfig.addWatchTarget("css/**/*.css");
   eleventyConfig.addWatchTarget("content/**/*.{svg,webp,png,jpg,jpeg,gif}");
 
+  // Copy static image assets to output
+  eleventyConfig.addPassthroughCopy("content/imgs");
+
   // CSS bundle
   eleventyConfig.addBundle("css", {
     toFileDirectory: "dist",

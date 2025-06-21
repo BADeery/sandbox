@@ -12,7 +12,7 @@ eleventyNavigation:
   </div>
 
   <div class="inline-image">
-      <img src="/content/imgs/BD-sm.JPG" alt="Ben" class="inline-image mobile-inline-image">
+      <img src="./imgs/BD-sm.JPG" alt="Ben" class="fade-in mobile-fade-in">
   </div>
   <div class="intro-text">
     <p><i data-lucide="hand"></i> I’m an everything-thinker who finds peace amongst the chaos.

@@ -431,6 +431,9 @@ header {
   display: block;
   object-fit: cover;
   border-radius: .4rem;
+}
+
+.fade-in {
   opacity: 0;
   transition: opacity 2s ease;
   transition-delay: 2s;
@@ -459,6 +462,15 @@ header {
     border-radius: .4rem;
     object-fit: cover;
     shape-outside: margin-box; /* helps justify wrap correctly */
+  }
+  .mobile-fade-in {
+    opacity: 0;
+    transition: opacity 2s ease;
+    transition-delay: 2s;
+  }
+
+  .mobile-fade-in.loaded {
+    opacity: 1;
   }
 
   .mobile-intro-block {
@@ -521,7 +533,7 @@ header {
 		</footer>
 		<script src="https://unpkg.com/lucide@latest"></script>
 		
-		<!-- This page `/tags/aboutme/` was built on 2025-06-21T12:42:18.107Z -->
+		<!-- This page `/tags/aboutme/` was built on 2025-06-21T13:59:07.252Z -->
 		<script type="module" src="/sandbox/dist/V6OKUKOoxV.js"></script>
 	</body>
 </html>
