@@ -476,6 +476,6 @@ header {
   .bio-block {
     position: relative;
     padding: 0 .2rem;
-    text-align: justify;
+    text-align: left;
   }
 }
