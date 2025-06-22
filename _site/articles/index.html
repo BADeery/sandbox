@@ -103,8 +103,13 @@ iframe {
 p:last-child {
 	margin-bottom: 0;
 }
+
 p {
 	line-height: 1.5;
+}
+
+p + p{
+  margin-top: 1rem;
 }
 
 li {
@@ -124,7 +129,8 @@ a[href]:active {
 
 main,
 footer {
-  max-width: 0 auto;
+  max-width: 1000px;
+  margin: 0 auto;
 	padding: 1rem;
 }
 main :first-child {
@@ -343,16 +349,10 @@ header {
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
 }
 
-
 .article-card h2 a {
   display: inline-flex;
   align-items: center;
   gap: 0.6rem; /* space between icon and title */
-}
-
-
-.article-card:hover {
-  transform: translateY(-4px);
 }
 
 .article-card h2 {
@@ -383,108 +383,111 @@ header {
   border-right: 2px solid var(--text-color);
   width: 0;
   animation:
-    typing 1.2s steps(20, end) forwards,
-    blink 0.5s step-end 4 2s,
-	hideCursor 0.01s forwards 4s; /* ✅ blinks 4 times */
+    preblink 1s step-end 2,
+    typing 1s steps(20, end) 2.5s forwards,
+    postblink 1s step-end 2 2.5s,
+    hideCursor 0.01s forwards 5s;
 }
 
-@keyframes typing {
-  from { width: 0 }
-  to { width: 14ch }
-}
-
-@keyframes blink {
+/* Pre-blink: solid → flash → solid */
+@keyframes preblink {
   0%, 100% { border-color: var(--text-color); }
-  50% {border-color: transparent; }
+  50% { border-color: transparent; }
 }
 
+/* Typing */
+@keyframes typing {
+  from { width: 0; }
+  to { width: 14ch; }
+}
+
+/* Post-blink: flash 2 times */
+@keyframes postblink {
+  0%, 100% { border-color: var(--text-color); }
+  50% { border-color: transparent; }
+}
+
+/* Final cursor hide */
 @keyframes hideCursor {
-	to {border-color: transparent; }
+  to { border-color: transparent; }
+}
+
+@keyframes slideInFromRight {
+  from{
+    opacity: 0;
+    transform: translateX(50%);
+  }
+  to{
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 .lucide {
   width: 1.25rem;
   height: 1.25rem;
   stroke-width: 2;
-  color: currentColor;
+  color: var(--text-color);
   vertical-align: middle;
   margin-right: 0.25rem;
 }
 
-.intro-block {
-  max-width: auto;
-  padding: 0;
+.main-block {
+  max-width: 1000px;
+  padding: 0 0;
 }
 
-.inline-image {
+.bio-block {
+  position: relative;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+.float-image {
   float: right;
+  width: 40%;
   max-width: 200px;
-  shape-outside: margin-box;
   margin-left: 2rem;
   margin-bottom: 1rem;
+  shape-outside: margin-box;
   border-radius: 0.4rem;
+  clip-path: inset(0); /* ensures shape-outside takes effect in modern browsers */
 }
 
-.inline-image img {
-  width: 100%;
-  height: auto;
-  display: flow-root;
-  border-radius: .4rem;
-}
-
-.fade-in {
+.float-image {
   opacity: 0;
-  transition: opacity 2s ease;
-  transition-delay: 1s;
-}
-
-.inline-image img.loaded {
-  opacity: 1;
-}
-
-.intro-heading {
-  margin-bottom: 1rem;
-}
-
-.intro-text {
-  text-align: left;
-  line-height: 1.6;
-  margin-bottom: .5rem;
+  transform: translateX(50%);
+  animation: slideInFromRight 2s ease forwards;
+  animation-delay: .5s
 }
 
 @media (max-width: 768px) {
-  .mobile-inline-image {
+  .main-block {
+    padding: 0 .5rem;
+  }
+
+  .float-image {
     float: right;
+    width: 40%;
     max-width: 200px;
-    shape-outside:margin-box;
-    margin-left: 1rem;
-    margin-bottom: .5rem;
-    border-radius: .4rem;
-  }
-  .mobile-fade-in {
-    opacity: 0;
-    transition: opacity 2s ease;
-    transition-delay: 0s;
-  }
-
-  .mobile-fade-in.loaded {
-    opacity: 1;
-  }
-
-  .mobile-intro-block {
+    margin-left: 2rem;
     margin-bottom: 1rem;
-    line-height: 1.5;
-    padding-right: 0;
+    shape-outside: margin-box;
+    border-radius: 0.4rem;
+    clip-path: inset(0); /* ensures shape-outside takes effect in modern browsers */
   }
 
-  .mobile-intro-block p {
-    text-align: left;
-    hyphens: auto;
-    overflow-wrap: break-word;
-    word-break: break-word;
-    widows: 2;
-    orphans: 2;
-    margin-bottom: .5rem;
+  .float-image {
+    opacity: 0;
+    transform: translateX(50%);
+    animation: slideInFromRight 2s ease forwards;
+    animation-delay: .5s;
+  }
+
+  .bio-block {
+    position: relative;
+    padding: 0 .2rem;
+    text-align: justify;
   }
 }</style>
 
@@ -648,7 +651,7 @@ header {
 		</footer>
 		<script src="https://unpkg.com/lucide@latest"></script>
 		
-		<!-- This page `/articles/` was built on 2025-06-22T00:41:36.071Z -->
+		<!-- This page `/articles/` was built on 2025-06-22T13:10:27.076Z -->
 		<script type="module" src="/sandbox/dist/V6OKUKOoxV.js"></script>
 	</body>
 </html>

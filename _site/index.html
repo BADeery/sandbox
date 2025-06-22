@@ -103,8 +103,13 @@ iframe {
 p:last-child {
 	margin-bottom: 0;
 }
+
 p {
 	line-height: 1.5;
+}
+
+p + p{
+  margin-top: 1rem;
 }
 
 li {
@@ -124,7 +129,8 @@ a[href]:active {
 
 main,
 footer {
-  max-width: 0 auto;
+  max-width: 1000px;
+  margin: 0 auto;
 	padding: 1rem;
 }
 main :first-child {
@@ -343,16 +349,10 @@ header {
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
 }
 
-
 .article-card h2 a {
   display: inline-flex;
   align-items: center;
   gap: 0.6rem; /* space between icon and title */
-}
-
-
-.article-card:hover {
-  transform: translateY(-4px);
 }
 
 .article-card h2 {
@@ -383,108 +383,111 @@ header {
   border-right: 2px solid var(--text-color);
   width: 0;
   animation:
-    typing 1.2s steps(20, end) forwards,
-    blink 0.5s step-end 4 2s,
-	hideCursor 0.01s forwards 4s; /* ✅ blinks 4 times */
+    preblink 1s step-end 2,
+    typing 1s steps(20, end) 2.5s forwards,
+    postblink 1s step-end 2 2.5s,
+    hideCursor 0.01s forwards 5s;
 }
 
-@keyframes typing {
-  from { width: 0 }
-  to { width: 14ch }
-}
-
-@keyframes blink {
+/* Pre-blink: solid → flash → solid */
+@keyframes preblink {
   0%, 100% { border-color: var(--text-color); }
-  50% {border-color: transparent; }
+  50% { border-color: transparent; }
 }
 
+/* Typing */
+@keyframes typing {
+  from { width: 0; }
+  to { width: 14ch; }
+}
+
+/* Post-blink: flash 2 times */
+@keyframes postblink {
+  0%, 100% { border-color: var(--text-color); }
+  50% { border-color: transparent; }
+}
+
+/* Final cursor hide */
 @keyframes hideCursor {
-	to {border-color: transparent; }
+  to { border-color: transparent; }
+}
+
+@keyframes slideInFromRight {
+  from{
+    opacity: 0;
+    transform: translateX(50%);
+  }
+  to{
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 .lucide {
   width: 1.25rem;
   height: 1.25rem;
   stroke-width: 2;
-  color: currentColor;
+  color: var(--text-color);
   vertical-align: middle;
   margin-right: 0.25rem;
 }
 
-.intro-block {
-  max-width: auto;
-  padding: 0;
+.main-block {
+  max-width: 1000px;
+  padding: 0 0;
 }
 
-.inline-image {
+.bio-block {
+  position: relative;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+.float-image {
   float: right;
+  width: 40%;
   max-width: 200px;
-  shape-outside: margin-box;
   margin-left: 2rem;
   margin-bottom: 1rem;
+  shape-outside: margin-box;
   border-radius: 0.4rem;
+  clip-path: inset(0); /* ensures shape-outside takes effect in modern browsers */
 }
 
-.inline-image img {
-  width: 100%;
-  height: auto;
-  display: flow-root;
-  border-radius: .4rem;
-}
-
-.fade-in {
+.float-image {
   opacity: 0;
-  transition: opacity 2s ease;
-  transition-delay: 1s;
-}
-
-.inline-image img.loaded {
-  opacity: 1;
-}
-
-.intro-heading {
-  margin-bottom: 1rem;
-}
-
-.intro-text {
-  text-align: left;
-  line-height: 1.6;
-  margin-bottom: .5rem;
+  transform: translateX(50%);
+  animation: slideInFromRight 2s ease forwards;
+  animation-delay: .5s
 }
 
 @media (max-width: 768px) {
-  .mobile-inline-image {
+  .main-block {
+    padding: 0 .5rem;
+  }
+
+  .float-image {
     float: right;
+    width: 40%;
     max-width: 200px;
-    shape-outside:margin-box;
-    margin-left: 1rem;
-    margin-bottom: .5rem;
-    border-radius: .4rem;
-  }
-  .mobile-fade-in {
-    opacity: 0;
-    transition: opacity 2s ease;
-    transition-delay: 0s;
-  }
-
-  .mobile-fade-in.loaded {
-    opacity: 1;
-  }
-
-  .mobile-intro-block {
+    margin-left: 2rem;
     margin-bottom: 1rem;
-    line-height: 1.5;
-    padding-right: 0;
+    shape-outside: margin-box;
+    border-radius: 0.4rem;
+    clip-path: inset(0); /* ensures shape-outside takes effect in modern browsers */
   }
 
-  .mobile-intro-block p {
-    text-align: left;
-    hyphens: auto;
-    overflow-wrap: break-word;
-    word-break: break-word;
-    widows: 2;
-    orphans: 2;
-    margin-bottom: .5rem;
+  .float-image {
+    opacity: 0;
+    transform: translateX(50%);
+    animation: slideInFromRight 2s ease forwards;
+    animation-delay: .5s;
+  }
+
+  .bio-block {
+    position: relative;
+    padding: 0 .2rem;
+    text-align: justify;
   }
 }</style>
 
@@ -504,27 +507,22 @@ header {
 		</header>
 
 		<main id="main">
-			<section class="intro-block">
-  <div class="intro-heading">
+			<section class="main-block">
+  <div class="heading">
     <h1 id="hi-i-m-ben"><span class="typewriter">Hi, I'm Ben.</span></h1>
   </div>
-  <div class="inline-image">
-      <picture><source type="image/avif" srcset="/sandbox/.11ty/image/?src=content%5Cimgs%5CBD-sm.JPG&width=400&format=avif&via=transform 400w"><source type="image/webp" srcset="/sandbox/.11ty/image/?src=content%5Cimgs%5CBD-sm.JPG&width=400&format=webp&via=transform 400w"><img loading="lazy" decoding="async" src="/sandbox/.11ty/image/?src=content%5Cimgs%5CBD-sm.JPG&width=400&format=jpeg&via=transform" alt="Ben" class="fade-in mobile-fade" width="400" height="559"></picture>
-  </div>
-  <div class="intro-text">
+  <article class="bio-block">
+    <picture><source type="image/avif" srcset="/sandbox/.11ty/image/?src=content%5Cimgs%5CBD-sm.JPG&width=400&format=avif&via=transform 400w"><source type="image/webp" srcset="/sandbox/.11ty/image/?src=content%5Cimgs%5CBD-sm.JPG&width=400&format=webp&via=transform 400w"><img loading="lazy" decoding="async" src="/sandbox/.11ty/image/?src=content%5Cimgs%5CBD-sm.JPG&width=400&format=jpeg&via=transform" alt="Ben" class="float-image" width="400" height="559"></picture>
     <p><i data-lucide="hand"></i> I’m an everything-thinker who finds peace amongst the chaos.
-      The best way to think of me? A Swiss Army Knife — because my name’s not Jack.
-    </p>
+      The best way to think of me? A Swiss Army Knife — because my name’s not Jack. </p>
     <p><i data-lucide="brain"></i> My brain wears Nikes, always running. This site’s where I unload thoughts, frameworks, and half-tested ideas—some clean, some messy.</p>
     <p><i data-lucide="help-circle"></i> I'm comfortable wrestling two-truths at once, being uncomfortable is where we grow. I like simplifying complexity and finding out what matters in the noise.</p>
-<p></p><p><i data-lucide="box"></i> I think deeply, work hard, and often ask too many questions. I don’t always fit the mould—but I’ve stopped seeing that as <em>my</em> problem.</p><p></p>
-<p></p><p><i data-lucide="dna"></i> Somewhere along the way, I came to understand that I’m twice-exceptional (2e)—a term for those with both cognitive giftedness and ADHD. It sits under the neurodivergent umbrella, but it’s part of my wiring, not my identity. It helps explain the friction, the intensity, and the weird strengths I bring. More than that, it reminds me that doing things differently isn’t the flaw—it’s the feature.</p><p></p>
-<p></p><p><i data-lucide="mail"></i> If it clicks, <a href="/sandbox/contact">say hey</a>. If not, no stress—there’s an <code>X</code> right up there in the corner of your browser.</p><p></p>
-<p></p><p><i data-lucide="cone-off"></i> Welcome to my sandbox.</p><p></p>
-  </div>
+    <p><i data-lucide="box"></i> I think deeply, work hard, and often ask too many questions. I don’t always fit the mould—but I’ve stopped seeing that as <em>my</em> problem.</p>
+    <p><i data-lucide="dna"></i> Somewhere along the way, I came to understand that I’m twice-exceptional (2e)—a term for those with both cognitive giftedness and ADHD. It sits under the neurodivergent umbrella, but it’s part of my wiring, not my identity. It helps explain the friction, the intensity, and the weird strengths I bring. More than that, it reminds me that doing things differently isn’t the flaw—it’s the feature.</p>
+    <p><i data-lucide="mail"></i> If it clicks, <a href="/sandbox/contact">say hey</a>. If not, no stress—there’s an <code>X</code> right up there in the corner of your browser.</p>
+    <p><i data-lucide="cone-off"></i> Welcome to my sandbox.</p>
+  </article>
 </section>
-  
-
 		</main>
 
 		<footer>
@@ -534,7 +532,7 @@ header {
 		</footer>
 		<script src="https://unpkg.com/lucide@latest"></script>
 		
-		<!-- This page `/` was built on 2025-06-22T00:41:36.055Z -->
-		<script type="module" src="/sandbox/dist/FZ7TKewJfO.js"></script>
+		<!-- This page `/` was built on 2025-06-22T13:10:27.064Z -->
+		<script type="module" src="/sandbox/dist/V6OKUKOoxV.js"></script>
 	</body>
 </html>
