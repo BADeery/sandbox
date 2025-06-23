@@ -13,6 +13,7 @@
 :root {
 	--font-family: 'Courier Prime', Courier Prime, monospace;
 	--font-family-monospace:  Courier Prime, monospace;
+  --font-weight-normal:700;
 }
 
 /* Theme colors */
@@ -58,6 +59,7 @@ body {
 	max-width: 1000px;
 	margin: 0 auto;
 	font-family: var(--font-family);
+  font-weight: var(--font-weight-normal);
 	color: var(--text-color);
 	background-color: var(--background-color);
 	font-weight: 450;
@@ -125,6 +127,13 @@ a[href]:visited {
 a[href]:hover,
 a[href]:active {
 	color: var(--text-color-link-active);
+}
+
+blockquote {
+  margin: 1.5rem 1rem;
+  padding-left: 1rem;
+  border-left: 3px solid #a882ff;;
+  font-style: italic;
 }
 
 main,
@@ -430,6 +439,40 @@ header {
   color: var(--text-color);
   vertical-align: middle;
   margin-right: 0.25rem;
+  margin-bottom: .25rem
+}
+
+.icon-adjust {
+  position: relative;
+  margin-bottom: .2rem;
+  width: 1.25rem;
+  height: 1.25rem;
+
+}
+
+.asterisk-left{
+  position: relative;
+  top: -1px;
+  width: .6rem;
+  height: .6rem;
+  vertical-align: top;
+  margin-right: 0;
+}
+
+.asterisk-right{
+  position: relative;
+  top: -1px;
+  width: .6rem;
+  height: .6rem;
+  vertical-align: top;
+  margin-left: -.1rem;
+}
+
+.identity-callout {
+  margin-left: 1.5rem;
+  font-style: italic;
+  font-weight: 600;
+  opacity: 1;
 }
 
 .main-block {
@@ -461,6 +504,7 @@ header {
   animation-delay: .5s
 }
 
+
 @media (max-width: 768px) {
   .main-block {
     padding: 0 .5rem;
@@ -470,8 +514,8 @@ header {
     float: right;
     width: 40%;
     max-width: 200px;
-    margin-left: 2rem;
-    margin-bottom: 1rem;
+    margin-left: 1.5rem;
+    margin-bottom: .2rem;
     shape-outside: margin-box;
     border-radius: 0.4rem;
     clip-path: inset(0); /* ensures shape-outside takes effect in modern browsers */
@@ -488,6 +532,7 @@ header {
     position: relative;
     padding: 0 .2rem;
     text-align: left;
+    overflow-x: hidden;
   }
 }
 /**
@@ -689,7 +734,7 @@ pre[class*="language-diff-"] {
 
 
 <ul class="post-metadata">
-	<li><time datetime="22-Jun-2025">22 06 2025</time></li>
+	<li><time datetime="23-Jun-2025">23 06 2025</time></li>
 </ul>
 
 <p>Post body goes here...</p>
@@ -713,7 +758,7 @@ pre[class*="language-diff-"] {
 		</footer>
 		<script src="https://unpkg.com/lucide@latest"></script>
 		
-		<!-- This page `/articles/fourthpost/` was built on 2025-06-22T15:13:59.610Z -->
+		<!-- This page `/articles/fourthpost/` was built on 2025-06-23T05:49:44.588Z -->
 		<script type="module" src="/sandbox/dist/V6OKUKOoxV.js"></script>
 	</body>
 </html>
