@@ -7,6 +7,7 @@ tags:
 - posts
 - PersonalProfile
 - AboutMe
+eleventyExcludeFromCollections: true
 ---
 #AboutMe #PersonalProfile #Personal
 

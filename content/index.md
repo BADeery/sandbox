@@ -17,7 +17,7 @@ eleventyNavigation:
       <p style="font-size:0.9rem"><i data-lucide="asterisk" class="asterisk-left"></i><em>Also, my name’s not Jack.</em><i data-lucide="asterisk" class="asterisk-right"></i></p>
       <p><i data-lucide="brain"></i> My brain wears Nikes, it's always running.</p>
       <p><i data-lucide="help-circle"></i> I'm comfortable wrestling two-truths at once, being uncomfortable is where we grow. I like to think I can simplify complexity, finding and understanding what matters amongst the noise.</p>
-      <p><i data-lucide="zap"></i> I think deeply, explore broadly, and often ask too many questions. I'm a bit of an anarchist in the right ways (your grandmother loves me).</p>
+      <p><i data-lucide="zap"></i> I think deeply, explore broadly, and often ask too many questions. I'm a bit of an anarchist in all the right ways; (your grandmother loves me).</p>
       <p><i data-lucide="flame"></i> That being said, sometimes being a menace is a <em style="color:indianred">me</em> problem, but sometimes, it isn't always <em style="color:indianred">my</em> problem.</p>
       <p><i data-lucide="dna"></i> Somewhere along the way, I came to understand that I’m twice-exceptional (2e) — a term for those with both cognitive Giftedness and ADHD/ASD. For me it's Giftedness + ADHD. It falls under the neurodivergent umbrella.</p>
       <p><i data-lucide="layers"></i> Being 2e means I default to thinking outside the box, I'm always looking in, trying to understand:</p>
