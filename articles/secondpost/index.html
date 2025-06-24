@@ -24,6 +24,10 @@
   --text-color-link: #082840;
   --text-color-link-active: #5f2b48;
   --text-color-link-visited: #17050F;
+  --text-color-strong: #3f9ca0;
+  /* --text-color-h1: #45b69c;
+  --text-color-h2: #397a84;
+  --text-color-h3: #7aa2b5; */
 }
 
 @media (prefers-color-scheme: dark) {
@@ -34,6 +38,10 @@
     --text-color-link: #66d9ef;
     --text-color-link-active: #f92672;
     --text-color-link-visited: #ae81ff;
+    --text-color-strong: #397a84;
+    /* --text-color-h1:   #778899;
+    --text-color-h2: #82c8d9;
+    --text-color-h3: #a8d5e5; */
   }
 }
 
@@ -135,6 +143,22 @@ blockquote {
   border-left: 3px solid #a882ff;;
   font-style: italic;
 }
+
+strong {
+  color: var(--text-color-strong);
+}
+
+/* h1 { 
+  color: var(--text-color-h1); 
+}
+
+h2 { 
+  color: var(--text-color-h2); 
+}
+
+h3 { 
+  color: var(--text-color-h3); 
+} */
 
 main,
 footer {
@@ -483,7 +507,7 @@ header {
 .bio-block {
   position: relative;
   line-height: 1.6;
-  text-align: justify;
+  text-align: left;
 }
 
 .float-image {
@@ -715,6 +739,7 @@ pre[class*="language-diff-"] {
 				<ul class="nav">
 					<li class="nav-item"><a href="/sandbox/">Hello</a></li>
 					<li class="nav-item"><a href="/sandbox/articles/">Articles</a></li>
+					<li class="nav-item"><a href="/sandbox/bz-and-dz/">Bz &amp; Dz</a></li>
 				</ul>
 			</nav>
 		</header>
@@ -734,7 +759,7 @@ pre[class*="language-diff-"] {
 
 
 <ul class="post-metadata">
-	<li><time datetime="23-Jun-2025">23 06 2025</time></li>
+	<li><time datetime="24-Jun-2025">24 06 2025</time></li>
 </ul>
 
 <p>Post body goes here...</p>
@@ -758,7 +783,8 @@ pre[class*="language-diff-"] {
 		</footer>
 		<script src="https://unpkg.com/lucide@latest"></script>
 		
-		<!-- This page `/articles/secondpost/` was built on 2025-06-23T05:49:44.587Z -->
+		<!-- This page `/articles/secondpost/` was built on 2025-06-24T15:01:35.292Z -->
 		<script type="module" src="/sandbox/dist/V6OKUKOoxV.js"></script>
+		
 	</body>
 </html>
