@@ -30,7 +30,8 @@ eleventyNavigation:
         Where did the box even come from?<br>
         Is it even the right box?<br>
       </blockquote>
-    <p>I don’t always slot neatly into systems — I need to understand them, test them, sometimes reassemble them — guided by curiosity and instinct. Put simply, I just see and interact with the world differently.</p>
+    <p>Because of this, I don’t always slot neatly into systems — I need to understand them, test them, sometimes even reassemble them before they make sense enough to use. Forever guided by curiosity and instinct.</p>
+    <p>Put simply, I just see and interact with the world differently.</p>
     <p class="identity-callout">
       <span style="color: #5fae6e;">Wiring? Sure.</span> 
       <span style="color: #888;"> Identity? Nah.</span>
