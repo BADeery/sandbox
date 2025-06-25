@@ -81,6 +81,14 @@ export default async function(eleventyConfig) {
   eleventyConfig.addShortcode("currentBuildDate", () => {
     return new Date().toISOString();
   });
+
+  eleventyConfig.addShortcode("quip", function(text) {
+  return `<span class="quip-wrapper" tabindex="0">
+  ^<span class="quip-tooltip">${text}</span></span>`
+  .trim();
+  });
+
+
 }
 
 export const config = {

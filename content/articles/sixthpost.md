@@ -6,6 +6,7 @@ tags:
   - posts
 layout: layouts/post.njk
 icon: biceps-flexed
+eleventyExcludeFromCollections: true
 ---
 
 This is the full content of the sixth post. You can write **markdown** here just like any article.

@@ -5,6 +5,7 @@ layout: layouts/post.njk
 description: This is a short description of what the post is about.
 icon: brain
 tags: posts
+eleventyExcludeFromCollections: true
 ---
 Post body goes here...
 

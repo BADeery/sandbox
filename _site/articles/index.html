@@ -5,15 +5,18 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Articles</title>
 		<meta name="description" content="A sandbox for me to write and play.">
+		<link rel="stylesheet" href="/sandbox/css/index.css">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Space+Mono|Muli|Oswald|Noto+Sans&display=swap">
 		
 		
 		
 		<style>/* This is an arbitrary CSS string added to the bundle */
 /* Defaults */
 :root {
-	--font-family: 'Courier Prime', Courier Prime, monospace;
+	--font-family-body: 'Muli', Courier Prime, monospace;
 	--font-family-monospace:  Courier Prime, monospace;
-  --font-weight-normal:700;
+  --font-family-heading: 'Space Mono', 'sans-serif', monospace;
+  --font-weight-normal:550;
 }
 
 /* Theme colors */
@@ -25,9 +28,9 @@
   --text-color-link-active: #5f2b48;
   --text-color-link-visited: #17050F;
   --text-color-strong: #3f9ca0;
-  /* --text-color-h1: #45b69c;
-  --text-color-h2: #397a84;
-  --text-color-h3: #7aa2b5; */
+  --text-color-h1: #2a2a2a;
+  --text-color-h2: #2a2a2a;
+  --text-color-h3: #2a2a2a;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -39,9 +42,9 @@
     --text-color-link-active: #f92672;
     --text-color-link-visited: #ae81ff;
     --text-color-strong: #397a84;
-    /* --text-color-h1:   #778899;
-    --text-color-h2: #82c8d9;
-    --text-color-h3: #a8d5e5; */
+    --text-color-h1:   #e0e0e0;
+    --text-color-h2: #e0e0e0;
+    --text-color-h3: #e0e0e0;
   }
 }
 
@@ -49,6 +52,7 @@
 * {
 	box-sizing: border-box;
 }
+
 
 @view-transition {
 	navigation: auto;
@@ -66,11 +70,10 @@ body {
 	padding: 0;
 	max-width: 1000px;
 	margin: 0 auto;
-	font-family: var(--font-family);
+	font-family: var(--font-family-body);
   font-weight: var(--font-weight-normal);
 	color: var(--text-color);
 	background-color: var(--background-color);
-	font-weight: 450;
 	font-size: 1rem;
 	line-height: 1;
 }
@@ -116,10 +119,12 @@ p:last-child {
 
 p {
 	line-height: 1.5;
+  margin-left: .65rem;
 }
 
 p + p{
-  margin-top: 1rem;
+  margin-top: .75em;
+  margin-bottom: .75em;
 }
 
 li {
@@ -138,7 +143,7 @@ a[href]:active {
 }
 
 blockquote {
-  margin: 1.5rem 1rem;
+  margin: 1.5rem 1.5rem;
   padding-left: 1rem;
   border-left: 3px solid #a882ff;;
   font-style: italic;
@@ -148,17 +153,51 @@ strong {
   color: var(--text-color-strong);
 }
 
-/* h1 { 
-  color: var(--text-color-h1); 
+h1 i[data-lucide],
+h2 i[data-lucide],
+h3 i[data-lucide],
+h1 svg.lucide,
+h2 svg.lucide,
+h3 svg.lucide {
+  position: relative;
+  vertical-align: middle;
+  width: 1.1em;
+  height: 1.1em;
+  stroke: currentColor;
+  margin-right: 0;
+}
+
+h1 { 
+  color: var(--text-color-h1);
+  font-size: 2.25rem;
+  font-family: var(--font-family-heading);
+  font-weight: 800;
+  margin-bottom: 0;
+  letter-spacing: -0.05rem;
 }
 
 h2 { 
-  color: var(--text-color-h2); 
+  color: var(--text-color-h2);
+  font-family: var(--font-family-heading);
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: .5rem;
 }
 
-h3 { 
+h3 {
   color: var(--text-color-h3); 
-} */
+  font-family: var(--font-family-heading);
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+hr {
+  width: 75%;               /* leaves 12.5% on each side */
+  margin: 2rem auto;        /* centers it */
+  border: none;
+  border-top: 1px solid var(--text-color); /* or your theme */
+}
 
 main,
 footer {
@@ -410,6 +449,8 @@ header {
 }
 
 .typewriter {
+  color: var(--text-color);
+  font-family: var(--font-family-heading);
   display: inline-block;
   overflow: hidden;
   white-space: nowrap;
@@ -431,7 +472,7 @@ header {
 /* Typing */
 @keyframes typing {
   from { width: 0; }
-  to { width: 14ch; }
+  to { width: 15ch; }
 }
 
 /* Post-blink: flash 2 times */
@@ -462,34 +503,8 @@ header {
   stroke-width: 2;
   color: var(--text-color);
   vertical-align: middle;
-  margin-right: 0.25rem;
+  margin-right: 0.4rem;
   margin-bottom: .25rem
-}
-
-.icon-adjust {
-  position: relative;
-  margin-bottom: .2rem;
-  width: 1.25rem;
-  height: 1.25rem;
-
-}
-
-.asterisk-left{
-  position: relative;
-  top: -1px;
-  width: .6rem;
-  height: .6rem;
-  vertical-align: top;
-  margin-right: 0;
-}
-
-.asterisk-right{
-  position: relative;
-  top: -1px;
-  width: .6rem;
-  height: .6rem;
-  vertical-align: top;
-  margin-left: -.1rem;
 }
 
 .identity-callout {
@@ -516,6 +531,7 @@ header {
   max-width: 200px;
   margin-left: 2rem;
   margin-bottom: 1rem;
+  margin-top: 0;
   shape-outside: margin-box;
   border-radius: 0.4rem;
   clip-path: inset(0); /* ensures shape-outside takes effect in modern browsers */
@@ -531,15 +547,24 @@ header {
 
 @media (max-width: 768px) {
   .main-block {
-    padding: 0 .5rem;
+    padding: .25rem .25rem;
+    margin: 0 auto;
   }
+
+  blockquote {
+  margin: 1.5rem 1.5rem;
+  padding-left: 1rem;
+  border-left: 3px solid #a882ff;;
+  font-style: italic;
+}
 
   .float-image {
     float: right;
-    width: 40%;
-    max-width: 200px;
-    margin-left: 1.5rem;
-    margin-bottom: .2rem;
+    width: 30%;
+    max-width: 180px;
+    margin-left: 1rem;
+    margin-top: 1.1rem;
+    margin-bottom: 2rem;
     shape-outside: margin-box;
     border-radius: 0.4rem;
     clip-path: inset(0); /* ensures shape-outside takes effect in modern browsers */
@@ -554,12 +579,53 @@ header {
 
   .bio-block {
     position: relative;
-    padding: 0 .2rem;
     text-align: left;
     overflow-x: hidden;
   }
-}</style>
+}
 
+.quip-wrapper {
+  position: relative;
+  display: inline-block;
+  vertical-align: super;
+  font-size: 0.65em;
+  margin-left: 0.15em;
+  cursor: help;
+  opacity: 1;
+}
+
+.quip-wrapper:hover,
+.quip-wrapper:focus {
+  opacity: 1;
+}
+
+.quip-tooltip {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  top: -2.2em;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #222;
+  color: #fff;
+  font-size: .9rem;
+  padding: 0.35em 0.6em;
+  border-radius: 4px;
+  white-space: nowrap;
+  z-index: 10;
+  transition: opacity 0.2s ease;
+  pointer-events: none;
+}
+
+.quip-wrapper:hover .quip-tooltip,
+.quip-wrapper:focus .quip-tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+
+.bumpdown {
+  margin-top: 2rem;
+}</style>
 	</head>
 	<body>
 		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
@@ -584,12 +650,12 @@ header {
     <div class="articles-grid">
       
         <article class="article-card">
-          <h2 id="the-windscreen-wiper-method">
+          <h2 id="windshield-wipers">
             <a href="/sandbox/articles/Windshield Wipers/">
               
                 <i data-lucide="wind"></i>
               
-              The Windscreen Wiper Method
+              Windshield Wipers
             </a>
           </h2>
 
@@ -602,102 +668,12 @@ header {
         </article>
       
         <article class="article-card">
-          <h2 id="my-sixth-post">
-            <a href="/sandbox/articles/sixthpost/">
-              
-                <i data-lucide="biceps-flexed"></i>
-              
-              My Sixth Post
-            </a>
-          </h2>
-
-          
-            <p class="excerpt">This is a short description for the sixth post.</p>
-          
-          
-            <p class="post-date">20-Jun-2025</p>
-          
-        </article>
-      
-        <article class="article-card">
-          <h2 id="my-third-post">
-            <a href="/sandbox/articles/thirdpost/">
-              
-                <i data-lucide="brain"></i>
-              
-              My Third Post
-            </a>
-          </h2>
-
-          
-            <p class="excerpt">This is a short description of what the post is about.</p>
-          
-          
-            <p class="post-date">19-Jun-2025</p>
-          
-        </article>
-      
-        <article class="article-card">
-          <h2 id="my-second-post">
-            <a href="/sandbox/articles/secondpost/">
-              
-                <i data-lucide="brain"></i>
-              
-              My Second Post
-            </a>
-          </h2>
-
-          
-            <p class="excerpt">This is a short description of what the post is about.</p>
-          
-          
-            <p class="post-date">19-Jun-2025</p>
-          
-        </article>
-      
-        <article class="article-card">
           <h2 id="my-fourth-post">
             <a href="/sandbox/articles/fourthpost/">
               
                 <i data-lucide="brain"></i>
               
               My Fourth Post
-            </a>
-          </h2>
-
-          
-            <p class="excerpt">This is a short description of what the post is about.</p>
-          
-          
-            <p class="post-date">19-Jun-2025</p>
-          
-        </article>
-      
-        <article class="article-card">
-          <h2 id="my-first-post">
-            <a href="/sandbox/articles/firstpost/">
-              
-                <i data-lucide="brain"></i>
-              
-              My First Post
-            </a>
-          </h2>
-
-          
-            <p class="excerpt">This is a short description of what the post is about.</p>
-          
-          
-            <p class="post-date">19-Jun-2025</p>
-          
-        </article>
-      
-        <article class="article-card">
-          <h2 id="my-fifth-post">
-            <a href="/sandbox/articles/fifthpost/">
-              
-                <i data-lucide="brain"></i>
-              
-              My Fifth Post
             </a>
           </h2>
 
@@ -721,7 +697,7 @@ header {
 		</footer>
 		<script src="https://unpkg.com/lucide@latest"></script>
 		
-		<!-- This page `/articles/` was built on 2025-06-24T14:59:19.636Z -->
+		<!-- This page `/articles/` was built on 2025-06-25T09:34:03.590Z -->
 		<script type="module" src="/sandbox/dist/V6OKUKOoxV.js"></script>
 		
 	</body>

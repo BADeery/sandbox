@@ -1,6 +1,6 @@
 ---
 
-title: The Windscreen Wiper Method  
+title: Windshield Wipers 
 Date: 2025-06-24  
 layout: layouts/post.njk  
 description: A metaphor for staying functional in mental storms.  
@@ -9,15 +9,10 @@ tags:
 - posts
 - CreativeNonfiction
 - MetaphorsWithPurpose
-    
-
 ---
+<span style="font-size:2em; text-weight:strong">As</span> a young fella, I was always scared of the dark, scared of the unknowns that lurk in the darkest corners of the room.
 
-# Just turn on the windshield wipers
-
-As a young fella, I was always scared of the dark, scared of the unknowns that lurk in the darkest corners of the room.
-
-I'd lay there trying to sleep, my brain with its Nikes laced up, ready to bolt, realising that sleep was something I couldn't catch — I built myself a mechanism to clear my mind — the simplest of mechanisms: a metaphor.
+I'd lay there trying to sleep, my brain with its Nikes laced up, ready to bolt. Realising that sleep was something I couldn't catch — I built myself a mechanism to clear my mind — the simplest of mechanisms: a metaphor.
 
 With my eyes closed, I’d imagine myself in the back seat of a car. It's night-time. I'm looking through the windscreen. The road's blurry with heavy rain. Even with the headlights on, it’s hard to see.
 

@@ -7,6 +7,8 @@ icon: brain
 tags:
 - posts
 - AboutMe
+
+eleventyExcludeFromCollections: true
 ---
 
 Post body goes here...
