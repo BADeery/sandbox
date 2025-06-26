@@ -7,9 +7,16 @@ import pluginFilters from "./_config/filters.js";
 
 /** @param {import("@11ty/eleventy").UserConfig} eleventyConfig */
 export default async function(eleventyConfig) {
-  // ✅ Use file creation/modification date by default
+  // ✅ Reading time plugin (load early, before computed merge)
+  const readingTime = (await import("eleventy-plugin-reading-time")).default;
+  eleventyConfig.addPlugin(readingTime);
+
+  eleventyConfig.addPlugin(readingTime, {
+    wordPerMinute: 200
+  });
+
   eleventyConfig.addGlobalData("eleventyComputed", {
-    date: data => data.page.date
+    date: data => data?.page?.date,
   });
 
   // ✅ Custom filter to format dates in AU style
@@ -87,7 +94,6 @@ export default async function(eleventyConfig) {
   ^<span class="quip-tooltip">${text}</span></span>`
   .trim();
   });
-
 
 }
 

@@ -444,9 +444,25 @@ header {
 }
 
 .description,
-.post-date {
+.post-date,
+.card-read-time {
   color: var(--text-color);
 }
+
+.flex-spacer {
+  flex-grow: 1;
+}
+
+.card-read-time {
+  font-size: 0.75rem;
+  opacity: 0.7;
+  align-self: flex-end;
+  margin-top: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
 
 .typewriter {
   color: var(--text-color);
@@ -833,7 +849,7 @@ pre[class*="language-diff-"] {
 	<!-- Open Graph -->
 		<meta property="og:title" content="BDs Sandbox">
 		<meta property="og:description" content="Where grains of thought can become sandmansions">
-		<meta property="og:image" content="sandbox/imgs/BDs-sandbox.png">
+		<meta property="og:image" content="/sandbox/imgs/BDs-sandbox.png">
 		<meta property="og:url" content="https://badeery.github.io/sandbox">
 		<meta property="og:type" content="website">
 	
@@ -855,25 +871,28 @@ pre[class*="language-diff-"] {
 
 		<main id="main">
 			
+  
+  
 
+  <h1 id="windshield-wipers">
+    <span style="display: inline-flex; align-items: center; gap: 0.9rem;">
+      
+        <i data-lucide="wind"></i>
+      
+      Windshield Wipers
+    </span>
+  </h1>
 
-<h1 id="windshield-wipers">
-  <span style="display: inline-flex; align-items: center; gap: 0.9rem;">
-    
-      <i data-lucide="wind"></i>
-    
-    Windshield Wipers
-  </span>
-</h1>
+  <p class="read-time">
+    <i data-lucide="clock"></i> 2 min read  </p>
 
+  <ul class="post-metadata">
+    <li><time datetime="24-Jun-2025">24 06 2025</time></li>
+      <li><a href="/sandbox/tags/creativenonfiction/" class="post-tag">CreativeNonfiction</a>, </li>
+      <li><a href="/sandbox/tags/metaphorswithpurpose/" class="post-tag">MetaphorsWithPurpose</a></li>
+  </ul>
 
-<ul class="post-metadata">
-	<li><time datetime="24-Jun-2025">24 06 2025</time></li>
-	<li><a href="/sandbox/tags/creativenonfiction/" class="post-tag">CreativeNonfiction</a>, </li>
-	<li><a href="/sandbox/tags/metaphorswithpurpose/" class="post-tag">MetaphorsWithPurpose</a></li>
-</ul>
-
-<p><span style="font-size:2em; text-weight:strong">As</span> a young fella, I was always scared of the dark, scared of the unknowns that lurk in the darkest corners of the room.</p>
+  <p><span style="font-size:2em; text-weight:strong">As</span> a young fella, I was always scared of the dark, scared of the unknowns that lurk in the darkest corners of the room.</p>
 <p>I'd lay there trying to sleep, my brain with its Nikes laced up, ready to bolt. Realising that sleep was something I couldn't catch - I built myself a mechanism to clear my mind - the simplest of mechanisms: a metaphor.</p>
 <p>With my eyes closed, I’d imagine myself in the back seat of a car. It's night-time. I'm looking through the windscreen. The road's blurry with heavy rain. Even with the headlights on, it’s hard to see.</p>
 <p>And those irrational fears? They’re stuck inside the beads of water rolling across my vision like they’re right in front of me.<br>
@@ -918,7 +937,7 @@ But by turning on the wipers, you’ve now got clarity. You never forgot how to 
 		</footer>
 		<script src="https://unpkg.com/lucide@latest"></script>
 		
-		<!-- This page `/articles/Windshield Wipers/` was built on 2025-06-26T11:55:10.187Z -->
+		<!-- This page `/articles/Windshield Wipers/` was built on 2025-06-26T14:40:57.781Z -->
 		<script type="module" src="/sandbox/dist/V6OKUKOoxV.js"></script>
 	</body>
 </html>

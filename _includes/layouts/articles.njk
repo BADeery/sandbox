@@ -22,6 +22,12 @@
           {% if post.date %}
             <p class="post-date">{{ post.date | auDate("dd-MMM-yyyy") }}</p>
           {% endif %}
+
+          <div class="flex-spacer"></div>
+
+          <p class="card-read-time">
+            <i data-lucide="clock"></i> {{ post.templateContent | readingTime }} read
+          </p>
         </article>
       {% endfor %}
     </div>
