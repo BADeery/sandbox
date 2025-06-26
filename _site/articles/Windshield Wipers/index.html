@@ -145,7 +145,7 @@ a[href]:active {
 blockquote {
   margin: 1.5rem 1.5rem;
   padding-left: 1rem;
-  border-left: 3px solid #a882ff;;
+  border-left: 3px solid #a882ff;
   font-style: italic;
 }
 
@@ -508,10 +508,11 @@ header {
 }
 
 .identity-callout {
-  margin-left: 1.5rem;
+  text-align: center;
   font-style: italic;
   font-weight: 600;
-  opacity: 1;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
 }
 
 .main-block {
@@ -551,13 +552,6 @@ header {
     margin: 0 auto;
   }
 
-  blockquote {
-  margin: 1.5rem 1.5rem;
-  padding-left: 1rem;
-  border-left: 3px solid #a882ff;;
-  font-style: italic;
-}
-
   .float-image {
     float: right;
     width: 30%;
@@ -582,6 +576,10 @@ header {
     text-align: left;
     overflow-x: hidden;
   }
+  .quip-tooltip {
+    background-color: #222;
+    color: #fff;
+  }
 }
 
 .quip-wrapper {
@@ -591,7 +589,7 @@ header {
   font-size: 0.65em;
   margin-left: 0.15em;
   cursor: help;
-  opacity: 1;
+  color: rgba(168, 130, 255, 0.9); /* subtle caret tint */
 }
 
 .quip-wrapper:hover,
@@ -608,13 +606,17 @@ header {
   transform: translateX(-50%);
   background-color: #222;
   color: #fff;
-  font-size: .9rem;
+  font-size: 0.75rem;
   padding: 0.35em 0.6em;
   border-radius: 4px;
   white-space: nowrap;
+  word-break: normal;
   z-index: 10;
   transition: opacity 0.2s ease;
   pointer-events: none;
+  min-width: unset;
+  max-width: 220px;
+  text-align: center;
 }
 
 .quip-wrapper:hover .quip-tooltip,
@@ -623,9 +625,31 @@ header {
   opacity: 1;
 }
 
+
 .bumpdown {
   margin-top: 2rem;
 }
+
+.sandbox-welcome{
+  font-size: 1.8rem;
+  text-align: center;
+  padding: .75rem;
+  color:navajowhite;
+}
+
+/* ─── Utility Classes ─── */
+
+/* --- Text Alignment --- */
+
+.text-center { text-align: center; }
+.l-indent-half { margin-left: 0.5rem; }
+
+/* --- Colors --- */
+.color-navajowhite { color: navajowhite; }
+.color-indianred { color: indianred; }
+.color-affirm{ color: #5fae6e; }
+.color-muted{ color:#888;}
+.color-red{ color: red;}
 /**
  * okaidia theme for JavaScript, CSS and HTML
  * Loosely based on Monokai textmate theme by http://www.monokai.nl/
@@ -794,6 +818,13 @@ pre[class*="language-diff-"] {
 	text-decoration: none; /* override del, ins, mark defaults */
 	color: inherit; /* override del, ins, mark defaults */
 }</style>
+	<!-- Open Graph -->
+		<meta property="og:title" content="BDs Sandbox">
+		<meta property="og:description" content="Where grains of thought can become sandmansions">
+		<meta property="og:image" content="imgs/BDs-sandbox.png">
+		<meta property="og:url" content="https://badeery.github.io/sandbox">
+		<meta property="og:type" content="website">
+	
 	</head>
 	<body>
 		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
@@ -831,16 +862,16 @@ pre[class*="language-diff-"] {
 </ul>
 
 <p><span style="font-size:2em; text-weight:strong">As</span> a young fella, I was always scared of the dark, scared of the unknowns that lurk in the darkest corners of the room.</p>
-<p>I'd lay there trying to sleep, my brain with its Nikes laced up, ready to bolt. Realising that sleep was something I couldn't catch — I built myself a mechanism to clear my mind — the simplest of mechanisms: a metaphor.</p>
+<p>I'd lay there trying to sleep, my brain with its Nikes laced up, ready to bolt. Realising that sleep was something I couldn't catch - I built myself a mechanism to clear my mind - the simplest of mechanisms: a metaphor.</p>
 <p>With my eyes closed, I’d imagine myself in the back seat of a car. It's night-time. I'm looking through the windscreen. The road's blurry with heavy rain. Even with the headlights on, it’s hard to see.</p>
 <p>And those irrational fears? They’re stuck inside the beads of water rolling across my vision like they’re right in front of me.<br>
-But then, I’d turn the windscreen wipers on, and every few seconds, they’d cut through the raindrops with clinical precision — clearing the view once again.</p>
+But then, I’d turn the windscreen wipers on, and every few seconds, they’d cut through the raindrops with clinical precision - clearing the view once again.</p>
 <p>That image stuck.<br>
 And I still use it today.</p>
 <hr>
-<p>Those raindrops — the thoughts — they're the images of failure, the awkward jokes that fell flat, the concerns that it’s getting late and the motel down the road might not be open.</p>
+<p>Those raindrops - the thoughts - they're the images of failure, the awkward jokes that fell flat, the concerns that it’s getting late and the motel down the road might not be open.</p>
 <p>But there’s no point getting emotional at the sky. Weather is the last thing that will ever surrender control to us mere mortals.</p>
-<p>The motel? Who cares. You just need to worry about staying on the road. If it’s not open — you’ll figure it out like you always do.</p>
+<p>The motel? Who cares. You just need to worry about staying on the road. If it’s not open - you’ll figure it out like you always do.</p>
 <p>All that needs to be done right now is to anticipate that next swipe of the blades, watching those thoughts cut shapes across the windscreen until they’re swept away.</p>
 <blockquote>
 <p>And when the rain gets heavier?<br>
@@ -853,20 +884,18 @@ Life is like riding a bike: momentum equals balance, balance equals momentum.<br
 To get ahead, just get started. And if you can’t walk? Then crawl.</p>
 <p>Often, the thoughts that smash our windscreen make the idea of moving forward feel almost unachievable.</p>
 <p>But by focusing on those droplets, the wipers, they bring clarity.</p>
-<p>Not all at once, not forever — just enough to keep moving forward. Just enough to slow your thoughts so you can fall asleep tonight.</p>
+<p>Not all at once, not forever - just enough to keep moving forward. Just enough to slow your thoughts so you can fall asleep tonight.</p>
 <blockquote>
-<p>“Even when the storm is intense — there’s always a moment of clarity between the swipes.”</p>
+<p>“Even when the storm is intense - there’s always a moment of clarity between the swipes.”</p>
 </blockquote>
 <hr>
 <p>I don't consider this to be avoidance.</p>
-<p>It's clearing your viewpoint <em>for now</em> — to get the rest you need, to gain the clarity required to identify the next step.</p>
+<p>It's clearing your viewpoint <em>for now</em> - to get the rest you need, to gain the clarity required to identify the next step.</p>
 <hr>
 <p>The journey doesn’t always get easier.<br>
-But by turning on the wipers, you’ve now got clarity. You never forgot how to drive — you just know how to do it in the rain.</p>
+But by turning on the wipers, you’ve now got clarity. You never forgot how to drive - you just know how to do it in the rain.</p>
 <hr>
 
-<ul class="links-nextprev"><li class="links-nextprev-prev">← Previous<br> <a href="/sandbox/articles/fourthpost/">My Fourth Post</a></li>
-</ul>
 
 		</main>
 
@@ -877,8 +906,7 @@ But by turning on the wipers, you’ve now got clarity. You never forgot how to 
 		</footer>
 		<script src="https://unpkg.com/lucide@latest"></script>
 		
-		<!-- This page `/articles/Windshield Wipers/` was built on 2025-06-25T09:34:03.595Z -->
+		<!-- This page `/articles/Windshield Wipers/` was built on 2025-06-26T11:20:20.780Z -->
 		<script type="module" src="/sandbox/dist/V6OKUKOoxV.js"></script>
-		
 	</body>
 </html>

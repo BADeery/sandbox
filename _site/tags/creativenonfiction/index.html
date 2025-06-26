@@ -145,7 +145,7 @@ a[href]:active {
 blockquote {
   margin: 1.5rem 1.5rem;
   padding-left: 1rem;
-  border-left: 3px solid #a882ff;;
+  border-left: 3px solid #a882ff;
   font-style: italic;
 }
 
@@ -508,10 +508,11 @@ header {
 }
 
 .identity-callout {
-  margin-left: 1.5rem;
+  text-align: center;
   font-style: italic;
   font-weight: 600;
-  opacity: 1;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
 }
 
 .main-block {
@@ -551,13 +552,6 @@ header {
     margin: 0 auto;
   }
 
-  blockquote {
-  margin: 1.5rem 1.5rem;
-  padding-left: 1rem;
-  border-left: 3px solid #a882ff;;
-  font-style: italic;
-}
-
   .float-image {
     float: right;
     width: 30%;
@@ -582,6 +576,10 @@ header {
     text-align: left;
     overflow-x: hidden;
   }
+  .quip-tooltip {
+    background-color: #222;
+    color: #fff;
+  }
 }
 
 .quip-wrapper {
@@ -591,7 +589,7 @@ header {
   font-size: 0.65em;
   margin-left: 0.15em;
   cursor: help;
-  opacity: 1;
+  color: rgba(168, 130, 255, 0.9); /* subtle caret tint */
 }
 
 .quip-wrapper:hover,
@@ -608,13 +606,17 @@ header {
   transform: translateX(-50%);
   background-color: #222;
   color: #fff;
-  font-size: .9rem;
+  font-size: 0.75rem;
   padding: 0.35em 0.6em;
   border-radius: 4px;
   white-space: nowrap;
+  word-break: normal;
   z-index: 10;
   transition: opacity 0.2s ease;
   pointer-events: none;
+  min-width: unset;
+  max-width: 220px;
+  text-align: center;
 }
 
 .quip-wrapper:hover .quip-tooltip,
@@ -623,9 +625,38 @@ header {
   opacity: 1;
 }
 
+
 .bumpdown {
   margin-top: 2rem;
-}</style>
+}
+
+.sandbox-welcome{
+  font-size: 1.8rem;
+  text-align: center;
+  padding: .75rem;
+  color:navajowhite;
+}
+
+/* ─── Utility Classes ─── */
+
+/* --- Text Alignment --- */
+
+.text-center { text-align: center; }
+.l-indent-half { margin-left: 0.5rem; }
+
+/* --- Colors --- */
+.color-navajowhite { color: navajowhite; }
+.color-indianred { color: indianred; }
+.color-affirm{ color: #5fae6e; }
+.color-muted{ color:#888;}
+.color-red{ color: red;}</style>
+	<!-- Open Graph -->
+		<meta property="og:title" content="BDs Sandbox">
+		<meta property="og:description" content="Where grains of thought can become sandmansions">
+		<meta property="og:image" content="imgs/BDs-sandbox.png">
+		<meta property="og:url" content="https://badeery.github.io/sandbox">
+		<meta property="og:type" content="website">
+	
 	</head>
 	<body>
 		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
@@ -665,8 +696,7 @@ header {
 		</footer>
 		<script src="https://unpkg.com/lucide@latest"></script>
 		
-		<!-- This page `/tags/creativenonfiction/` was built on 2025-06-25T09:34:03.614Z -->
+		<!-- This page `/tags/creativenonfiction/` was built on 2025-06-26T11:20:20.768Z -->
 		<script type="module" src="/sandbox/dist/V6OKUKOoxV.js"></script>
-		
 	</body>
 </html>

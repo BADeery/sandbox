@@ -37,6 +37,13 @@
 		{#- <link rel="stylesheet" href="{% getBundleFileUrl "css" %}"> #}
 
 		{#- Add the heading-anchors web component to the JavaScript bundle #}
+	<!-- Open Graph -->
+		<meta property="og:title" content="BDs Sandbox" />
+		<meta property="og:description" content="Where grains of thought can become sandmansions" />
+		<meta property="og:image" content="imgs/BDs-sandbox.png" />
+		<meta property="og:url" content="https://badeery.github.io/sandbox" />
+		<meta property="og:type" content="website" />
+	
 	</head>
 	<body>
 		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
@@ -70,6 +77,5 @@
 		</script>
 		<!-- This page `{{ page.url }}` was built on {% currentBuildDate %} -->
 		<script type="module" src="{% getBundleFileUrl "js" %}"></script>
-		</footer>
 	</body>
 </html>
