@@ -444,9 +444,25 @@ header {
 }
 
 .description,
-.post-date {
+.post-date,
+.card-read-time {
   color: var(--text-color);
 }
+
+.flex-spacer {
+  flex-grow: 1;
+}
+
+.card-read-time {
+  font-size: 0.75rem;
+  opacity: 0.7;
+  align-self: flex-end;
+  margin-top: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
 
 .typewriter {
   color: var(--text-color);
@@ -708,6 +724,12 @@ header {
           
             <p class="post-date">26-Jun-2025</p>
           
+
+          <div class="flex-spacer"></div>
+
+          <p class="card-read-time">
+            <i data-lucide="clock"></i> 2 min read
+          </p>
         </article>
       
     </div>
@@ -722,7 +744,7 @@ header {
 		</footer>
 		<script src="https://unpkg.com/lucide@latest"></script>
 		
-		<!-- This page `/articles/` was built on 2025-06-26T12:01:32.980Z -->
+		<!-- This page `/articles/` was built on 2025-06-26T14:43:30.473Z -->
 		<script type="module" src="/sandbox/dist/V6OKUKOoxV.js"></script>
 	</body>
 </html>
