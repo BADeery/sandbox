@@ -145,7 +145,7 @@ a[href]:active {
 blockquote {
   margin: 1.5rem 1.5rem;
   padding-left: 1rem;
-  border-left: 3px solid #a882ff;;
+  border-left: 3px solid #a882ff;
   font-style: italic;
 }
 
@@ -508,10 +508,11 @@ header {
 }
 
 .identity-callout {
-  margin-left: 1.5rem;
+  text-align: center;
   font-style: italic;
   font-weight: 600;
-  opacity: 1;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
 }
 
 .main-block {
@@ -551,13 +552,6 @@ header {
     margin: 0 auto;
   }
 
-  blockquote {
-  margin: 1.5rem 1.5rem;
-  padding-left: 1rem;
-  border-left: 3px solid #a882ff;;
-  font-style: italic;
-}
-
   .float-image {
     float: right;
     width: 30%;
@@ -582,6 +576,10 @@ header {
     text-align: left;
     overflow-x: hidden;
   }
+  .quip-tooltip {
+    background-color: #222;
+    color: #fff;
+  }
 }
 
 .quip-wrapper {
@@ -591,7 +589,7 @@ header {
   font-size: 0.65em;
   margin-left: 0.15em;
   cursor: help;
-  opacity: 1;
+  color: rgba(168, 130, 255, 0.9); /* subtle caret tint */
 }
 
 .quip-wrapper:hover,
@@ -608,13 +606,17 @@ header {
   transform: translateX(-50%);
   background-color: #222;
   color: #fff;
-  font-size: .75rem;
+  font-size: 0.75rem;
   padding: 0.35em 0.6em;
   border-radius: 4px;
   white-space: nowrap;
+  word-break: normal;
   z-index: 10;
   transition: opacity 0.2s ease;
   pointer-events: none;
+  min-width: unset;
+  max-width: 220px;
+  text-align: center;
 }
 
 .quip-wrapper:hover .quip-tooltip,
@@ -623,9 +625,38 @@ header {
   opacity: 1;
 }
 
+
 .bumpdown {
   margin-top: 2rem;
-}</style>
+}
+
+.sandbox-welcome{
+  font-size: 1.8rem;
+  text-align: center;
+  padding: .75rem;
+  color:navajowhite;
+}
+
+/* ─── Utility Classes ─── */
+
+/* --- Text Alignment --- */
+
+.text-center { text-align: center; }
+.l-indent-half { margin-left: 0.5rem; }
+
+/* --- Colors --- */
+.color-navajowhite { color: navajowhite; }
+.color-indianred { color: indianred; }
+.color-affirm{ color: #5fae6e; }
+.color-muted{ color:#888;}
+.color-red{ color: red;}</style>
+	<!-- Open Graph -->
+		<meta property="og:title" content="BDs Sandbox">
+		<meta property="og:description" content="Where grains of thought can become sandmansions">
+		<meta property="og:image" content="imgs/BDs-sandbox.png">
+		<meta property="og:url" content="https://badeery.github.io/sandbox">
+		<meta property="og:type" content="website">
+	
 	</head>
 	<body>
 		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
@@ -652,11 +683,11 @@ header {
     <p><i data-lucide="brain"></i> I’m an everything-thinker who finds peace amongst the chaos.</p>
     <p><i data-lucide="wrench" class="icon-adjust"></i> I consider myself a Swiss Army Knife<span class="quip-wrapper" tabindex="0">
   ^<span class="quip-tooltip">I mean, my name isn't Jack anyway</span></span> - I'm great at a lot of things - but I know when to hand it off to an expert.</p>
-    <p style="text-align:center">My brain wears Nikes.<span class="quip-wrapper" tabindex="0">
+    <p class="text-center">My brain wears Nikes.<span class="quip-wrapper" tabindex="0">
   ^<span class="quip-tooltip">Because its always running</span></span></p>
     <p><i data-lucide="help-circle"></i> I'm comfortable wrestling two-truths at once. Discomfort is where we grow. I like to think I can simplify complexity - cutting through the noise to find what actually matters.</p>
     <p><i data-lucide="zap"></i> I think deeply, explore broadly, and often ask too many questions. I'm a bit of an anarchist in all the right ways (your grandmother loves me).</p>
-    <p><i data-lucide="flame"></i> That being said, sometimes being a menace is a <em style="color:indianred">me</em> problem - but sometimes, it isn’t always <em style="color:indianred">my</em> problem.</p>
+    <p><i data-lucide="flame"></i> That being said, sometimes being a menace is a <em class="color-indiandred">me</em> problem - but sometimes, it isn’t always <em class="color-indiandred">my</em> problem.</p>
     <hr>
     <h2 id="wired-differently"><i data-lucide="circuit-board"></i> Wired Differently</h2>
     <p>Somewhere along the way, I came to understand that I’m twice-exceptional (2e) - a term used for those who are both Gifted and have another neurodivergent trait. For me, it's Giftedness + ADHD.</p>
@@ -671,17 +702,18 @@ header {
     <p>Because of this, I don’t always slot neatly into systems - I need to understand them, test them, sometimes even reassemble them before they make sense enough to use. Forever guided by curiosity and instinct.</p>
     <p>Put simply, I just see and interact with the world differently.</p>
     <p class="identity-callout">
-      <span style="color: #5fae6e;">Wiring? Sure.</span> 
-      <span style="color: #888;"> Identity? Nah.</span>
-    </p><hr>
-    <h2 style="margin-left: .50rem" id="sandbox-mode-on"><i data-lucide="toggle-right"></i> Sandbox Mode: On</h2>
+      <span class="color-affirm">Wiring? Sure.</span> 
+      <span class="color-muted"> Identity? Nah.</span>
+    </p>
+    <hr>
+    <h2 class="l-indent-half" id="sandbox-mode-on"><i data-lucide="toggle-right"></i> Sandbox Mode: On</h2>
     <p><i data-lucide="globe"></i> This site is a sandbox. A place to post ideas, reflections, stories, and frameworks - from the messy ones to the methodical ones.</p>
     <blockquote>
       Sometimes they're written on a napkin.<br>  
       Sometimes they're blueprints.
     </blockquote>
-    <p><i data-lucide="mail"></i> If something I write clicks, stick around - I can be quite endearing when I’m not being difficult. <a href="/sandbox/contact">Say g'day</a> if you feel like it. If not, no stress - there’s an <i data-lucide="x" style="color:red"></i>right up there in the corner of your browser. Feel free to use it.</p>
-    <p style="font-size:1.8rem; text-align:center; padding:0.75rem; color:navajowhite;">Welcome to my sandbox.</p>
+    <p><i data-lucide="mail"></i> If something I write clicks, stick around - I can be quite endearing when I’m not being difficult. <a href="https://www.linkedin.com/in/ben-deery" target="_blank" rel="noopener">Say g'day</a> if you feel like it. If not, no stress - there’s an <i data-lucide="x" class="color-red"></i>right up there in the corner of your browser. Feel free to use it.</p>
+    <p class="sandbox-welcome">Welcome to my sandbox.</p>
   </article>
 </section>
 
@@ -694,8 +726,7 @@ header {
 		</footer>
 		<script src="https://unpkg.com/lucide@latest"></script>
 		
-		<!-- This page `/` was built on 2025-06-25T22:06:23.109Z -->
+		<!-- This page `/` was built on 2025-06-26T11:24:22.463Z -->
 		<script type="module" src="/sandbox/dist/V6OKUKOoxV.js"></script>
-		
 	</body>
 </html>
