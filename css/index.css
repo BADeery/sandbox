@@ -576,8 +576,15 @@ header {
   font-size: 0.65em;
   margin-left: 0.15em;
   cursor: help;
-  color: rgba(168, 130, 255, 0.9); /* subtle caret tint */
+  color: #7c4dff;
 }
+
+@media (prefers-color-scheme: dark) {
+  .quip-wrapper {
+    color: rgba(168, 130, 255, 0.9);
+  }
+}
+
 
 .quip-wrapper:hover,
 .quip-wrapper:focus {
@@ -612,7 +619,6 @@ header {
   opacity: 1;
 }
 
-
 .bumpdown {
   margin-top: 2rem;
 }
@@ -621,7 +627,13 @@ header {
   font-size: 1.8rem;
   text-align: center;
   padding: .75rem;
-  color:navajowhite;
+  color: #a86b26;
+}
+
+@media (prefers-color-scheme: dark) {
+  .sandbox-welcome {
+    color: navajowhite;
+  }
 }
 
 /* ─── Utility Classes ─── */
