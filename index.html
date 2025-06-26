@@ -589,8 +589,15 @@ header {
   font-size: 0.65em;
   margin-left: 0.15em;
   cursor: help;
-  color: rgba(168, 130, 255, 0.9); /* subtle caret tint */
+  color: #7c4dff;
 }
+
+@media (prefers-color-scheme: dark) {
+  .quip-wrapper {
+    color: rgba(168, 130, 255, 0.9);
+  }
+}
+
 
 .quip-wrapper:hover,
 .quip-wrapper:focus {
@@ -625,7 +632,6 @@ header {
   opacity: 1;
 }
 
-
 .bumpdown {
   margin-top: 2rem;
 }
@@ -634,7 +640,13 @@ header {
   font-size: 1.8rem;
   text-align: center;
   padding: .75rem;
-  color:navajowhite;
+  color: #a86b26;
+}
+
+@media (prefers-color-scheme: dark) {
+  .sandbox-welcome {
+    color: navajowhite;
+  }
 }
 
 /* ─── Utility Classes ─── */
@@ -653,7 +665,7 @@ header {
 	<!-- Open Graph -->
 		<meta property="og:title" content="BDs Sandbox">
 		<meta property="og:description" content="Where grains of thought can become sandmansions">
-		<meta property="og:image" content="imgs/BDs-sandbox.png">
+		<meta property="og:image" content="sandbox/imgs/BDs-sandbox.png">
 		<meta property="og:url" content="https://badeery.github.io/sandbox">
 		<meta property="og:type" content="website">
 	
@@ -726,7 +738,7 @@ header {
 		</footer>
 		<script src="https://unpkg.com/lucide@latest"></script>
 		
-		<!-- This page `/` was built on 2025-06-26T11:24:22.463Z -->
+		<!-- This page `/` was built on 2025-06-26T11:50:25.992Z -->
 		<script type="module" src="/sandbox/dist/V6OKUKOoxV.js"></script>
 	</body>
 </html>
