@@ -15,7 +15,7 @@ eleventyNavigation:
     <img src="./imgs/BD-sm.JPG" alt="Ben" class="float-image">
     <p><i data-lucide="brain"></i> I’m an everything-thinker who finds peace amongst the chaos.</p>
     <p><i data-lucide="wrench" class="icon-adjust"></i> I consider myself a Swiss Army Knife{% quip "I mean, my name isn't Jack anyway" %} - I'm great at a lot of things - but I know when to hand it off to an expert.</p>
-    <p class="text-center">My brain wears Nikes.{% quip "Because its always running" %}</p>
+    <p class="nikes">My brain wears Nikes.{% quip "Because its always running" %}</p>
     <p><i data-lucide="help-circle"></i> I'm comfortable wrestling two-truths at once. Discomfort is where we grow. I like to think I can simplify complexity - cutting through the noise to find what actually matters.</p>
     <p><i data-lucide="zap"></i> I think deeply, explore broadly, and often ask too many questions. I'm a bit of an anarchist in all the right ways (your grandmother loves me).</p>
     <p><i data-lucide="flame"></i> That being said, sometimes being a menace is a <em class="color-indiandred">me</em> problem - but sometimes, it isn’t always <em class="color-indiandred">my</em> problem.</p>

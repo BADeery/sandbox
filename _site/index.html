@@ -17,6 +17,8 @@
 	--font-family-monospace:  Courier Prime, monospace;
   --font-family-heading: 'Space Mono', 'sans-serif', monospace;
   --font-weight-normal:550;
+  --font-size-base: 1.1rem;
+  --line-height-base: 1.5p;
 }
 
 /* Theme colors */
@@ -31,6 +33,10 @@
   --text-color-h1: #2a2a2a;
   --text-color-h2: #2a2a2a;
   --text-color-h3: #2a2a2a;
+  --quip-color: #7c4dff;
+  --sandbox-color: #a86b26; 
+  --quip-a:  #14b89d;
+  --quip-b: #ff6978;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -45,6 +51,9 @@
     --text-color-h1:   #e0e0e0;
     --text-color-h2: #e0e0e0;
     --text-color-h3: #e0e0e0;
+    --quip-color: rgba(168, 130, 255, 0.9);
+    --sandbox-color: navajowhite;
+     
   }
 }
 
@@ -65,18 +74,18 @@
 }
 
 
-html,
-body {
-	padding: 0;
-	max-width: 1000px;
-	margin: 0 auto;
-	font-family: var(--font-family-body);
+html, body {
+  margin: 0 auto;
+  padding: 0;
+  max-width: 1000px;
+  font-family: var(--font-family-body);
   font-weight: var(--font-weight-normal);
-	color: var(--text-color);
-	background-color: var(--background-color);
-	font-size: 1rem;
-	line-height: 1;
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+  color: var(--text-color);
+  background-color: var(--background-color);
 }
+
 html {
 	overflow-y: scroll;
 }
@@ -117,14 +126,18 @@ p:last-child {
 	margin-bottom: 0;
 }
 
+/* Indent all paragraphs from headings */
 p {
-	line-height: 1.5;
-  margin-left: .65rem;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.bio-block p {
+  margin-left: 0.65rem;
 }
 
 p + p{
   margin-top: .75em;
-  margin-bottom: .75em;
 }
 
 li {
@@ -150,7 +163,7 @@ blockquote {
 }
 
 strong {
-  color: var(--text-color-strong);
+  font-weight: 700;
 }
 
 h1 i[data-lucide],
@@ -383,8 +396,14 @@ header {
 	margin-right: 1em;
 }
 
+.article-intro{
+  font-size: var(--font-size-base);
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
 .articles {
-  padding: 0 2.2rem;
+  padding: 1rem;
 }
 
 .articles-grid {
@@ -402,9 +421,7 @@ header {
   border-radius: 1rem;
   padding: 1.25rem;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07); /* Softer and more modern */
-  
   height: auto;
-  min-height: 240px;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -453,21 +470,11 @@ header {
   flex-grow: 1;
 }
 
-.card-read-time {
-  font-size: 0.75rem;
-  opacity: 0.7;
-  align-self: flex-end;
-  margin-top: 0.5rem;
-  display: flex;
-  align-items: center;
-  gap: 0.3rem;
-}
-
 .post-footer-meta-row {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 0.75rem;
+  font-size: 0.9rem;
   opacity: 0.7;
   margin-top: 0.5rem;
   flex-wrap: nowrap;
@@ -480,9 +487,7 @@ header {
   display: flex;
   align-items: center;
   gap: 0.3rem;
-  color: var(--text-color);
 }
-
 
 .typewriter {
   color: var(--text-color);
@@ -537,7 +542,7 @@ header {
   width: 1.25rem;
   height: 1.25rem;
   stroke-width: 2;
-  color: var(--text-color);
+  color: inherit;
   vertical-align: middle;
   margin-right: 0.4rem;
   margin-bottom: .25rem
@@ -616,6 +621,14 @@ header {
     background-color: #222;
     color: #fff;
   }
+
+  .article-tag-line {
+    gap: 0.2rem 0.5rem;
+  }
+
+  .article-intro p{
+    margin-left: 0;
+  }
 }
 
 .quip-wrapper {
@@ -625,15 +638,8 @@ header {
   font-size: 0.65em;
   margin-left: 0.15em;
   cursor: help;
-  color: #7c4dff;
+  color: var(--quip-color);
 }
-
-@media (prefers-color-scheme: dark) {
-  .quip-wrapper {
-    color: rgba(168, 130, 255, 0.9);
-  }
-}
-
 
 .quip-wrapper:hover,
 .quip-wrapper:focus {
@@ -676,30 +682,57 @@ header {
   font-size: 1.8rem;
   text-align: center;
   padding: .75rem;
-  color: #a86b26;
+  color: var(--sandbox-color);
 }
 
-@media (prefers-color-scheme: dark) {
-  .sandbox-welcome {
-    color: navajowhite;
-  }
+.article-chevron {
+  display: inline-block;
+  vertical-align: baseline;
+  height: 1em;
+  width: 1em;
+  stroke-width: 2;
+  margin: 0 0.2rem;
+  color: var(--quip-color);
+}
+.article-chevron svg{
+  stroke: currentColor;
+}
+
+.article-tag-line {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.4rem 0.75rem;
+  margin: 1.5rem auto 1rem;
+  font-style: italic;
+  font-weight: 600;
+  max-width: 90%;
+}
+
+.article-tag-line span {
+  white-space: nowrap;
+}
+
+.nikes{
+   text-align: center;
+   font-weight: 600; 
 }
 
 /* ─── Utility Classes ─── */
 
 /* --- Text Alignment --- */
 
-.text-center { text-align: center; }
+
 .l-indent-half { margin-left: 0.5rem; }
 
-/* --- Colors --- */
-.color-navajowhite { color: navajowhite; }
+/* --- Colors --- that work with both light and dark mode */
 .color-indianred { color: indianred; }
 .color-affirm{ color: #5fae6e; }
 .color-muted{ color:#888;}
 .color-red{ color: red;}</style>
 	<!-- Open Graph -->
-		<meta property="og:title" content="BDs Sandbox">
+		<meta property="og:title" content="BD's Sandbox">
 		<meta property="og:description" content="Where grains of thought can become sandmansions">
 		<meta property="og:image" content="/sandbox/imgs/BDs-Sandboxv2.png">
 		<meta property="og:url" content="https://badeery.github.io/sandbox">
@@ -731,7 +764,7 @@ header {
     <p><i data-lucide="brain"></i> I’m an everything-thinker who finds peace amongst the chaos.</p>
     <p><i data-lucide="wrench" class="icon-adjust"></i> I consider myself a Swiss Army Knife<span class="quip-wrapper" tabindex="0">
   ^<span class="quip-tooltip">I mean, my name isn't Jack anyway</span></span> - I'm great at a lot of things - but I know when to hand it off to an expert.</p>
-    <p class="text-center">My brain wears Nikes.<span class="quip-wrapper" tabindex="0">
+    <p class="nikes">My brain wears Nikes.<span class="quip-wrapper" tabindex="0">
   ^<span class="quip-tooltip">Because its always running</span></span></p>
     <p><i data-lucide="help-circle"></i> I'm comfortable wrestling two-truths at once. Discomfort is where we grow. I like to think I can simplify complexity - cutting through the noise to find what actually matters.</p>
     <p><i data-lucide="zap"></i> I think deeply, explore broadly, and often ask too many questions. I'm a bit of an anarchist in all the right ways (your grandmother loves me).</p>
@@ -774,7 +807,7 @@ header {
 		</footer>
 		<script src="https://unpkg.com/lucide@latest"></script>
 		
-		<!-- This page `/` was built on 2025-06-27T03:08:06.058Z -->
+		<!-- This page `/` was built on 2025-06-27T10:17:02.564Z -->
 		<script type="module" src="/sandbox/dist/V6OKUKOoxV.js"></script>
 	</body>
 </html>

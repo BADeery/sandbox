@@ -38,9 +38,9 @@ All that needs to be done right now is to anticipate that next swipe of the blad
 You just crank the pace up on those bad boys and clear the windscreen even quicker.
 
 Life is about momentum.  
-_A rolling stone gathers no moss._  
-Life is like riding a bike: momentum equals balance, balance equals momentum.  
-To get ahead, just get started. And if you can’t walk? Then crawl.
+_A rolling stone gathers no moss._ 
+_Life is like riding a bike: momentum equals balance, balance equals momentum._  
+_To get ahead, just get started. And if you can’t walk? Then crawl._
 
 Often, the thoughts that smash our windscreen make the idea of moving forward feel almost unachievable.
 
