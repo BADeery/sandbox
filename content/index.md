@@ -8,9 +8,11 @@ eleventyNavigation:
 ---
 
 <section class="main-block">
-  <div>
-    <h1><span class="typewriter"><i data-lucide="hand"></i> Hi, I'm Ben.</span></h1>
-  </div>
+  <h1 class="typewriter-heading">
+    <span class="typewriter">
+      <i data-lucide="hand"></i> Hi, I'm Ben.
+    </span>
+  </h1>  
   <article class="bio-block">
     <img src="./imgs/BD-sm.JPG" alt="Ben" class="float-image">
     <p><i data-lucide="brain"></i> I’m an everything-thinker who finds peace amongst the chaos.</p>
