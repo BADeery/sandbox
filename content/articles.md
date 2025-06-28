@@ -13,17 +13,23 @@ noAnchor: true
 </p>
 
 <div class="article-tag-line">
-  <span style="color:var(--quip-a)">Helpful?</span>
-  <span style="color:var(--text-color)">Occasionally.</span>
-  <span style="color:var(--quip-a)">On track?</span>
-  <span style="color:var(--text-color)">Questionable.</span>
-  <span style="color:var(--quip-a)">Charming?</span>
-  <span style="color:var(--quip-b)">Obviously.</span>
+  <span class="tag-line-initial">
+    <span class="tag-q">Helpful?</span>
+    <span class="tag-a">Occasionally.</span>
+    <span class="tag-q">On topic?</span>
+    <span class="tag-a">Questionable.</span>
+  </span>
+  <span class="tag-line-final">
+    <span class="tag-q">Charming?</span>
+    <span class="tag-a tag-a--highlight">Obviously.</span>
+  </span>
 </div>
+
 
 <hr>
 
-<p>Regarding my articles - Some go deep. Some go sideways. All of them go somewhere.</p>
+<p>Regarding my articles — Some go deep. Some go sideways. All of them go somewhere.</p>
+
 
 
 

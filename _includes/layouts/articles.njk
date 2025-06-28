@@ -1,11 +1,12 @@
 {% extends "layouts/base.njk" %}
 
 {% block content %}
-  <section class="articles">
+  <article class="main-block">
     <h1>Articles</h1>
-      <div class="article-intro">
+
+    <div class="article-intro">
         {{ content | safe}}
-      </div>
+    </div>
     
     <div class="articles-grid">
       {% for post in collections.posts | reverse %}
@@ -22,6 +23,8 @@
           {% if post.data.description %}
             <p class="excerpt">{{ post.data.description }}</p>
           {% endif %}
+
+
           <div class="flex-spacer"></div>
 
           <div class="post-footer-meta-row">
@@ -32,7 +35,6 @@
               <i data-lucide="clock"></i> {{ post.templateContent | readingTime }} read
             </span>
           </div>
-
         </article>
       {% endfor %}
     </div>

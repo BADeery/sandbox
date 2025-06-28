@@ -8,7 +8,7 @@ eleventyNavigation:
 ---
 
 <section class="main-block">
-  <div class="heading">
+  <div>
     <h1><span class="typewriter"><i data-lucide="hand"></i> Hi, I'm Ben.</span></h1>
   </div>
   <article class="bio-block">
