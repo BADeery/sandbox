@@ -29,7 +29,7 @@
   --text-color-link: #082840;
   --text-color-link-active: #5f2b48;
   --text-color-link-visited: #17050F;
-  --text-color-strong: #3f9ca0;
+  --text-color-strong: #ffffff;
   --text-color-h1: #2a2a2a;
   --text-color-h2: #2a2a2a;
   --text-color-h3: #2a2a2a;
@@ -47,7 +47,7 @@
     --text-color-link: #66d9ef;
     --text-color-link-active: #f92672;
     --text-color-link-visited: #ae81ff;
-    --text-color-strong: #397a84;
+    --text-color-strong: #ffffff;
     --text-color-h1:   #e0e0e0;
     --text-color-h2: #e0e0e0;
     --text-color-h3: #e0e0e0;
@@ -195,6 +195,7 @@ h1 {
   font-weight: 800;
   line-height: 1.2;
   margin: 2rem 0 1rem;
+  letter-spacing: .01em;
 }
 
 
@@ -216,7 +217,7 @@ h3 {
 
 hr {
   width: 75%;               /* leaves 12.5% on each side */
-  margin: 2rem auto;        /* centers it */
+  margin: 2rem auto;
   border: none;
   border-top: 1px solid var(--text-color); /* or your theme */
 }
@@ -421,6 +422,11 @@ header {
   gap: 1.5rem;
   margin-top: 2rem;
   padding: 0;
+  aspect-ratio: 1/1;
+  max-width: 310px;
+  margin-left: auto;
+  margin-right: auto;
+  
 }
 
 .article-card {
@@ -435,6 +441,7 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
 
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   overflow: hidden;
@@ -649,21 +656,13 @@ header {
     color: #fff;
   }
 
-  .article-tag-line {
-    font-size: 0.95rem;
-    line-height: 1.35;
+    .article-tag-line {
+    margin-top: .25rem;
+    margin-bottom: 0.25rem;
+    row-gap: .1rem; 
+    column-gap: .75rem;
   }
 
-  .tag-line-initial {
-    flex-wrap: wrap;
-    justify-content: center;
-    text-align: center;
-  }
-
-  .tag-line-final {
-    margin-top: 0.8rem;
-    white-space: normal; /* ← allow wrapping on mobile */
-  }
 }
 
 
@@ -737,49 +736,32 @@ header {
 
 .article-tag-line {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: row;
+  justify-content: center;
   font-style: italic;
   font-weight: 600;
-  margin: 1.5rem auto 1rem;
-  text-align: center;
-  width: 100%;
+  flex-wrap: wrap; 
+  row-gap: .1rem; 
+  column-gap: .75rem;
+  margin-bottom: 0;
 }
 
-.tag-line-initial {
+.tag-pair {
   display: flex;
-  justify-content: center;
   gap: 0.5rem;
-  flex-wrap: nowrap;
-  width: 100%;
-  max-width: 100%;
-}
-
-.tag-line-final {
-  margin-top: 0.5rem;
-  white-space: nowrap;
 }
 
 .tag-q {
   color: var(--quip-a);
-  white-space: nowrap;
 }
 
 .tag-a {
   color: var(--text-color);
-  white-space: nowrap;
 }
 
 .tag-a--highlight {
   color: var(--quip-b);
 }
-
-
-.tag-line-final {
-  flex-basis: 100%;
-  margin-top: 0.5rem;
-}
-
 
 .nikes{
    text-align: center;
@@ -807,6 +789,14 @@ header {
 
 html, body {
   overflow-x: hidden;
+} */
+
+/* .tag-pair {
+  outline: 1px solid lime;
+}
+
+.article-tag-line{
+  outline: 1px solid magenta;
 } */</style>
 	<!-- Open Graph -->
 		<meta property="og:title" content="BD's Sandbox">
@@ -838,7 +828,7 @@ html, body {
 <ol reversed="" class="postlist" style="--postlist-index: 2">
 	<li class="postlist-item">
 		<a href="/sandbox/articles/Windshield Wipers/" class="postlist-link">Windshield Wipers</a>
-		<time class="postlist-date" datetime="28-Jun-2025">28 06 2025</time>
+		<time class="postlist-date" datetime="29-Jun-2025">29 06 2025</time>
 	</li>
 </ol>
 
@@ -854,7 +844,7 @@ html, body {
 		</footer>
 		<script src="https://unpkg.com/lucide@latest"></script>
 		
-		<!-- This page `/tags/creativenonfiction/` was built on 2025-06-28T15:07:22.802Z -->
+		<!-- This page `/tags/creativenonfiction/` was built on 2025-06-29T03:41:44.713Z -->
 		<script type="module" src="/sandbox/dist/V6OKUKOoxV.js"></script>
 	</body>
 </html>
