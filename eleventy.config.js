@@ -94,6 +94,10 @@ export default async function(eleventyConfig) {
   ^<span class="quip-tooltip">${text}</span></span>`
   .trim();
   });
+  eleventyConfig.addShortcode("lucide", function(name) {
+  return `<i data-lucide="${name}"></i>`;
+  });
+
 
 }
 

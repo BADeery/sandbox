@@ -3,8 +3,7 @@
 title: Windshield Wipers 
 Date: 2025-06-24  
 layout: layouts/post.njk  
-description: A metaphor for staying functional in mental storms.  
-icon: wind  
+description: A metaphor for staying functional in mental storms. 
 tags:
 - posts
 - CreativeNonfiction
