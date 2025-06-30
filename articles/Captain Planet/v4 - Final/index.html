@@ -3,8 +3,8 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Tagged &#39;CreativeNonfiction&#39;</title>
-		<meta name="description" content="A sandbox for me to write and play.">
+		<title>Captain Planet vs. Emissions = Win?</title>
+		<meta name="description" content="Could a mulleted cartoon from the &#39;90s have quietly influenced a generation better our environment? Maybe it&#39;s time for a reboot?">
 		<link rel="stylesheet" href="/sandbox/css/index.css">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Space+Mono|Muli|Oswald|Noto+Sans&display=swap">
 		
@@ -809,7 +809,175 @@ html, body {
 
 .article-tag-line{
   outline: 1px solid magenta;
-} */</style>
+} */
+/**
+ * okaidia theme for JavaScript, CSS and HTML
+ * Loosely based on Monokai textmate theme by http://www.monokai.nl/
+ * @author ocodia
+ */
+
+code[class*="language-"],
+pre[class*="language-"] {
+	color: #f8f8f2;
+	background: none;
+	text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	font-size: 1em;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	line-height: 1.5;
+
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+	padding: 1em;
+	margin: .5em 0;
+	overflow: auto;
+	border-radius: 0.3em;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+	background: #272822;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+	padding: .1em;
+	border-radius: .3em;
+	white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: #8292a2;
+}
+
+.token.punctuation {
+	color: #f8f8f2;
+}
+
+.token.namespace {
+	opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.constant,
+.token.symbol,
+.token.deleted {
+	color: #f92672;
+}
+
+.token.boolean,
+.token.number {
+	color: #ae81ff;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+	color: #a6e22e;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string,
+.token.variable {
+	color: #f8f8f2;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.function,
+.token.class-name {
+	color: #e6db74;
+}
+
+.token.keyword {
+	color: #66d9ef;
+}
+
+.token.regex,
+.token.important {
+	color: #fd971f;
+}
+
+.token.important,
+.token.bold {
+	font-weight: bold;
+}
+.token.italic {
+	font-style: italic;
+}
+
+.token.entity {
+	cursor: help;
+}
+/*
+ * New diff- syntax
+ */
+
+pre[class*="language-diff-"] {
+	--eleventy-code-padding: 1.25em;
+	padding-left: var(--eleventy-code-padding);
+	padding-right: var(--eleventy-code-padding);
+}
+.token.deleted {
+	background-color: hsl(0, 51%, 37%);
+	color: inherit;
+}
+.token.inserted {
+	background-color: hsl(126, 31%, 39%);
+	color: inherit;
+}
+
+/* Make the + and - characters unselectable for copy/paste */
+.token.prefix.unchanged,
+.token.prefix.inserted,
+.token.prefix.deleted {
+	-webkit-user-select: none;
+	user-select: none;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+.token.prefix.inserted,
+.token.prefix.deleted {
+	width: var(--eleventy-code-padding);
+	background-color: rgba(0,0,0,.2);
+}
+
+/* Optional: full-width background color */
+.token.inserted:not(.prefix),
+.token.deleted:not(.prefix) {
+	display: block;
+	margin-left: calc(-1 * var(--eleventy-code-padding));
+	margin-right: calc(-1 * var(--eleventy-code-padding));
+	text-decoration: none; /* override del, ins, mark defaults */
+	color: inherit; /* override del, ins, mark defaults */
+}</style>
 	<!-- Open Graph -->
 		<meta property="og:title" content="BD's Sandbox">
 		<meta property="og:description" content="Where grains of thought can become sandmansions">
@@ -834,18 +1002,130 @@ html, body {
 		</header>
 
 		<main id="main">
-			<h1 id="tagged-creativenonfiction">Tagged “CreativeNonfiction”</h1>
+			
+  
+  
 
+  <h1 id="captain-planet-vs-emissions-win">
+    <span style="display: inline-flex; align-items: center; gap: 0.9rem;">
+      
+      Captain Planet vs. Emissions = Win?
+    </span>
+  </h1>
 
-<ol reversed="" class="postlist" style="--postlist-index: 2">
-	<li class="postlist-item">
-		<a href="/sandbox/articles/Windshield Wipers/" class="postlist-link">Windshield Wipers</a>
-		<time class="postlist-date" datetime="30-Jun-2025">30 06 2025</time>
-	</li>
-</ol>
+  <p class="read-time">
+    <i data-lucide="clock"></i> 4 min read  </p>
 
+  <ul class="post-metadata">
+    <li><time datetime="30-Jun-2025">30 06 2025</time></li>
+      <li><a href="/sandbox/tags/reflectivepolemic/" class="post-tag">ReflectivePolemic</a>, </li>
+      <li><a href="/sandbox/tags/environmentalframing/" class="post-tag">EnvironmentalFraming</a>, </li>
+      <li><a href="/sandbox/tags/subconsciouslearning/" class="post-tag">SubconsciousLearning</a></li>
+  </ul>
 
-<p>See <a href="/sandbox/tags/">all tags</a>.</p>
+  <h1 id="captain-planet-vs-emissions-win-2">Captain Planet vs. Emissions = Win?</h1>
+<p>In the early ’90s <a href="https://en.wikipedia.org/wiki/Captain_Planet_and_the_Planeteers">Captain Planet and the Planeteers</a> was waging war against overconsumption, deforestation, toxic dumping.</p>
+<p>So imagine a 2020 reboot. With the same diverse team of [[Captain Planet and the Planeteers|Planeteers.]]</p>
+<p>With their sights set on fighting the villainous <strong>Smoggorth</strong> and their cannon of caustic carbon - polluting the air, choking our crops, and making beach cricket a forever memory.</p>
+<p>Yes, I realise - we already have too many green-haired eco-warriors with mullets fighting against Scope 3 Greenhouse Gases.</p>
+<p>So it’s fair to ask: <em>how is another one going to help?</em></p>
+<p>Well… let our powers combine.</p>
+<p>Week after week, this cartoon placed kids at the centre of environmental salvation -  both on and off screen.</p>
+<p>Five kids. Five elements. One planet.<br>
+Easy, right?</p>
+<p>But behind that simplicity sat a hypercomplex idea: that ecological harm existed, and we could fight back for our environment -  and not just by bathing seagulls or chaining ourselves to trees.</p>
+<p>That idea was planted early.</p>
+<p>So what happens when that simplified idea keeps growing?</p>
+<p>When it evolves into a subconscious model -  where actions are mapped to consequences, help or harm to our environment are distinguishable, and probably most importantly, where your choice exists?</p>
+<p>Captain Planet and the Planeteers aired in over 100 countries from 1990–1996.<br>
+Each week episodes reached tens of millions of 6–11-year-olds.</p>
+<p>That’s a serious slice of a generation.</p>
+<p>That generation now makes up a serious slice of today’s workforce -  senior managers, engineers, policymakers, scientists &amp; frontline staff.</p>
+<p>A generation raised with the idea that fighting environmental damage wasn’t super complex -  it was just about doing the <em>right</em> thing.</p>
+<blockquote>
+<p>Not systemic.<br>
+Not abstract.<br>
+Just… simple.</p>
+</blockquote>
+<p>And maybe, just maybe, that idea stuck -  manifested and subconsciously guided our actions.</p>
+<hr>
+<h2 id="consider-this"><i data-lucide="brain"></i> Consider this</h2>
+<p>Say 10 million kids tuned in weekly:</p>
+<ul>
+<li>~500,000 became lawyers</li>
+<li>~300,000 became scientists</li>
+<li>~800,000 became engineers</li>
+<li>~2 million rose to senior management</li>
+<li>~20 million became frontline workers making daily, operational decisions</li>
+</ul>
+<p>That’s a lot of people who might carry a subconscious orientation toward better environmental choices -  all from a Saturday morning cartoon.</p>
+<p><strong>How could it look?</strong></p>
+<ul>
+<li>Engineers who grew up wanting to reinforce ship hulls to avoid spillage.</li>
+<li>Scientists who chased clean tech because it was best for our planet.</li>
+<li>Senior leaders who started putting a third column on their P&amp;L -  one that tracked costs debited from our environment.</li>
+<li>Frontline staff who made daily, operational choices to produce slightly less waste, use fewer chemicals, by simply adopting the option that <em>“just felt right.”</em></li>
+</ul>
+<p>Could that not be considered the <em>right</em> type of activism?</p>
+<hr>
+<h2 id="the-subconscious-learning-lens"><i data-lucide="zap"></i> The subconscious learning lens</h2>
+<p>It’s well covered that media can influence and impact childhood learning -  take <a href="https://www.pbs.org/education/blogs/pbs-in-the-classroom/how-sesame-street-helps-children-learn-for-life/">Sesame Street</a> as an example. While that show was targeted at curriculum benchmarks and early learning, the impact was far from nothing.</p>
+<p>I'm focusing on the concept of subconsciously learning -  particularly complex ethical or environmental framing.<br>
+As Bargh &amp; Morsella (2008) put it, unconscious processes are <em>“unintentional by nature… yet capable of forming sophisticated, flexible, and adaptive unconscious behavior guidance systems.”</em>
+<a href="https://www.researchgate.net/publication/235357087_The_Unconscious_Mind">Read the paper</a></p>
+<p>As children, teens, adults, we're subconsciously guided by fragments.<br>
+Cartoons, books, main characters and slogans stick, and continue to grow and manifest.<br>
+They shape how we approach problems, how we frame trade-offs, how we implement solutions.</p>
+<p>So with that lens:</p>
+<blockquote>
+<p>Could Captain Planet be one of the most powerful pieces of environmental education in the 20th century?</p>
+</blockquote>
+<p>Not because it directly changed the world.<br>
+But because it influenced the kids who eventually could.</p>
+<hr>
+<h2 id="what-if-we-did-it-again">What if we did it again?</h2>
+<p>Not a nostalgia piece. Not an ironic reboot. <span class="quip-wrapper" tabindex="0">
+^<span class="quip-tooltip">Like that 2017 3315 release we've probably forgotten happened</span></span></p>
+<p>But a genuine educational cartoon designed to shape the environmental lens of the next generation -  <em>before</em> they’re the ones signing off on Scope 1, 2, and 3 emissions policies.</p>
+<p>What if the new Captain Planet didn’t fight oil barons, but instead battled:</p>
+<ul>
+<li>The quiet rise of greenhouse gases</li>
+<li>The awkward calculus of carbon offsetting</li>
+<li>The normality of accepted obsolescence</li>
+<li>The logistical violence of late-stage capitalism</li>
+</ul>
+<p>Imagine a show that didn’t frame the impact of carbon emissions and greenhouse gases as a hyper-complex problem, but as a villain that can be fought against. With kids at the centre of the fight and a superhero that tells our future generation that:</p>
+<blockquote>
+<p><span class="quip-callout">“The real power to save Earth comes from within. Inside you. It always has.”</span></p>
+</blockquote>
+<p>Not with protests. Not with slogans.<br>
+But identification and teamwork.</p>
+<p>A new team of Planeteers, just… getting it done.</p>
+<p>With its catchphrases? Sure. Cheesy one-liners? Of course.</p>
+<p>Its impact? Ask me again in 2055.</p>
+<p>Because if even a sliver of that generation became engineers, scientists, managers -  primed with an orientation toward better decisions?<br>
+That’s not nothing.</p>
+<p>By my count, that sees at least <em>some</em> changes by 2030.</p>
+<hr>
+<h2 id="it-s-not-about-creating-more-greenies">It’s not about creating more greenies</h2>
+<p>Let’s be clear: businesses need to make money and being 100% green isn’t a no-cost exercise.<br>
+It’s not a binary business decision or change that is as simple as flicking a light switch.</p>
+<p>But it needs to be recognised that until we as a society can operate in a carbon-neutral state, the money made is being debited from that third column of the profit and loss -  the environmental cost column -  and not just COGS or OPEX.</p>
+<p>So no -  I’m not asking for a new generation of eco-warriors with their, “I AM MORALLY RIGHT” argument that at times doesn't seem to live in the realm of reality.</p>
+<p>What I <em>am</em> advocating for is a generation of quietly preloaded operators <span class="quip-wrapper" tabindex="0">
+^<span class="quip-tooltip">Almost like environmental sleeper agents</span></span> - people with enough internal wiring to make better ecological decisions, not out of ideology, but because it just… <em>makes sense</em>.</p>
+<p>Maybe these operators enter the workplace with ideas for a new light globe and not a preconceived notion that flicking the switch is the only solution.</p>
+<p>Operators such as:</p>
+<ul>
+<li>Chemical engineers with emissions aversion baked into their designs</li>
+<li>Lawyers who read “compliance” through a planetary lens</li>
+<li>Senior managers who make systematic changes because their gut says, <em>“We need to and we can do better.”</em></li>
+</ul>
+<p>If Captain Planet generated even the faintest ripple of thought for ecological preservation, even if it is just a ripple, 30 years of subconscious processing would generate a wave.</p>
+<p>If a reboot of a children’s TV show could generate that type of wave -  then maybe, a mulleted cartoon hero isn’t the worst place to start.</p>
+
+      <ul class="links-nextprev"><li class="links-nextprev-prev">← Previous<br> <a href="/sandbox/articles/Captain Planet/Captain Planet and the Planeteers/">Captain Planet &amp; The Planeteers</a></li><li class="links-nextprev-next">Next →<br><a href="/sandbox/articles/Windshield Wipers/">Windshield Wipers</a></li>
+      </ul>
 
 		</main>
 
@@ -856,7 +1136,7 @@ html, body {
 		</footer>
 		<script src="https://unpkg.com/lucide@latest"></script>
 		
-		<!-- This page `/tags/creativenonfiction/` was built on 2025-06-30T05:57:03.949Z -->
+		<!-- This page `/articles/Captain Planet/v4 - Final/` was built on 2025-06-30T05:57:03.961Z -->
 		<script type="module" src="/sandbox/dist/V6OKUKOoxV.js"></script>
 	</body>
 </html>
