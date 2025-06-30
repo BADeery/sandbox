@@ -1,9 +1,7 @@
 ---
-title: Captain Planet & The Planeteers
+title: Captain Planet and the Planeteers
 Date: 2025-06-30
 layout: layouts/post.njk
-eleventyExcludeFromCollections: false
-
 ---
 
 

@@ -8,9 +8,6 @@ tags:
 - ReflectivePolemic
 - EnvironmentalFraming
 - SubconsciousLearning
-
-eleventyExcludeFromCollections: false
-
 ---
 
 # Captain Planet vs. Emissions = Win?
