@@ -714,10 +714,11 @@ header {
   z-index: 10;
   transition: opacity 0.2s ease;
   pointer-events: none;
-  min-width: unset;
-  max-width: 220px;
+  width: fit-content;
   text-align: center;
 }
+
+
 
 .quip-wrapper:hover .quip-tooltip,
 .quip-wrapper:focus .quip-tooltip {

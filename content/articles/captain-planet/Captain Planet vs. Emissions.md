@@ -5,8 +5,8 @@ layout: layouts/article.njk
 description: Could a mulleted cartoon from the '90s have quietly influenced a generation better our environment? Maybe it's time for a reboot?
 tags: 
 - posts
-- ReflectivePolemic
-- EnvironmentalFraming 
+- LayeredPerspective
+- Environmental
 - SubsciousLearning
 ---
 <span style="font-size: 2em; font-weight: 700;">In</span> the early ’90s Captain Planet was waging war against overconsumption, deforestation, toxic dumping.
