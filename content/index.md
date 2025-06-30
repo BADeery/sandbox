@@ -20,7 +20,7 @@ eleventyNavigation:
     <p class="nikes">My brain wears Nikes.{% quip "Because its always running" %}</p>
     <p><i data-lucide="help-circle"></i> I'm comfortable wrestling two-truths at once. Discomfort is where we grow. I like to think I can simplify complexity - cutting through the noise to find what actually matters.</p>
     <p><i data-lucide="zap"></i> I think deeply, explore broadly, and often ask too many questions. I'm a bit of an anarchist in all the right ways (your grandmother loves me).</p>
-    <p><i data-lucide="flame"></i> That being said, sometimes being a menace is a <em class="color-indiandred">me</em> problem - but sometimes, it isn’t always <em class="color-indiandred">my</em> problem.</p>
+    <p><i data-lucide="flame"></i> That being said, sometimes being a menace is a <em class="color-indianred" style="font-weight: 600">me</em> problem - but sometimes, it isn’t always <em class="color-indianred" style="font-weight: 600">my</em> problem.</p>
     <hr>
     <h2><i data-lucide="circuit-board"></i> Wired Differently</h2>
     <p>Somewhere along the way, I came to understand that I’m twice-exceptional (2e) - a term used for those who are both Gifted and have another neurodivergent trait. For me, it's Giftedness + ADHD.</p>

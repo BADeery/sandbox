@@ -12,7 +12,13 @@ noAnchor: true
 
 **Forward:**
 
-As you're reading, if you spot a<span class="article-chevron"><i data-lucide="chevron-up"></i></span>, hover or tap it. It’ll reveal a tiny footnote, an easter egg, or a divergent thought.
+As you're reading, if you spot a<span class="quip-wrapper">
+  <span class="article-chevron">
+    <i data-lucide="chevron-up" ></i>
+  </span>
+  <span class="quip-tooltip">Yeah buddy</span>
+</span> , hover or tap it. It’ll reveal a tiny footnote, an easter egg, or a divergent thought.
+
 
 <aside class="article-tag-line">
   <span class="tag-pair">
