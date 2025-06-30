@@ -10,8 +10,6 @@ tags:
 - SubconsciousLearning
 ---
 
-# Captain Planet vs. Emissions = Win?
-
 In the early ’90s [Captain Planet and the Planeteers](https://en.wikipedia.org/wiki/Captain_Planet_and_the_Planeteers) was waging war against overconsumption, deforestation, toxic dumping.
 
 So imagine a 2020 reboot. With the same diverse team of [[Captain Planet and the Planeteers|Planeteers.]]

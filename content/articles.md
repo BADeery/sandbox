@@ -37,7 +37,7 @@ As you're reading, if you spot a<span class="quip-wrapper">
 
 ---
 
-Regarding my articles — Some go deep. Some go sideways. All of them go somewhere.
+Regarding my articles - Some go deep. Some go sideways. All of them go somewhere.
 
 ---
 
