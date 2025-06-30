@@ -67,7 +67,7 @@
 }
 
 @media (min-width: 1100px) {
-  .articles-grid {
+  .articles-page-grid {
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   }
 }
@@ -113,6 +113,12 @@ img[src$=".svg"] {
   height: auto;
   max-width: none;
 }
+img {
+  display: block;
+  margin: 1rem auto;
+  max-width: 100%;
+}
+
 video,
 iframe {
 	width: 100%;
@@ -412,11 +418,11 @@ header {
   margin-bottom: 2rem;
 }
 
-.article-intro p{
+.articles-page-intro p{
   margin-left: .65rem;
 }
 
-.articles-grid {
+.articles-page-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, 280px);
   gap: 1.5rem;
@@ -429,7 +435,7 @@ header {
 
 }
 
-.article-card {
+.articles-page-card {
   background-color: var(--background-color);
   color: var(--text-color);
   border: 1px solid var(--text-color-link-visited); 
@@ -451,7 +457,7 @@ header {
   will-change: transform;
 }
 
-.article-excerpt {
+.articles-page-excerpt {
   font-size: 0.95rem;
   opacity: 0.9;
   line-height: 1.45;
@@ -461,44 +467,44 @@ header {
   overflow: hidden;
 }
 
-.article-card:hover {
+.articles-page-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
 }
 
-.article-card h2 a {
+.articles-page-card h2 a {
   display: inline-flex;
   align-items: center;
   gap: 0.6rem; /* space between icon and title */
 }
 
-.article-card h2 {
+.articles-page-card h2 {
   margin-top: 0;
   margin-bottom: 0.25rem;
   font-size: 1rem;
 }
 
-.article-card a {
+.articles-page-card a {
   text-decoration: none;
   color: var(--text-color-link);;
 }
 
-.article-card a:hover {
+.articles-page-card a:hover {
   color: var(--text-color-link-active);
   text-decoration: underline;
 }
 
-.description,
-.post-date,
-.card-read-time {
+.articles-page-description,
+.articles-page-post-date,
+.articles-page-card-read-time {
   color: var(--text-color);
 }
 
-.flex-spacer {
+.articles-page-flex-spacer {
   flex-grow: 1;
 }
 
-.post-footer-meta-row {
+.articles-page-footer-meta-row {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -510,8 +516,8 @@ header {
   overflow: hidden;
 }
 
-.post-footer-meta-row .post-date,
-.post-footer-meta-row .card-read-time {
+.articles-page-footer-meta-row .articles-page-date,
+.articles-page-footer-meta-row .articles-page-read-time {
   display: flex;
   align-items: center;
   gap: 0;
@@ -668,16 +674,26 @@ header {
     color: #fff;
   }
 
-  .article-tag-line {
+  .-tag-line {
     margin-top: .25rem;
     margin-bottom: 0.25rem;
     row-gap: .1rem; 
     column-gap: .75rem;
   }
   
-  .article-card {
+  .articles-page-card {
     height: 240px; /* or 260px — adjust as needed */
   }
+
+  .article-title{
+    font-size: 1.5rem;
+    letter-spacing: 0.1rem;
+  }
+  .article-tag-line{
+    font-size: 1rem;
+  }
+
+
 }
 
 .quip-wrapper {
@@ -733,7 +749,7 @@ header {
   color: var(--sandbox-color);
 }
 
-.article-chevron {
+.articles-page-chevron {
   display: inline-block;
   vertical-align: baseline;
   height: 1em;
@@ -742,11 +758,11 @@ header {
   margin: 0 0.2rem;
   color: var(--quip-color);
 }
-.article-chevron svg{
+.articles-page-chevron svg{
   stroke: currentColor;
 }
 
-.article-tag-line {
+.articles-page-tag-line {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -780,12 +796,55 @@ header {
    font-weight: 600; 
 }
 
+/* ARTICLE TEMPLATE */
+.article-meta-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  opacity: 0.7;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.article-tag-line a {
+  margin-right: 0.75rem;
+}
+
+
+.article-nav-links {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+  list-style: none;
+  padding: 0;
+  gap: 2rem;
+}
+
+.article-nav-prev {
+  text-align: left;
+}
+
+.article-nav-next {
+  text-align: right;
+  margin-left: auto; /* pushes it to the right */
+}
+
+.article-body{
+  margin-top: 1rem;
+  margin-left: .65rem;
+}
+
 /* ─── Utility Classes ─── */
 
 /* --- Text Alignment --- */
 
 
 .l-indent-half { margin-left: 0.5rem; }
+.center { text-align: center; }
+.right { text-align: right; }
+.left { text-align: left; }
 
 /* --- Colors --- that work with both light and dark mode */
 .color-indianred { color: indianred; }
@@ -807,7 +866,7 @@ html, body {
   outline: 1px solid lime;
 }
 
-.article-tag-line{
+.articles-page-tag-line{
   outline: 1px solid magenta;
 } */</style>
 	<!-- Open Graph -->
@@ -856,7 +915,7 @@ html, body {
 		</footer>
 		<script src="https://unpkg.com/lucide@latest"></script>
 		
-		<!-- This page `/tags/metaphorswithpurpose/` was built on 2025-06-30T08:40:26.802Z -->
+		<!-- This page `/tags/metaphorswithpurpose/` was built on 2025-06-30T11:21:05.646Z -->
 		<script type="module" src="/sandbox/dist/V6OKUKOoxV.js"></script>
 	</body>
 </html>

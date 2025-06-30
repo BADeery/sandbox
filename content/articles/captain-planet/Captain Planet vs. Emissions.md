@@ -1,16 +1,15 @@
 ---
 title: Captain Planet vs. Emissions = Win?
 Date: 2025-06-30
-layout: layouts/post.njk
+layout: layouts/article.njk
 description: Could a mulleted cartoon from the '90s have quietly influenced a generation better our environment? Maybe it's time for a reboot?
-tags:
+tags: 
 - posts
 - ReflectivePolemic
-- EnvironmentalFraming
-- SubconsciousLearning
+- EnvironmentalFraming 
+- SubsciousLearning
 ---
-
-In the early ’90s [Captain Planet and the Planeteers](https://en.wikipedia.org/wiki/Captain_Planet_and_the_Planeteers) was waging war against overconsumption, deforestation, toxic dumping.
+<span style="font-size: 2em; font-weight: 700;">In</span> the early ’90s Captain Planet was waging war against overconsumption, deforestation, toxic dumping.
 
 So imagine a 2020 reboot. With the same diverse team of [[Captain Planet and the Planeteers|Planeteers.]]
 

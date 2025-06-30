@@ -1,0 +1,52 @@
+{% extends "layouts/base.njk" %}
+
+{% block content %}
+  <style>{% include "node_modules/prismjs/themes/prism-okaidia.css" %}</style>
+  <style>{% include "css/prism-diff.css" %}</style>
+
+  <article class="main-block">
+    <h1 class="article-title">
+      <span style="display: inline-flex; align-items: center; gap: 0.9rem;">
+        {% if icon %}
+          <i data-lucide="{{ icon }}"></i>
+        {% endif %}
+        {{ title }}
+      </span>
+    </h1>
+
+    <div class="article-meta-row">
+      <span class="article-meta-date">
+        <i data-lucide="calendar"></i> {{ page.date | auDate("dd-MMM-yyyy") }}
+      </span>
+      <span class="article-meta-read-time">
+        <i data-lucide="clock"></i> {{ content | readingTime }} read
+      </span>
+    </div>
+
+    <div class="article-tag-line">
+      {% for tag in tags | filterTagList %}
+        <a href="/tags/{{ tag | slugify }}/">#{{ tag }}</a>
+      {% endfor %}
+    </div>
+
+    <div class="article-body">
+      {{ content | safe }}
+    </div>
+
+    {% if collections.posts %}
+      {% set previousPost = collections.posts | getPreviousCollectionItem %}
+      {% set nextPost = collections.posts | getNextCollectionItem %}
+      {% if nextPost or previousPost %}
+        <ul class="article-nav-links">
+          {% if previousPost %}
+            <li class="article-nav-prev">← Previous<br><a href="{{ previousPost.url }}">{{ previousPost.data.title }}</a></li>
+          {% endif %}
+          {% if nextPost %}
+            <li class="article-nav-next">Next →<br><a href="{{ nextPost.url }}">{{ nextPost.data.title }}</a></li>
+          {% endif %}
+        </ul>
+      {% endif %}
+    {% endif %}
+  </article>
+{% endblock %}
+

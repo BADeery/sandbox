@@ -2,13 +2,13 @@
 
 {% block content %}
   <article class="main-block">
-    <section class="article-intro">
+    <section class="articles-page-intro">
         {{ content | safe}}
     </section>
     
-    <div class="articles-grid">
+    <div class="articles-page-grid">
       {% for post in collections.posts | reverse %}
-        <article class="article-card">
+        <article class="articles-page-card">
           <h2>
             <a href="{{ post.url }}">
               {% if post.data.icon %}
@@ -19,17 +19,17 @@
           </h2>
 
           {% if post.data.description %}
-            <p class="article-excerpt">{{ post.data.description }}</p>
+            <p class="articles-page-excerpt">{{ post.data.description }}</p>
           {% endif %}
 
 
-          <div class="flex-spacer"></div>
+          <div class="articles-page-flex-spacer"></div>
 
-          <div class="post-footer-meta-row">
-            <span class="post-date">
+          <div class="articles-page-footer-meta-row">
+            <span class="articles-page-post-date">
               <i data-lucide="calendar"></i> {{ post.date | auDate("dd-MMM-yyyy") }}
             </span>
-            <span class="card-read-time">
+            <span class="articles-page-card-read-time">
               <i data-lucide="clock"></i> {{ post.templateContent | readingTime }} read
             </span>
           </div>

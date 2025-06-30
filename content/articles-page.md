@@ -1,6 +1,6 @@
 ---
 title: Articles
-layout: layouts/articles.njk
+layout: layouts/articles-page.njk
 permalink: /articles/
 eleventyNavigation:
   key: Articles
@@ -13,14 +13,14 @@ noAnchor: true
 **Forward:**
 
 As you're reading, if you spot a<span class="quip-wrapper">
-  <span class="article-chevron">
+  <span class="articles-page-chevron">
     <i data-lucide="chevron-up" ></i>
   </span>
   <span class="quip-tooltip">Yeah buddy</span>
 </span> , hover or tap it. It’ll reveal a tiny footnote, an easter egg, or a divergent thought.
 
 
-<aside class="article-tag-line">
+<aside class="articles-page-tag-line">
   <span class="tag-pair">
     <span class="tag-q">Helpful?</span>
     <span class="tag-a">Occasionally.</span>
@@ -37,9 +37,8 @@ As you're reading, if you spot a<span class="quip-wrapper">
 
 ---
 
-Regarding my articles - Some go deep. Some go sideways. All of them go somewhere.
+<p class="center">Regarding my articles - Some go deep. Some go sideways. All of them go somewhere.<p>
 
----
 
 
 
