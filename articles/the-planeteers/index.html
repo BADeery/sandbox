@@ -684,6 +684,26 @@ p.articles-page-excerpt {
     color: #fff;
   }
 
+  .quip-tooltip {
+    position: absolute;
+    top: -2.2em;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #222;
+    color: #fff;
+    font-size: 0.75rem;
+    padding: 0.35em 0.6em;
+    border-radius: 4px;
+    z-index: 10;
+    white-space: normal;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    max-width: 80vw;
+    box-sizing: border-box;
+    text-align: center;
+    width: max-content;
+  }
+
   .-tag-line {
     margin-top: .25rem;
     margin-bottom: 0.25rem;
@@ -702,8 +722,6 @@ p.articles-page-excerpt {
   .article-tag-line{
     font-size: 1rem;
   }
-
-
 }
 
 .quip-wrapper {
@@ -720,13 +738,17 @@ p.articles-page-excerpt {
   opacity: 1;
 }
 
+.quip-wrapper:hover .quip-tooltip,
+.quip-wrapper:focus .quip-tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+
 .quip-tooltip {
   visibility: hidden;
   opacity: 0;
   position: absolute;
   top: -2.2em;
-  left: 50%;
-  transform: translateX(-50%);
   background-color: #222;
   color: #fff;
   font-size: 0.75rem;
@@ -741,13 +763,6 @@ p.articles-page-excerpt {
   text-align: center;
 }
 
-
-
-.quip-wrapper:hover .quip-tooltip,
-.quip-wrapper:focus .quip-tooltip {
-  visibility: visible;
-  opacity: 1;
-}
 
 .bumpdown {
   margin-top: 2rem;
@@ -886,6 +901,10 @@ html, body {
 
 .articles-page-tag-line{
   outline: 1px solid magenta;
+} */
+
+/* * {
+  outline: 1px solid red;
 } */</style>
 		<!-- Open Graph -->
 		<meta name="apple-mobile-web-app-capable" content="yes">
@@ -932,7 +951,8 @@ html, body {
 		</footer>
 		<script src="https://unpkg.com/lucide@latest"></script>
 		
-		<!-- This page `/articles/the-planeteers/` was built on 2025-07-01T10:41:39.884Z -->
-		<script type="module" src="/sandbox/dist/V6OKUKOoxV.js"></script>
+		<!-- This page `/articles/the-planeteers/` was built on 2025-07-01T12:48:23.002Z -->
+		<script type="module" src="/sandbox/dist/H7jxC_LYWA.js"></script>
+		  
 	</body>
 </html>

@@ -684,6 +684,26 @@ p.articles-page-excerpt {
     color: #fff;
   }
 
+  .quip-tooltip {
+    position: absolute;
+    top: -2.2em;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #222;
+    color: #fff;
+    font-size: 0.75rem;
+    padding: 0.35em 0.6em;
+    border-radius: 4px;
+    z-index: 10;
+    white-space: normal;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    max-width: 80vw;
+    box-sizing: border-box;
+    text-align: center;
+    width: max-content;
+  }
+
   .-tag-line {
     margin-top: .25rem;
     margin-bottom: 0.25rem;
@@ -702,8 +722,6 @@ p.articles-page-excerpt {
   .article-tag-line{
     font-size: 1rem;
   }
-
-
 }
 
 .quip-wrapper {
@@ -720,13 +738,17 @@ p.articles-page-excerpt {
   opacity: 1;
 }
 
+.quip-wrapper:hover .quip-tooltip,
+.quip-wrapper:focus .quip-tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+
 .quip-tooltip {
   visibility: hidden;
   opacity: 0;
   position: absolute;
   top: -2.2em;
-  left: 50%;
-  transform: translateX(-50%);
   background-color: #222;
   color: #fff;
   font-size: 0.75rem;
@@ -741,13 +763,6 @@ p.articles-page-excerpt {
   text-align: center;
 }
 
-
-
-.quip-wrapper:hover .quip-tooltip,
-.quip-wrapper:focus .quip-tooltip {
-  visibility: visible;
-  opacity: 1;
-}
 
 .bumpdown {
   margin-top: 2rem;
@@ -886,6 +901,10 @@ html, body {
 
 .articles-page-tag-line{
   outline: 1px solid magenta;
+} */
+
+/* * {
+  outline: 1px solid red;
 } */
 /**
  * okaidia theme for JavaScript, CSS and HTML
@@ -1114,7 +1133,7 @@ pre[class*="language-diff-"] {
     </div>
 
     <div class="article-body">
-      <p><span style="font-size: 2em; font-weight: 700;">In</span> the early ’90s Captain Planet was waging war against overconsumption, deforestation, toxic dumping.</p>
+      <p><span style="font-size: 2em; font-weight: 700;">In</span> the early ’90s Captain Planet was waging war against overconsumption, deforestation and toxic dumping.</p>
 <p>So imagine a 2020 reboot, the same diverse team of <a href="/sandbox/articles/the-planeteers/">Planeteers.</a> but with their sights set on fighting the villainous <strong>Smoggorth</strong> and their cannon of caustic carbon - polluting the air, choking our crops, and making beach cricket a forever memory.</p>
 <p>Yes, I realise - we already have too many green-haired eco-warriors with mullets fighting against Scope 3 Greenhouse Gases.</p>
 <p>So it’s fair to ask: <em>how is another one going to help?</em></p>
@@ -1171,7 +1190,7 @@ Cartoons, books, main characters and slogans, they stick, and continue to sharpe
 But because it influenced the kids who eventually could.</p>
 <hr>
 <h2 id="what-if-we-did-it-again">What if we did it again?</h2>
-<p>Not a nostalgia piece. Not an ironic reboot. <span class="quip-wrapper" tabindex="0">^<span class="quip-tooltip">Like the 2017 Nokia 3310 release we forget happened</span></span></p>
+<p>Not a nostalgia piece. Not an ironic reboot.</p>
 <p>But a genuine educational cartoon designed to shape the environmental lens of the next generation, <em>before</em> they’re the ones signing off on Scope 1, 2, and 3 emissions policies.</p>
 <p>What if the new Captain Planet didn’t fight oil barons, but instead battled:</p>
 <ul>
@@ -1235,7 +1254,8 @@ It’s not a binary business decision or change that is as simple as flicking a 
 		</footer>
 		<script src="https://unpkg.com/lucide@latest"></script>
 		
-		<!-- This page `/articles/captain-planet-vs-emissions/` was built on 2025-07-01T10:41:39.896Z -->
-		<script type="module" src="/sandbox/dist/V6OKUKOoxV.js"></script>
+		<!-- This page `/articles/captain-planet-vs-emissions/` was built on 2025-07-01T12:48:23.014Z -->
+		<script type="module" src="/sandbox/dist/H7jxC_LYWA.js"></script>
+		  
 	</body>
 </html>
