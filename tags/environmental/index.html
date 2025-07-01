@@ -418,6 +418,10 @@ header {
   margin-bottom: 2rem;
 }
 
+.base-content p{
+margin-left: .65rem;
+}
+
 .articles-page-intro p{
   margin-left: .65rem;
 }
@@ -466,6 +470,12 @@ header {
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
+
+p.articles-page-excerpt {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
 
 .articles-page-card:hover {
   transform: translateY(-4px);
@@ -853,6 +863,13 @@ header {
 .color-muted{ color:#888;}
 .color-red{ color: red;}
 
+/* --- GLOBAL --- */
+/* Counteracts base-content p{} */
+/* p.no-indent {
+  margin-left: 0 !important;
+} */
+
+
 
 /* --- Debug Frames --- */
 /* * {
@@ -895,20 +912,33 @@ html, body {
 			</nav>
 		</header>
 
-		<main id="main">
-			<h1 id="tagged-environmental">Tagged “Environmental”</h1>
+		<main id="main-block">
+			<section class="base-content">
+				<h1 id="tagged-environmental">Tagged “Environmental”</h1>
 
 
-<ol reversed="" class="postlist" style="--postlist-index: 2">
-	<li class="postlist-item">
-		<a href="/sandbox/articles/captain-planet/Captain Planet vs. Emissions/" class="postlist-link">Captain Planet vs. Emissions = Win?</a>
-		<time class="postlist-date" datetime="01-Jul-2025">01 07 2025</time>
-	</li>
-</ol>
+<div class="articles-page-grid">
+    <article class="articles-page-card">
+      <h2 id="captain-planet-vs-emissions-win">
+        <a href="/sandbox/articles/captain-planet-vs-emissions/">
+          
+          Captain Planet vs. Emissions = Win?
+        </a>
+      </h2>
+
+      
+        <p class="articles-page-excerpt">Could a mulleted cartoon from the &#39;90s have quietly influenced a generation better our environment? Maybe it&#39;s time for a reboot?</p>
+      
+
+      <div class="articles-page-flex-spacer"></div>
+
+      
+    </article>
+</div>
 
 
-<p>See <a href="/sandbox/tags/">all tags</a>.</p>
 
+			</section>
 		</main>
 
 		<footer>
@@ -918,7 +948,7 @@ html, body {
 		</footer>
 		<script src="https://unpkg.com/lucide@latest"></script>
 		
-		<!-- This page `/tags/environmental/` was built on 2025-07-01T02:53:46.688Z -->
+		<!-- This page `/tags/environmental/` was built on 2025-07-01T10:41:40.010Z -->
 		<script type="module" src="/sandbox/dist/V6OKUKOoxV.js"></script>
 	</body>
 </html>

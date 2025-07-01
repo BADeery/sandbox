@@ -418,6 +418,10 @@ header {
   margin-bottom: 2rem;
 }
 
+.base-content p{
+margin-left: .65rem;
+}
+
 .articles-page-intro p{
   margin-left: .65rem;
 }
@@ -466,6 +470,12 @@ header {
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
+
+p.articles-page-excerpt {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
 
 .articles-page-card:hover {
   transform: translateY(-4px);
@@ -853,6 +863,13 @@ header {
 .color-muted{ color:#888;}
 .color-red{ color: red;}
 
+/* --- GLOBAL --- */
+/* Counteracts base-content p{} */
+/* p.no-indent {
+  margin-left: 0 !important;
+} */
+
+
 
 /* --- Debug Frames --- */
 /* * {
@@ -1044,7 +1061,7 @@ pre[class*="language-diff-"] {
 		<meta property="og:title" content="Captain Planet vs. Emissions = Win?">
 		<meta property="og:description" content="Could a mulleted cartoon from the &#39;90s have quietly influenced a generation better our environment? Maybe it&#39;s time for a reboot?">
 		<meta property="og:type" content="website">
-		<meta property="og:url" content="https://badeery.github.io/articles/captain-planet/Captain Planet vs. Emissions/">
+		<meta property="og:url" content="https://badeery.github.io/articles/captain-planet-vs-emissions/">
 		<meta property="og:image" content="https://badeery.github.io/sandbox/imgs/BDs-Sandboxv2.png">
 
 	</head>
@@ -1063,8 +1080,9 @@ pre[class*="language-diff-"] {
 			</nav>
 		</header>
 
-		<main id="main">
-			
+		<main id="main-block">
+			<section class="base-content">
+				
   
   
 
@@ -1097,7 +1115,7 @@ pre[class*="language-diff-"] {
 
     <div class="article-body">
       <p><span style="font-size: 2em; font-weight: 700;">In</span> the early ’90s Captain Planet was waging war against overconsumption, deforestation, toxic dumping.</p>
-<p>So imagine a 2020 reboot, the same diverse team of <a href="/sandbox/articles/captain-planet/Captain%20Planet%20and%20the%20Planeteers/">Planeteers.</a> but with their sights set on fighting the villainous <strong>Smoggorth</strong> and their cannon of caustic carbon - polluting the air, choking our crops, and making beach cricket a forever memory.</p>
+<p>So imagine a 2020 reboot, the same diverse team of <a href="/sandbox/articles/the-planeteers/">Planeteers.</a> but with their sights set on fighting the villainous <strong>Smoggorth</strong> and their cannon of caustic carbon - polluting the air, choking our crops, and making beach cricket a forever memory.</p>
 <p>Yes, I realise - we already have too many green-haired eco-warriors with mullets fighting against Scope 3 Greenhouse Gases.</p>
 <p>So it’s fair to ask: <em>how is another one going to help?</em></p>
 <p>Well… let our powers combine.</p>
@@ -1199,7 +1217,7 @@ It’s not a binary business decision or change that is as simple as flicking a 
       
         <ul class="article-nav-links">
           
-            <li class="article-nav-prev">← Previous<br><a href="/sandbox/articles/Windshield Wipers/">Windshield Wipers</a></li>
+            <li class="article-nav-prev">← Previous<br><a href="/sandbox/windshield-wipers/">Windshield Wipers</a></li>
           
           
         </ul>
@@ -1207,6 +1225,7 @@ It’s not a binary business decision or change that is as simple as flicking a 
     
   </article>
 
+			</section>
 		</main>
 
 		<footer>
@@ -1216,7 +1235,7 @@ It’s not a binary business decision or change that is as simple as flicking a 
 		</footer>
 		<script src="https://unpkg.com/lucide@latest"></script>
 		
-		<!-- This page `/articles/captain-planet/Captain Planet vs. Emissions/` was built on 2025-07-01T02:53:46.581Z -->
+		<!-- This page `/articles/captain-planet-vs-emissions/` was built on 2025-07-01T10:41:39.896Z -->
 		<script type="module" src="/sandbox/dist/V6OKUKOoxV.js"></script>
 	</body>
 </html>

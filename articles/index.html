@@ -418,6 +418,10 @@ header {
   margin-bottom: 2rem;
 }
 
+.base-content p{
+margin-left: .65rem;
+}
+
 .articles-page-intro p{
   margin-left: .65rem;
 }
@@ -466,6 +470,12 @@ header {
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
+
+p.articles-page-excerpt {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
 
 .articles-page-card:hover {
   transform: translateY(-4px);
@@ -853,6 +863,13 @@ header {
 .color-muted{ color:#888;}
 .color-red{ color: red;}
 
+/* --- GLOBAL --- */
+/* Counteracts base-content p{} */
+/* p.no-indent {
+  margin-left: 0 !important;
+} */
+
+
 
 /* --- Debug Frames --- */
 /* * {
@@ -895,8 +912,9 @@ html, body {
 			</nav>
 		</header>
 
-		<main id="main">
-			
+		<main id="main-block">
+			<section class="base-content">
+				
   <article class="main-block">
     <section class="articles-page-intro">
         <h1 id="articles">Articles</h1>
@@ -930,7 +948,7 @@ html, body {
       
         <article class="articles-page-card">
           <h2 id="captain-planet-vs-emissions-win">
-            <a href="/sandbox/articles/captain-planet/Captain Planet vs. Emissions/">
+            <a href="/sandbox/articles/captain-planet-vs-emissions/">
               
               Captain Planet vs. Emissions = Win?
             </a>
@@ -955,7 +973,7 @@ html, body {
       
         <article class="articles-page-card">
           <h2 id="windshield-wipers">
-            <a href="/sandbox/articles/Windshield Wipers/">
+            <a href="/sandbox/windshield-wipers/">
               
               Windshield Wipers
             </a>
@@ -981,6 +999,7 @@ html, body {
     </div>
   </article>
 
+			</section>
 		</main>
 
 		<footer>
@@ -990,7 +1009,7 @@ html, body {
 		</footer>
 		<script src="https://unpkg.com/lucide@latest"></script>
 		
-		<!-- This page `/articles/` was built on 2025-07-01T02:53:46.574Z -->
+		<!-- This page `/articles/` was built on 2025-07-01T10:41:39.890Z -->
 		<script type="module" src="/sandbox/dist/V6OKUKOoxV.js"></script>
 	</body>
 </html>

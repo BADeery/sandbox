@@ -3,8 +3,8 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Windshield Wipers</title>
-		<meta name="description" content="A metaphor for staying functional in mental storms.">
+		<title>Tagged &#39;CreativeNavigation&#39;</title>
+		<meta name="description" content="A sandbox for me to write and play.">
 		<link rel="stylesheet" href="/sandbox/css/index.css">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Space+Mono|Muli|Oswald|Noto+Sans&display=swap">
 		
@@ -418,6 +418,10 @@ header {
   margin-bottom: 2rem;
 }
 
+.base-content p{
+margin-left: .65rem;
+}
+
 .articles-page-intro p{
   margin-left: .65rem;
 }
@@ -466,6 +470,12 @@ header {
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
+
+p.articles-page-excerpt {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
 
 .articles-page-card:hover {
   transform: translateY(-4px);
@@ -853,6 +863,13 @@ header {
 .color-muted{ color:#888;}
 .color-red{ color: red;}
 
+/* --- GLOBAL --- */
+/* Counteracts base-content p{} */
+/* p.no-indent {
+  margin-left: 0 !important;
+} */
+
+
 
 /* --- Debug Frames --- */
 /* * {
@@ -869,182 +886,14 @@ html, body {
 
 .articles-page-tag-line{
   outline: 1px solid magenta;
-} */
-/**
- * okaidia theme for JavaScript, CSS and HTML
- * Loosely based on Monokai textmate theme by http://www.monokai.nl/
- * @author ocodia
- */
-
-code[class*="language-"],
-pre[class*="language-"] {
-	color: #f8f8f2;
-	background: none;
-	text-shadow: 0 1px rgba(0, 0, 0, 0.3);
-	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
-	font-size: 1em;
-	text-align: left;
-	white-space: pre;
-	word-spacing: normal;
-	word-break: normal;
-	word-wrap: normal;
-	line-height: 1.5;
-
-	-moz-tab-size: 4;
-	-o-tab-size: 4;
-	tab-size: 4;
-
-	-webkit-hyphens: none;
-	-moz-hyphens: none;
-	-ms-hyphens: none;
-	hyphens: none;
-}
-
-/* Code blocks */
-pre[class*="language-"] {
-	padding: 1em;
-	margin: .5em 0;
-	overflow: auto;
-	border-radius: 0.3em;
-}
-
-:not(pre) > code[class*="language-"],
-pre[class*="language-"] {
-	background: #272822;
-}
-
-/* Inline code */
-:not(pre) > code[class*="language-"] {
-	padding: .1em;
-	border-radius: .3em;
-	white-space: normal;
-}
-
-.token.comment,
-.token.prolog,
-.token.doctype,
-.token.cdata {
-	color: #8292a2;
-}
-
-.token.punctuation {
-	color: #f8f8f2;
-}
-
-.token.namespace {
-	opacity: .7;
-}
-
-.token.property,
-.token.tag,
-.token.constant,
-.token.symbol,
-.token.deleted {
-	color: #f92672;
-}
-
-.token.boolean,
-.token.number {
-	color: #ae81ff;
-}
-
-.token.selector,
-.token.attr-name,
-.token.string,
-.token.char,
-.token.builtin,
-.token.inserted {
-	color: #a6e22e;
-}
-
-.token.operator,
-.token.entity,
-.token.url,
-.language-css .token.string,
-.style .token.string,
-.token.variable {
-	color: #f8f8f2;
-}
-
-.token.atrule,
-.token.attr-value,
-.token.function,
-.token.class-name {
-	color: #e6db74;
-}
-
-.token.keyword {
-	color: #66d9ef;
-}
-
-.token.regex,
-.token.important {
-	color: #fd971f;
-}
-
-.token.important,
-.token.bold {
-	font-weight: bold;
-}
-.token.italic {
-	font-style: italic;
-}
-
-.token.entity {
-	cursor: help;
-}
-/*
- * New diff- syntax
- */
-
-pre[class*="language-diff-"] {
-	--eleventy-code-padding: 1.25em;
-	padding-left: var(--eleventy-code-padding);
-	padding-right: var(--eleventy-code-padding);
-}
-.token.deleted {
-	background-color: hsl(0, 51%, 37%);
-	color: inherit;
-}
-.token.inserted {
-	background-color: hsl(126, 31%, 39%);
-	color: inherit;
-}
-
-/* Make the + and - characters unselectable for copy/paste */
-.token.prefix.unchanged,
-.token.prefix.inserted,
-.token.prefix.deleted {
-	-webkit-user-select: none;
-	user-select: none;
-	display: inline-flex;
-	align-items: center;
-	justify-content: center;
-	padding-top: 2px;
-	padding-bottom: 2px;
-}
-.token.prefix.inserted,
-.token.prefix.deleted {
-	width: var(--eleventy-code-padding);
-	background-color: rgba(0,0,0,.2);
-}
-
-/* Optional: full-width background color */
-.token.inserted:not(.prefix),
-.token.deleted:not(.prefix) {
-	display: block;
-	margin-left: calc(-1 * var(--eleventy-code-padding));
-	margin-right: calc(-1 * var(--eleventy-code-padding));
-	text-decoration: none; /* override del, ins, mark defaults */
-	color: inherit; /* override del, ins, mark defaults */
-}</style>
+} */</style>
 		<!-- Open Graph -->
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="twitter:card" content="summary_large_image">
-		<meta property="og:title" content="Windshield Wipers">
-		<meta property="og:description" content="A metaphor for staying functional in mental storms.">
+		<meta property="og:title" content="Tagged &#39;CreativeNavigation&#39;">
+		<meta property="og:description" content="Where grains of thought can become sandmansions">
 		<meta property="og:type" content="website">
-		<meta property="og:url" content="https://badeery.github.io/articles/Windshield Wipers/">
+		<meta property="og:url" content="https://badeery.github.io/tags/creativenavigation/">
 		<meta property="og:image" content="https://badeery.github.io/sandbox/imgs/BDs-Sandboxv2.png">
 
 	</head>
@@ -1063,88 +912,49 @@ pre[class*="language-diff-"] {
 			</nav>
 		</header>
 
-		<main id="main">
-			
-  
-  
+		<main id="main-block">
+			<section class="base-content">
+				<h1 id="tagged-creativenavigation">Tagged “CreativeNavigation”</h1>
 
-  <article class="main-block">
-    <h1 class="article-title" id="windshield-wipers">
-      <span style="display: inline-flex; align-items: center; gap: 0.9rem;">
-        
-        Windshield Wipers
-      </span>
-    </h1>
 
-    <div class="article-meta-row">
-      <span class="article-meta-date">
-        <i data-lucide="calendar"></i> 01-Jul-2025
-      </span>
-      <span class="article-meta-read-time">
-        <i data-lucide="clock"></i> 2 min read
-      </span>
-    </div>
-
-    <div class="article-tag-line">
-      
-        <a href="/sandbox/tags/creativenonfiction/">#CreativeNonfiction</a>
-      
-        <a href="/sandbox/tags/metaphorswithpurpose/">#MetaphorsWithPurpose</a>
-      
-    </div>
-
-    <div class="article-body">
-      <p><span style="font-size:2em; font-weight: 700">As</span> a young fella, I was always scared of the dark, scared of the unknowns that lurk in the darkest corners of the room.</p>
-<p>I'd lay there trying to sleep, my brain with its Nikes laced up, ready to bolt. Realising that sleep was something I couldn't catch - I built myself a mechanism to clear my mind - the simplest of mechanisms: a metaphor.</p>
-<p>With my eyes closed, I’d imagine myself in the back seat of a car. It's night-time. I'm looking through the windscreen. The road's blurry with heavy rain. Even with the headlights on, it’s hard to see.</p>
-<p>And those irrational fears? They’re stuck inside the beads of water rolling across my vision like they’re right in front of me.<br>
-But then, I’d turn the windscreen wipers on, and every few seconds, they’d cut through the raindrops with clinical precision - clearing the view once again.</p>
-<p>That image stuck.<br>
-And I still use it today.</p>
-<hr>
-<p>Those raindrops - the thoughts - they're the images of failure, the awkward jokes that fell flat, the concerns that it’s getting late and the motel down the road might not be open.</p>
-<p>But there’s no point getting emotional at the sky. Weather is the last thing that will ever surrender control to us mere mortals.</p>
-<p>The motel? Who cares. You just need to worry about staying on the road. If it’s not open - you’ll figure it out like you always do.</p>
-<p>All that needs to be done right now is to anticipate that next swipe of the blades, watching those thoughts cut shapes across the windscreen until they’re swept away.</p>
-<blockquote>
-<p>And when the rain gets heavier?<br>
-When the thoughts spiral?</p>
-</blockquote>
-<p>You just crank the pace up on those bad boys and clear the windscreen even quicker.</p>
-<p>Life is about momentum.<br>
-<em>A rolling stone gathers no moss.</em>
-<em>Life is like riding a bike: momentum equals balance, balance equals momentum.</em><br>
-<em>To get ahead, just get started. And if you can’t walk? Then crawl.</em></p>
-<p>Often, the thoughts that smash our windscreen make the idea of moving forward feel almost unachievable.</p>
-<p>But by focusing on those droplets, the wipers, they bring clarity.</p>
-<p>Not all at once, not forever - just enough to keep moving forward. Just enough to slow your thoughts so you can fall asleep tonight.</p>
-<blockquote>
-<p>“Even when the storm is intense - there’s always a moment of clarity between the swipes.”</p>
-</blockquote>
-<hr>
-<p>I don't consider this to be avoidance.</p>
-<p>It's clearing your viewpoint <em>for now</em> - to get the rest you need, to gain the clarity required to identify the next step.</p>
-<hr>
-<p>The journey doesn’t always get easier.<br>
-But by turning on the wipers, you’ve now got clarity. You never forgot how to drive - you just know how to do it in the rain.</p>
-<hr>
-
-    </div>
-
-    
-      
-      
-      
-        <ul class="article-nav-links">
+<div class="articles-page-grid">
+    <article class="articles-page-card">
+      <h2 id="windshield-wipers">
+        <a href="/sandbox/windshield-wipers/">
           
-          
-            <li class="article-nav-next">Next →<br><a href="/sandbox/articles/captain-planet/Captain Planet vs. Emissions/">Captain Planet vs. Emissions = Win?</a></li>
-          
-        </ul>
-      
-    
-  </article>
+          Windshield Wipers
+        </a>
+      </h2>
 
+      
+        <p class="articles-page-excerpt">A metaphor for staying functional in mental storms.</p>
+      
+
+      <div class="articles-page-flex-spacer"></div>
+
+      
+    </article>
+    <article class="articles-page-card">
+      <h2 id="my-writing-styles">
+        <a href="/sandbox/writing-styles/">
+          
+          My Writing Styles
+        </a>
+      </h2>
+
+      
+        <p class="articles-page-excerpt">Just a brief write up on the types of writing you&#39;ll find on this page.</p>
+      
+
+      <div class="articles-page-flex-spacer"></div>
+
+      
+    </article>
+</div>
+
+
+
+			</section>
 		</main>
 
 		<footer>
@@ -1154,7 +964,7 @@ But by turning on the wipers, you’ve now got clarity. You never forgot how to 
 		</footer>
 		<script src="https://unpkg.com/lucide@latest"></script>
 		
-		<!-- This page `/articles/Windshield Wipers/` was built on 2025-07-01T02:53:46.579Z -->
+		<!-- This page `/tags/creativenavigation/` was built on 2025-07-01T10:41:39.987Z -->
 		<script type="module" src="/sandbox/dist/V6OKUKOoxV.js"></script>
 	</body>
 </html>

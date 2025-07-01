@@ -418,6 +418,10 @@ header {
   margin-bottom: 2rem;
 }
 
+.base-content p{
+margin-left: .65rem;
+}
+
 .articles-page-intro p{
   margin-left: .65rem;
 }
@@ -466,6 +470,12 @@ header {
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
+
+p.articles-page-excerpt {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
 
 .articles-page-card:hover {
   transform: translateY(-4px);
@@ -853,6 +863,13 @@ header {
 .color-muted{ color:#888;}
 .color-red{ color: red;}
 
+/* --- GLOBAL --- */
+/* Counteracts base-content p{} */
+/* p.no-indent {
+  margin-left: 0 !important;
+} */
+
+
 
 /* --- Debug Frames --- */
 /* * {
@@ -869,182 +886,14 @@ html, body {
 
 .articles-page-tag-line{
   outline: 1px solid magenta;
-} */
-/**
- * okaidia theme for JavaScript, CSS and HTML
- * Loosely based on Monokai textmate theme by http://www.monokai.nl/
- * @author ocodia
- */
-
-code[class*="language-"],
-pre[class*="language-"] {
-	color: #f8f8f2;
-	background: none;
-	text-shadow: 0 1px rgba(0, 0, 0, 0.3);
-	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
-	font-size: 1em;
-	text-align: left;
-	white-space: pre;
-	word-spacing: normal;
-	word-break: normal;
-	word-wrap: normal;
-	line-height: 1.5;
-
-	-moz-tab-size: 4;
-	-o-tab-size: 4;
-	tab-size: 4;
-
-	-webkit-hyphens: none;
-	-moz-hyphens: none;
-	-ms-hyphens: none;
-	hyphens: none;
-}
-
-/* Code blocks */
-pre[class*="language-"] {
-	padding: 1em;
-	margin: .5em 0;
-	overflow: auto;
-	border-radius: 0.3em;
-}
-
-:not(pre) > code[class*="language-"],
-pre[class*="language-"] {
-	background: #272822;
-}
-
-/* Inline code */
-:not(pre) > code[class*="language-"] {
-	padding: .1em;
-	border-radius: .3em;
-	white-space: normal;
-}
-
-.token.comment,
-.token.prolog,
-.token.doctype,
-.token.cdata {
-	color: #8292a2;
-}
-
-.token.punctuation {
-	color: #f8f8f2;
-}
-
-.token.namespace {
-	opacity: .7;
-}
-
-.token.property,
-.token.tag,
-.token.constant,
-.token.symbol,
-.token.deleted {
-	color: #f92672;
-}
-
-.token.boolean,
-.token.number {
-	color: #ae81ff;
-}
-
-.token.selector,
-.token.attr-name,
-.token.string,
-.token.char,
-.token.builtin,
-.token.inserted {
-	color: #a6e22e;
-}
-
-.token.operator,
-.token.entity,
-.token.url,
-.language-css .token.string,
-.style .token.string,
-.token.variable {
-	color: #f8f8f2;
-}
-
-.token.atrule,
-.token.attr-value,
-.token.function,
-.token.class-name {
-	color: #e6db74;
-}
-
-.token.keyword {
-	color: #66d9ef;
-}
-
-.token.regex,
-.token.important {
-	color: #fd971f;
-}
-
-.token.important,
-.token.bold {
-	font-weight: bold;
-}
-.token.italic {
-	font-style: italic;
-}
-
-.token.entity {
-	cursor: help;
-}
-/*
- * New diff- syntax
- */
-
-pre[class*="language-diff-"] {
-	--eleventy-code-padding: 1.25em;
-	padding-left: var(--eleventy-code-padding);
-	padding-right: var(--eleventy-code-padding);
-}
-.token.deleted {
-	background-color: hsl(0, 51%, 37%);
-	color: inherit;
-}
-.token.inserted {
-	background-color: hsl(126, 31%, 39%);
-	color: inherit;
-}
-
-/* Make the + and - characters unselectable for copy/paste */
-.token.prefix.unchanged,
-.token.prefix.inserted,
-.token.prefix.deleted {
-	-webkit-user-select: none;
-	user-select: none;
-	display: inline-flex;
-	align-items: center;
-	justify-content: center;
-	padding-top: 2px;
-	padding-bottom: 2px;
-}
-.token.prefix.inserted,
-.token.prefix.deleted {
-	width: var(--eleventy-code-padding);
-	background-color: rgba(0,0,0,.2);
-}
-
-/* Optional: full-width background color */
-.token.inserted:not(.prefix),
-.token.deleted:not(.prefix) {
-	display: block;
-	margin-left: calc(-1 * var(--eleventy-code-padding));
-	margin-right: calc(-1 * var(--eleventy-code-padding));
-	text-decoration: none; /* override del, ins, mark defaults */
-	color: inherit; /* override del, ins, mark defaults */
-}</style>
+} */</style>
 		<!-- Open Graph -->
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="twitter:card" content="summary_large_image">
 		<meta property="og:title" content="Captain Planet and the Planeteers">
 		<meta property="og:description" content="Where grains of thought can become sandmansions">
 		<meta property="og:type" content="website">
-		<meta property="og:url" content="https://badeery.github.io/articles/captain-planet/Captain Planet and the Planeteers/">
+		<meta property="og:url" content="https://badeery.github.io/articles/the-planeteers/">
 		<meta property="og:image" content="https://badeery.github.io/sandbox/imgs/BDs-Sandboxv2.png">
 
 	</head>
@@ -1063,51 +912,17 @@ pre[class*="language-diff-"] {
 			</nav>
 		</header>
 
-		<main id="main">
-			
-  
-  
+		<main id="main-block">
+			<section class="base-content">
+				<h1 id="captain-planet-and-the-planeteers">Captain Planet and the Planeteers</h1>
+<p><strong>Kwame</strong> (Africa): Wields the power of <em>Earth</em>—strong, grounded, and often the team’s quiet leader</p>
+<p><strong>Wheeler</strong> (North America): Controls <em>Fire</em>—hot-headed, brave, and always ready to jump into action.</p>
+<p><strong>Linka</strong> (Eastern Europe): Commands <em>Wind</em>—sharp, analytical, and fiercely protective of nature.</p>
+<p><strong>Gi</strong> (Asia): Has the power of <em>Water</em>—compassionate, curious, and deeply connected to marine life.</p>
+<p><strong>Ma-Ti</strong> (South America): Channels <em>Heart</em>—empathetic, intuitive, and able to communicate with animals and people alike.</p>
+<p><picture><source type="image/avif" srcset="/sandbox/articles/the-planeteers/prBJ5d9UhZ-720.avif 720w"><source type="image/webp" srcset="/sandbox/articles/the-planeteers/prBJ5d9UhZ-720.webp 720w"><img loading="lazy" decoding="async" src="/sandbox/articles/the-planeteers/prBJ5d9UhZ-720.jpeg" alt="Captain%20Planet%20and%20the%20Planteers.jpg" width="720" height="696"></picture></p>
 
-  <article class="main-block">
-    <h1 class="article-title" id="captain-planet-and-the-planeteers">
-      <span style="display: inline-flex; align-items: center; gap: 0.9rem;">
-        
-        Captain Planet and the Planeteers
-      </span>
-    </h1>
-
-    <div class="article-meta-row">
-      <span class="article-meta-date">
-        <i data-lucide="calendar"></i> 01-Jul-2025
-      </span>
-      <span class="article-meta-read-time">
-        <i data-lucide="clock"></i> 1 min read
-      </span>
-    </div>
-
-    <div class="article-tag-line">
-      
-    </div>
-
-    <div class="article-body">
-      <ul>
-<li><strong>Kwame</strong> (Africa): Wields the power of <em>Earth</em>—strong, grounded, and often the team’s quiet leader</li>
-<li><strong>Wheeler</strong> (North America): Controls <em>Fire</em>—hot-headed, brave, and always ready to jump into action.</li>
-<li><strong>Linka</strong> (Eastern Europe): Commands <em>Wind</em>—sharp, analytical, and fiercely protective of nature.</li>
-<li><strong>Gi</strong> (Asia): Has the power of <em>Water</em>—compassionate, curious, and deeply connected to marine life.</li>
-<li><strong>Ma-Ti</strong> (South America): Channels <em>Heart</em>—empathetic, intuitive, and able to communicate with animals and people alike.</li>
-</ul>
-<p><picture><source type="image/avif" srcset="/articles/captain-planet/Captain Planet and the Planeteers/prBJ5d9UhZ-720.avif 720w"><source type="image/webp" srcset="/articles/captain-planet/Captain Planet and the Planeteers/prBJ5d9UhZ-720.webp 720w"><img loading="lazy" decoding="async" src="/sandbox/articles/captain-planet/Captain Planet and the Planeteers/prBJ5d9UhZ-720.jpeg" alt="Captain%20Planet%20and%20the%20Planteers.jpg" width="720" height="696"></picture></p>
-
-    </div>
-
-    
-      
-      
-      
-    
-  </article>
-
+			</section>
 		</main>
 
 		<footer>
@@ -1117,7 +932,7 @@ pre[class*="language-diff-"] {
 		</footer>
 		<script src="https://unpkg.com/lucide@latest"></script>
 		
-		<!-- This page `/articles/captain-planet/Captain Planet and the Planeteers/` was built on 2025-07-01T02:53:46.580Z -->
+		<!-- This page `/articles/the-planeteers/` was built on 2025-07-01T10:41:39.884Z -->
 		<script type="module" src="/sandbox/dist/V6OKUKOoxV.js"></script>
 	</body>
 </html>
