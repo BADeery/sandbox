@@ -418,6 +418,10 @@ header {
   margin-bottom: 2rem;
 }
 
+.base-content p{
+margin-left: .65rem;
+}
+
 .articles-page-intro p{
   margin-left: .65rem;
 }
@@ -466,6 +470,12 @@ header {
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
+
+p.articles-page-excerpt {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
 
 .articles-page-card:hover {
   transform: translateY(-4px);
@@ -853,6 +863,13 @@ header {
 .color-muted{ color:#888;}
 .color-red{ color: red;}
 
+/* --- GLOBAL --- */
+/* Counteracts base-content p{} */
+/* p.no-indent {
+  margin-left: 0 !important;
+} */
+
+
 
 /* --- Debug Frames --- */
 /* * {
@@ -870,13 +887,15 @@ html, body {
 .articles-page-tag-line{
   outline: 1px solid magenta;
 } */</style>
-	<!-- Open Graph -->
-		<meta property="og:title" content="BD's Sandbox">
+		<!-- Open Graph -->
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="twitter:card" content="summary_large_image">
+		<meta property="og:title" content="Bz &amp; Dz">
 		<meta property="og:description" content="Where grains of thought can become sandmansions">
-		<meta property="og:image" content="/sandbox/imgs/BDs-Sandboxv2.png">
-		<meta property="og:image" content="https://badeery.github.io/sandbox/imgs/BDs-Sandboxv2.png?v=2">
 		<meta property="og:type" content="website">
-	
+		<meta property="og:url" content="https://badeery.github.io/bz-and-dz/">
+		<meta property="og:image" content="https://badeery.github.io/sandbox/imgs/BDs-Sandboxv2.png">
+
 	</head>
 	<body>
 		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
@@ -893,8 +912,10 @@ html, body {
 			</nav>
 		</header>
 
-		<main id="main">
-			<h1 id="beez-and-deez"> Beez & Deez </h1>
+		<main id="main-block">
+			<section class="base-content">
+				<h1 id="beez-and-deez"> Beez & Deez </h1>
+<p>To understand more about my writing styles - <a href="/sandbox/writing-styles">Click Here</a>, otherwise;</p>
 <p>This is a bit of a disclaimer for what you might read on this site:</p>
 <ul>
 <li>I speak with conviction.</li>
@@ -929,6 +950,7 @@ Expect unfiltered thoughts, unfinished ideas, half-built sandmansions.<br>
 If you’re after polished certainty - this may not be for you.<br>
 But if you’re okay with conviction that’s willing to evolve - welcome in.</p>
 
+			</section>
 		</main>
 
 		<footer>
@@ -938,7 +960,7 @@ But if you’re okay with conviction that’s willing to evolve - welcome in.</p
 		</footer>
 		<script src="https://unpkg.com/lucide@latest"></script>
 		
-		<!-- This page `/bz-and-dz/` was built on 2025-06-30T11:32:48.543Z -->
+		<!-- This page `/bz-and-dz/` was built on 2025-07-01T10:39:46.622Z -->
 		<script type="module" src="/sandbox/dist/V6OKUKOoxV.js"></script>
 	</body>
 </html>

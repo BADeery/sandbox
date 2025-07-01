@@ -2,6 +2,7 @@
 title: Captain Planet vs. Emissions = Win?
 Date: 2025-06-30
 layout: layouts/article.njk
+permalink: /articles/captain-planet-vs-emissions/
 description: Could a mulleted cartoon from the '90s have quietly influenced a generation better our environment? Maybe it's time for a reboot?
 tags: 
 - posts
@@ -11,7 +12,7 @@ tags:
 ---
 <span style="font-size: 2em; font-weight: 700;">In</span> the early ’90s Captain Planet was waging war against overconsumption, deforestation, toxic dumping.
 
-So imagine a 2020 reboot, the same diverse team of [[Captain Planet and the Planeteers|Planeteers.]] but with their sights set on fighting the villainous **Smoggorth** and their cannon of caustic carbon - polluting the air, choking our crops, and making beach cricket a forever memory.
+So imagine a 2020 reboot, the same diverse team of [Planeteers.](/articles/the-planeteers/) but with their sights set on fighting the villainous **Smoggorth** and their cannon of caustic carbon - polluting the air, choking our crops, and making beach cricket a forever memory.
 
 Yes, I realise - we already have too many green-haired eco-warriors with mullets fighting against Scope 3 Greenhouse Gases.
 

@@ -64,8 +64,10 @@
 			</nav>
 		</header>
 
-		<main id="main">
-			{% block content %}{{ content | safe }}{% endblock %}
+		<main id="main-block">
+			<section class="base-content">
+				{% block content %}{{ content | safe }}{% endblock %}
+			</section>
 		</main>
 
 		<footer>

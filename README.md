@@ -1,8 +1,3 @@
-Sure — here's your updated `README` written in plain text (you can copy this directly into a `README.md` file):
-
----
-
-````
 # BDs Sandbox
 
 **Live site:** https://badeery.github.io/sandbox  
@@ -13,11 +8,12 @@ Sure — here's your updated `README` written in plain text (you can copy this d
 
 ## 🧱 Features
 
-- Clean layout using Nunjucks templates (`base.njk`, `post.njk`, `articles.njk`)
-- Article grid with responsive `.article-card` layout
+- Modular layout using Nunjucks templates (`base.njk`, `article.njk`, `articles-page.njk`, `postslist.njk`)
+- Article grid with responsive `.articles-page-card` layout
+- Individual post pages via `article.njk` with semantic metadata
 - Reading time via `eleventy-plugin-reading-time`
 - Icons injected using `data-lucide`
-- Semantic HTML + Markdown content (`index.md`, `articles.md`, etc.)
+- Semantic HTML + Markdown content (`index.md`, `articles-page.md`, etc.)
 - Responsive design, dark mode support, and semantic spacing
 - Custom sitemap via `sitemap.xml.njk`
 - GitHub Pages-friendly build (`_site/`)
@@ -26,17 +22,15 @@ Sure — here's your updated `README` written in plain text (you can copy this d
 
 ## 🔧 Setup
 
-Terminal:
-
 ```bash
 npm install
 npx eleventy --serve
-````
+```
 
 To deploy to GitHub Pages:
 
-* Set build directory to `_site/`
-* Push from your working branch to `gh-pages` (via GitHub Actions or manual build)
+- Set build directory to `_site/`
+- Push from your working branch to `gh-pages` (via GitHub Actions or manual build)
 
 ---
 
@@ -44,19 +38,19 @@ To deploy to GitHub Pages:
 
 ```
 .
-├── .eleventy.js (eleventy.config.js)
+├── eleventy.config.js
 ├── package.json
 ├── index.css
 ├── sitemap.xml.njk
 ├── layouts/
 │   ├── base.njk
-│   ├── post.njk
-│   ├── articles.njk
+│   ├── article.njk
+│   ├── articles-page.njk
 │   └── postslist.njk
 ├── content/
 │   ├── index.md
-│   ├── articles.md
-│   └── Bz & Dz.md
+│   ├── articles-page.md
+│   └── articles/ (markdown article folders)
 └── _site/ (auto-generated)
 ```
 
@@ -64,27 +58,22 @@ To deploy to GitHub Pages:
 
 ## 🧩 Plugins
 
-* `eleventy-plugin-reading-time` — shows estimated read time on article cards
-* `luxon` — used in `auDate` filter for Australian-friendly date formatting
+- `eleventy-plugin-reading-time` — shows estimated read time
+- `luxon` — used in `auDate` filter for Australian-friendly date formatting
 
 ---
 
 ## 🧪 Notable Customisations
 
-* `.post-footer-meta-row` styles ensure date (with calendar icon) aligns bottom-left, and reading time (with clock icon) aligns bottom-right
-* Responsive grid scaling via `grid-template-columns: repeat(auto-fit, minmax(...))`
-* Typography via `Space Mono` and `Muli` fonts
-* Custom color system using `--text-color` variables and `prefers-color-scheme`
+- `.articles-page-card` and `.article-meta-row` for semantic and visual clarity
+- Custom Eleventy collection: `posts` pulls all `.md` articles from `/articles/`
+- Clean handling of Obsidian-style wikilinks and image references
+- Tooltip (`.quip-tooltip`) and inline symbol system (`.quip-wrapper`)
+- Typography via `Space Mono` and `Muli` fonts
+- CSS variables for theming and dark mode
 
 ---
 
 ## ✍️ Author
 
 Created by **BD** — a neurodivergent systems thinker with a sandbox mind.
-
-```
-
----
-
-Let me know if you want a short `gh-pages` deploy section or comments for each template file.
-```

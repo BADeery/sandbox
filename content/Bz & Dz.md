@@ -9,6 +9,8 @@ eleventyNavigation:
 
 <h1> Beez & Deez </h1>
 
+To understand more about my writing styles - [Click Here](/writing-styles), otherwise;
+
 This is a bit of a disclaimer for what you might read on this site:
 
 - I speak with conviction.  

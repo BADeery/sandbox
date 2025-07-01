@@ -3,11 +3,13 @@
 title: Windshield Wipers 
 Date: 2025-06-24  
 layout: layouts/article.njk  
+permalink: /windshield-wipers/
 description: A metaphor for staying functional in mental storms. 
 tags:
 - posts
-- CreativeNonfiction
+- CreativeNavigation
 - MetaphorsWithPurpose
+
 ---
 <span style="font-size:2em; font-weight: 700">As</span> a young fella, I was always scared of the dark, scared of the unknowns that lurk in the darkest corners of the room.
 
