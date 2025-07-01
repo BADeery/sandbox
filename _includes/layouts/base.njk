@@ -37,13 +37,15 @@
 		{#- <link rel="stylesheet" href="{% getBundleFileUrl "css" %}"> #}
 
 		{#- Add the heading-anchors web component to the JavaScript bundle #}
-	<!-- Open Graph -->
-		<meta property="og:title" content="BD's Sandbox" />
-		<meta property="og:description" content="Where grains of thought can become sandmansions" />
-		<meta property="og:image" content="/sandbox/imgs/BDs-Sandboxv2.png" />
-		<meta property="og:image" content="https://badeery.github.io/sandbox/imgs/BDs-Sandboxv2.png?v=2" />
-		<meta property="og:type" content="website" />
-	
+		<!-- Open Graph -->
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="twitter:card" content="summary_large_image">
+		<meta property="og:title" content="{{ title or 'BD\'s Sandbox' }}">
+		<meta property="og:description" content="{{ description or 'Where grains of thought can become sandmansions' }}">
+		<meta property="og:type" content="website">
+		<meta property="og:url" content="https://badeery.github.io{{ page.url }}">
+		<meta property="og:image" content="https://badeery.github.io/sandbox/imgs/BDs-Sandboxv2.png">
+
 	</head>
 	<body>
 		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>

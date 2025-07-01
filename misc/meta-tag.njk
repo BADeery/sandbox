@@ -1,0 +1,13 @@
+		{% if page.url contains "/articles/" %}
+		<meta property="og:title" content="{{ title }}">
+		<meta property="og:description" content="{{ description or 'Where grains of thought can become sandmansions' }}">
+		<meta property="og:type" content="article">
+		<meta property="og:url" content="https://badeery.github.io{{ page.url }}">
+		<meta property="og:image" content="https://res.cloudinary.com/dfuyvlfrf/image/upload/l_text:courier_72_bold:{{ title | urlencode }},co_rgb:1D2D50/fl_layer_apply,g_center,c_fit,w_800/BDs-Sandbox.png">
+		{% else %}
+		<meta property="og:title" content="BD's Sandbox">
+		<meta property="og:description" content="Where grains of thought can become sandmansions">
+		<meta property="og:type" content="website">
+		<meta property="og:url" content="https://badeery.github.io/sandbox">
+		<meta property="og:image" content="https://badeery.github.io/sandbox/imgs/BDs-Sandboxv2.png">
+		{% endif %} 
