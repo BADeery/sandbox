@@ -10,7 +10,7 @@ tags:
 - Environmental
 - SubsciousLearning
 ---
-<span style="font-size: 2em; font-weight: 700;">In</span> the early ’90s Captain Planet was waging war against overconsumption, deforestation, toxic dumping.
+<span style="font-size: 2em; font-weight: 700;">In</span> the early ’90s Captain Planet was waging war against overconsumption, deforestation and toxic dumping.
 
 So imagine a 2020 reboot, the same diverse team of [Planeteers.](/articles/the-planeteers/) but with their sights set on fighting the villainous **Smoggorth** and their cannon of caustic carbon - polluting the air, choking our crops, and making beach cricket a forever memory.
 
@@ -93,7 +93,7 @@ But because it influenced the kids who eventually could.
 
 ## What if we did it again?
 
-Not a nostalgia piece. Not an ironic reboot. {% quip "Like the 2017 Nokia 3310 release we forget happened" %}
+Not a nostalgia piece. Not an ironic reboot.
 
 But a genuine educational cartoon designed to shape the environmental lens of the next generation, *before* they’re the ones signing off on Scope 1, 2, and 3 emissions policies.
 
