@@ -93,7 +93,7 @@ But because it influenced the kids who eventually could.
 
 ## What if we did it again?
 
-Not a nostalgia piece. Not an ironic reboot.
+Not a nostalgia piece. Not an iconic reboot.
 
 But a genuine educational cartoon designed to shape the environmental lens of the next generation, *before* they’re the ones signing off on Scope 1, 2, and 3 emissions policies.
 
