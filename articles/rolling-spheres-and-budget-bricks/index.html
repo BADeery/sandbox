@@ -3,8 +3,8 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>The Sandbox</title>
-		<meta name="description" content="A sandbox for me to write and play.">
+		<title>Rolling Spheres and Budget Bricks</title>
+		<meta name="description" content="How a question about cheap Chinese cars turned into a metaphor about structural honesty and the cost of cutting corners.">
 		<link rel="stylesheet" href="/sandbox/css/index.css">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Space+Mono|Muli|Oswald|Noto+Sans&display=swap">
 		
@@ -926,14 +926,182 @@ html, body {
 
 /* * {
   outline: 1px solid red;
-} */</style>
+} */
+/**
+ * okaidia theme for JavaScript, CSS and HTML
+ * Loosely based on Monokai textmate theme by http://www.monokai.nl/
+ * @author ocodia
+ */
+
+code[class*="language-"],
+pre[class*="language-"] {
+	color: #f8f8f2;
+	background: none;
+	text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	font-size: 1em;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	line-height: 1.5;
+
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+	padding: 1em;
+	margin: .5em 0;
+	overflow: auto;
+	border-radius: 0.3em;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+	background: #272822;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+	padding: .1em;
+	border-radius: .3em;
+	white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: #8292a2;
+}
+
+.token.punctuation {
+	color: #f8f8f2;
+}
+
+.token.namespace {
+	opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.constant,
+.token.symbol,
+.token.deleted {
+	color: #f92672;
+}
+
+.token.boolean,
+.token.number {
+	color: #ae81ff;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+	color: #a6e22e;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string,
+.token.variable {
+	color: #f8f8f2;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.function,
+.token.class-name {
+	color: #e6db74;
+}
+
+.token.keyword {
+	color: #66d9ef;
+}
+
+.token.regex,
+.token.important {
+	color: #fd971f;
+}
+
+.token.important,
+.token.bold {
+	font-weight: bold;
+}
+.token.italic {
+	font-style: italic;
+}
+
+.token.entity {
+	cursor: help;
+}
+/*
+ * New diff- syntax
+ */
+
+pre[class*="language-diff-"] {
+	--eleventy-code-padding: 1.25em;
+	padding-left: var(--eleventy-code-padding);
+	padding-right: var(--eleventy-code-padding);
+}
+.token.deleted {
+	background-color: hsl(0, 51%, 37%);
+	color: inherit;
+}
+.token.inserted {
+	background-color: hsl(126, 31%, 39%);
+	color: inherit;
+}
+
+/* Make the + and - characters unselectable for copy/paste */
+.token.prefix.unchanged,
+.token.prefix.inserted,
+.token.prefix.deleted {
+	-webkit-user-select: none;
+	user-select: none;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+.token.prefix.inserted,
+.token.prefix.deleted {
+	width: var(--eleventy-code-padding);
+	background-color: rgba(0,0,0,.2);
+}
+
+/* Optional: full-width background color */
+.token.inserted:not(.prefix),
+.token.deleted:not(.prefix) {
+	display: block;
+	margin-left: calc(-1 * var(--eleventy-code-padding));
+	margin-right: calc(-1 * var(--eleventy-code-padding));
+	text-decoration: none; /* override del, ins, mark defaults */
+	color: inherit; /* override del, ins, mark defaults */
+}</style>
 		<!-- Open Graph -->
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="twitter:card" content="summary_large_image">
-		<meta property="og:title" content="BD&#39;s Sandbox">
-		<meta property="og:description" content="Where grains of thought can become sandmansions">
+		<meta property="og:title" content="Rolling Spheres and Budget Bricks">
+		<meta property="og:description" content="How a question about cheap Chinese cars turned into a metaphor about structural honesty and the cost of cutting corners.">
 		<meta property="og:type" content="website">
-		<meta property="og:url" content="https://badeery.github.io/404.html">
+		<meta property="og:url" content="https://badeery.github.io/articles/rolling-spheres-and-budget-bricks/">
 		<meta property="og:image" content="https://badeery.github.io/sandbox/imgs/BDs-Sandboxv2.png">
 
 	</head>
@@ -954,20 +1122,95 @@ html, body {
 
 		<main id="main-block">
 			<section class="base-content">
-				<h1 id="content-not-found">Content not found.</h1>
-<p>Go <a href="index.njk">home</a>.</p>
-<!--
+				
+  
+  
 
-Read more: https://www.11ty.dev/docs/quicktips/not-found/
+  <article class="main-block">
+    <h1 class="article-title" id="rolling-spheres-and-budget-bricks">
+      <span style="display: inline-flex; align-items: center; gap: 0.9rem;">
+        
+        Rolling Spheres and Budget Bricks
+      </span>
+    </h1>
 
-This is compatible with:
+    <div class="article-meta-row">
+      <span class="article-meta-date">
+        <i data-lucide="calendar"></i> 09-Jul-2025
+      </span>
+      <span class="article-meta-read-time">
+        <i data-lucide="clock"></i> 2 min read
+      </span>
+    </div>
 
-- GitHub Pages: https://help.github.com/articles/creating-a-custom-404-page-for-your-github-pages-site/
-- GitLab Pages: https://docs.gitlab.com/ee/user/project/pages/introduction.html#custom-error-codes-pages
-- Netlify: https://www.netlify.com/docs/redirects/#custom-404
-- Cloudflare Pages: https://developers.cloudflare.com/pages/platform/serving-pages/#not-found-behavior
-- Vercel: https://vercel.com/guides/custom-404-page#static-site-generator-ssg
--->
+    <div class="article-tag-line">
+      
+        <a href="/sandbox/tags/creativenavigation/">#CreativeNavigation</a>
+      
+        <a href="/sandbox/tags/systemsthinking/">#SystemsThinking</a>
+      
+        <a href="/sandbox/tags/industrialdesign/">#IndustrialDesign</a>
+      
+    </div>
+
+    <div class="article-body">
+      <h1 id="rolling-spheres-and-budget-bricks-2">Rolling Spheres and Budget Bricks</h1>
+<p>It started with a question:<br>
+<strong>Why are GWM cars so cheap in Australia?</strong></p>
+<p>From there, the conversation unrolled like one of those very same cars — smooth at first, then a little bumpy, and finally somewhere unexpected: a LEGO metaphor, stretched and twisted until it held something real.</p>
+<h3 id="step-one-cheaper-incompetent">Step One: Cheaper ≠ Incompetent</h3>
+<p>The answer wasn’t as simple as “Chinese cars are crap.” That kind of thinking flattens the real story.</p>
+<p>Turns out, brands like GWM often <em>license</em> real parts from big-name suppliers — <strong>ZF</strong>, <strong>Getrag</strong>, even <strong>Bosch</strong> — but what they <strong>do with those parts</strong> is where the cost-cutting shows up. It's not that they can't build good cars. It's that their priorities are different.</p>
+<ul>
+<li>BMW pays for top-tier gearboxes with fine-tuned firmware.</li>
+<li>GWM gets the same architecture, but without the calibration, without the finishing flourishes — and builds the rest of the car around it as affordably as possible.</li>
+</ul>
+<p>It works. It gets the job done. But something doesn’t <em>feel</em> the same.</p>
+<h3 id="step-two-enter-the-master-builder">Step Two: Enter the Master Builder</h3>
+<p>That’s when the metaphor showed up.</p>
+<blockquote>
+<p>Becoming a LEGO Master Builder, I heard once, requires being able to create a <strong>sphere that can roll without breaking</strong>.</p>
+</blockquote>
+<p>It doesn’t just have to <em>look</em> like a sphere. It has to <em>act</em> like one. Under pressure. Repeatedly. Without a single unexpected brick giving way.</p>
+<p>That’s what good engineering is.</p>
+<ul>
+<li>Toyota’s sphere? It can roll for 20 years, through potholes and neglect, and still hold shape.</li>
+<li>GWM’s? It rolls <em>once</em>. Maybe even impressively. But no one checked what happens on the tenth rotation under real pressure — or if they did, they didn’t care.</li>
+</ul>
+<p>Where a premium OEM uses calibrated sensors to detect <em>which bricks show stress</em>, and redesigns the structure accordingly, GWM builds something that works just enough to tick the box.</p>
+<p><strong>Same suppliers. Same starting bricks. Totally different integrity.</strong></p>
+<h3 id="step-three-building-with-whats-cheap-vs-building-what-lasts">Step Three: Building with What's Cheap vs Building What Lasts</h3>
+<p>What stuck with me most wasn’t the answer to the original question — it was what the question <em>unlocked</em>:</p>
+<ul>
+<li>You can have <em>all the right parts</em> and still end up with something misaligned.</li>
+<li>You can build a thing that functions, but falls apart under pressure.</li>
+<li>You can sell a car that rolls, but never truly handles the curves.</li>
+</ul>
+<p>It's not about bashing GWM. It's about <strong>what gets lost</strong> when cost becomes the only design principle.</p>
+<p>And maybe that doesn’t just apply to cars.</p>
+<hr>
+<span class="quip-callout">
+  <i data-lucide="wrench"></i> Want to know which bricks in your own systems might crack under pressure?  
+  Start by asking: *does this just look right — or does it last?*
+</span>
+
+    </div>
+
+    
+      
+      
+      
+        <ul class="article-nav-links">
+          
+            <li class="article-nav-prev">← Previous<br><a href="/sandbox/articles/the-thing-about-failure/">The Thing About Failure</a></li>
+          
+          
+            <li class="article-nav-next">Next →<br><a href="/sandbox/windshield-wipers/">Windshield Wipers</a></li>
+          
+        </ul>
+      
+    
+  </article>
 
 			</section>
 		</main>
@@ -979,7 +1222,7 @@ This is compatible with:
 		</footer>
 		<script src="https://unpkg.com/lucide@latest"></script>
 		
-		<!-- This page `/404.html` was built on 2025-07-09T11:04:44.565Z -->
+		<!-- This page `/articles/rolling-spheres-and-budget-bricks/` was built on 2025-07-09T11:04:44.574Z -->
 		<script type="module" src="/sandbox/dist/H7jxC_LYWA.js"></script>
 		  
 	</body>

@@ -3,8 +3,8 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>The Sandbox</title>
-		<meta name="description" content="A sandbox for me to write and play.">
+		<title>The Thing About Failure</title>
+		<meta name="description" content="Failure isn&#39;t just about getting back up — it&#39;s about what you do before you stand again.">
 		<link rel="stylesheet" href="/sandbox/css/index.css">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Space+Mono|Muli|Oswald|Noto+Sans&display=swap">
 		
@@ -926,14 +926,182 @@ html, body {
 
 /* * {
   outline: 1px solid red;
-} */</style>
+} */
+/**
+ * okaidia theme for JavaScript, CSS and HTML
+ * Loosely based on Monokai textmate theme by http://www.monokai.nl/
+ * @author ocodia
+ */
+
+code[class*="language-"],
+pre[class*="language-"] {
+	color: #f8f8f2;
+	background: none;
+	text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	font-size: 1em;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	line-height: 1.5;
+
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+	padding: 1em;
+	margin: .5em 0;
+	overflow: auto;
+	border-radius: 0.3em;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+	background: #272822;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+	padding: .1em;
+	border-radius: .3em;
+	white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: #8292a2;
+}
+
+.token.punctuation {
+	color: #f8f8f2;
+}
+
+.token.namespace {
+	opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.constant,
+.token.symbol,
+.token.deleted {
+	color: #f92672;
+}
+
+.token.boolean,
+.token.number {
+	color: #ae81ff;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+	color: #a6e22e;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string,
+.token.variable {
+	color: #f8f8f2;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.function,
+.token.class-name {
+	color: #e6db74;
+}
+
+.token.keyword {
+	color: #66d9ef;
+}
+
+.token.regex,
+.token.important {
+	color: #fd971f;
+}
+
+.token.important,
+.token.bold {
+	font-weight: bold;
+}
+.token.italic {
+	font-style: italic;
+}
+
+.token.entity {
+	cursor: help;
+}
+/*
+ * New diff- syntax
+ */
+
+pre[class*="language-diff-"] {
+	--eleventy-code-padding: 1.25em;
+	padding-left: var(--eleventy-code-padding);
+	padding-right: var(--eleventy-code-padding);
+}
+.token.deleted {
+	background-color: hsl(0, 51%, 37%);
+	color: inherit;
+}
+.token.inserted {
+	background-color: hsl(126, 31%, 39%);
+	color: inherit;
+}
+
+/* Make the + and - characters unselectable for copy/paste */
+.token.prefix.unchanged,
+.token.prefix.inserted,
+.token.prefix.deleted {
+	-webkit-user-select: none;
+	user-select: none;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+.token.prefix.inserted,
+.token.prefix.deleted {
+	width: var(--eleventy-code-padding);
+	background-color: rgba(0,0,0,.2);
+}
+
+/* Optional: full-width background color */
+.token.inserted:not(.prefix),
+.token.deleted:not(.prefix) {
+	display: block;
+	margin-left: calc(-1 * var(--eleventy-code-padding));
+	margin-right: calc(-1 * var(--eleventy-code-padding));
+	text-decoration: none; /* override del, ins, mark defaults */
+	color: inherit; /* override del, ins, mark defaults */
+}</style>
 		<!-- Open Graph -->
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="twitter:card" content="summary_large_image">
-		<meta property="og:title" content="BD&#39;s Sandbox">
-		<meta property="og:description" content="Where grains of thought can become sandmansions">
+		<meta property="og:title" content="The Thing About Failure">
+		<meta property="og:description" content="Failure isn&#39;t just about getting back up — it&#39;s about what you do before you stand again.">
 		<meta property="og:type" content="website">
-		<meta property="og:url" content="https://badeery.github.io/404.html">
+		<meta property="og:url" content="https://badeery.github.io/articles/the-thing-about-failure/">
 		<meta property="og:image" content="https://badeery.github.io/sandbox/imgs/BDs-Sandboxv2.png">
 
 	</head>
@@ -954,20 +1122,138 @@ html, body {
 
 		<main id="main-block">
 			<section class="base-content">
-				<h1 id="content-not-found">Content not found.</h1>
-<p>Go <a href="index.njk">home</a>.</p>
-<!--
+				
+  
+  
 
-Read more: https://www.11ty.dev/docs/quicktips/not-found/
+  <article class="main-block">
+    <h1 class="article-title" id="the-thing-about-failure">
+      <span style="display: inline-flex; align-items: center; gap: 0.9rem;">
+        
+        The Thing About Failure
+      </span>
+    </h1>
 
-This is compatible with:
+    <div class="article-meta-row">
+      <span class="article-meta-date">
+        <i data-lucide="calendar"></i> 09-Jul-2025
+      </span>
+      <span class="article-meta-read-time">
+        <i data-lucide="clock"></i> 4 min read
+      </span>
+    </div>
 
-- GitHub Pages: https://help.github.com/articles/creating-a-custom-404-page-for-your-github-pages-site/
-- GitLab Pages: https://docs.gitlab.com/ee/user/project/pages/introduction.html#custom-error-codes-pages
-- Netlify: https://www.netlify.com/docs/redirects/#custom-404
-- Cloudflare Pages: https://developers.cloudflare.com/pages/platform/serving-pages/#not-found-behavior
-- Vercel: https://vercel.com/guides/custom-404-page#static-site-generator-ssg
--->
+    <div class="article-tag-line">
+      
+        <a href="/sandbox/tags/creativenavigation/">#CreativeNavigation</a>
+      
+        <a href="/sandbox/tags/resilience/">#Resilience</a>
+      
+        <a href="/sandbox/tags/honestgrowth/">#HonestGrowth</a>
+      
+    </div>
+
+    <div class="article-body">
+      <p>You listen to enough TED Talks and entrepreneurial podcasts, and you start to notice a pattern. They all spout the importance of failure — almost like it's a rite of passage to success.</p>
+<p>Fail fast. Fail forward. Fail better.</p>
+<p>Failure, they say, builds resilience. Separates the strong from the weak. It's character-forming, growth-fuelling.</p>
+<p>So long as you get back up and try again.</p>
+<p>What frustrates me is how often they skip the part that actually matters — how to make failure <em>worth</em> something more than just a montage to your favourite pop punk song.</p>
+<p>They don't educate audiences on the importance of honesty, and I feel like they do a disservice by skipping the messy journey of self-reflection that actually allowed them to get back up and go again.</p>
+<p>In my experience, getting back up and trying again hasn't been possible without honestly looking at the wreckage and saying to myself:</p>
+<blockquote>
+<p><em>“Yeah. I cooked that. That was on me. What I could control, I didn't, and this is the outcome.”</em></p>
+</blockquote>
+<hr>
+<h2 id="magic-mirror-on-the-wall">Magic mirror on the wall</h2>
+<p>Just like the Evil Queen in Snow White found out, sometimes the outcome of honesty isn't exactly what you want or expect — but that makes it all the more important.</p>
+<p>I believe failure invites the opportunity for honest reflection by leading you to a fork in the road with a cart of bricks.</p>
+<p>These bricks represent the things that went wrong — the systems that broke down, the risks left unaddressed, the words you shouldn’t have said, the moves you should’ve made differently. The parts of failure that bear your fingerprint.</p>
+<p>At this fork you can choose to go left. <span class="quip-wrapper" tabindex="0">^<span class="quip-tooltip">Because nothing was going right</span></span> This path is an uphill stint. It's challenging, it's uncomfortable, it almost seems impossible — but it gets easier. Not because it flattens out, but because you begin building strength. You become fitter. You're emptying the cart one brick at a time, examining each one as you place it, facing it, accepting the mistakes made but in doing so, forging a new path that'll lead you to the top of the trail.</p>
+<p>The top of that trail is where you find a better version of you.</p>
+<p>This is the process of becoming resilient.</p>
+<p>Or, you can go right — an easy path that leads to flowing water, with a canoe waiting for you. But before you jump in, you have to quickly throw in all of the bricks you've carted with you.</p>
+<p>But that's okay.</p>
+<p>The river seems calm enough.</p>
+<p>The canoe seems stable enough.</p>
+<p>Lots of room to throw your bricks in.</p>
+<p>Until it's not.</p>
+<p>Once you’re downstream, you realise it’s more turbulent than expected. There’s less room than you thought. And… is that a leak?</p>
+<p>Then you see the sign, ominously looming from the riverbank:</p>
+<div style="text-align:center">
+    <div class="sign-label">The River Denial</div>
+</div>
+<p>So if you ever have the opportunity to face that fork in the road, remember:</p>
+<div class="center"><strong class="color-soft-green">Failing + Honesty = Growth.</strong></div>
+<p>This isn't a clever metaphor for me, it's the truth of my own journey — it's the fork I've encountered, and not once have I dipped my toes in the water.</p>
+<hr>
+<h2 id="i-ve-failed-a-lot">I’ve failed a lot.</h2>
+<p>I’ve failed in ways that have cost me a job. Caused a loss of self-confidence.<br>
+Deteriorated the trust in my own ability to be more than just a shell of who I once was.</p>
+<p>But I've never failed twice in the same way — because I chose to conduct my self-reflection through a lens of honesty and integrity.</p>
+<p>I had a personal story written here on how I accredit honesty to overcoming one of my greatest failings. However, as I wrote and iterated the story, it grew into something that warranted its own space to breathe. I’ve included a shorter personal story of failure below, but if you want to read a more in-depth tale — you can read it here: <a href="/sandbox/articles/failure-a-personal-story/">Failure - A Personal Story</a></p>
+<h3 id="honesty-in-action">Honesty in action</h3>
+<p>At the start of 2023, a business I co-founded closed its doors. I had spent six years building it.<br>
+Six years not just of my life, but of my partner’s as well — she stood with me through the highs and lows.</p>
+<p>I could tell you that it wasn't me that failed. That the business only had to close because of regulatory changes outside our control. Changes that wiped out 50% of our short-term business overnight.</p>
+<p>But in order to move on, I couldn't accept that as the whole story. If I did, I’d remove the ability to make that failure <em>worth</em> something.</p>
+<p>The truth? The business closed its doors because I didn't conduct a risk analysis on regulatory changes that were known about for six months. I failed to understand the risk. I failed to treat it seriously. I failed to mitigate it appropriately.</p>
+<h2 id="honesty-self-destruction">Honesty ≠ Self-Destruction</h2>
+<p>This is the important bit of honesty — the checks and balances of it.</p>
+<p>Honesty isn’t:</p>
+<ul>
+<li>
+<p>Mentally beating yourself up.</p>
+</li>
+<li>
+<p>Repeating like a sycophant, “I am a failure.”</p>
+</li>
+<li>
+<p>Collapsing into shame.</p>
+</li>
+<li>
+<p>Doing so much damage to your own psyche that you become a victim.</p>
+</li>
+</ul>
+<p>It’s:</p>
+<ul>
+<li>
+<p>Identifying the environment that didn’t help, but naming your part in that environment.</p>
+</li>
+<li>
+<p>Holding the contradiction.</p>
+</li>
+<li>
+<p>Taking accountability without abandoning yourself.</p>
+</li>
+<li>
+<p>Utilising the bricks to forge a sturdier path.</p>
+</li>
+</ul>
+<p>But most importantly: recognising that you <strong>failed</strong> — but you aren't a <strong>failure</strong>.</p>
+<hr>
+<h2 id="where-has-this-honesty-gotten-me-today">Where has this honesty gotten me today?</h2>
+<p>Am I a gazillionaire? No.<br>
+Am I an exec in the ASX50? No.<br>
+Am I debt-free, living some #inspo lifestyle? Definitely not.</p>
+<p>But I'm better for the failed attempts. I'm fortified. I rarely notice small setbacks. I bounce back quicker when things don’t go to plan — all because I built something better with the bricks I could’ve drowned under.</p>
+<p>It might not be the pop punk montage we all know and love, but I’d still call that a solid success — built on a foundation of honesty.</p>
+
+    </div>
+
+    
+      
+      
+      
+        <ul class="article-nav-links">
+          
+          
+            <li class="article-nav-next">Next →<br><a href="/sandbox/articles/rolling-spheres-and-budget-bricks/">Rolling Spheres and Budget Bricks</a></li>
+          
+        </ul>
+      
+    
+  </article>
 
 			</section>
 		</main>
@@ -979,7 +1265,7 @@ This is compatible with:
 		</footer>
 		<script src="https://unpkg.com/lucide@latest"></script>
 		
-		<!-- This page `/404.html` was built on 2025-07-09T11:04:44.565Z -->
+		<!-- This page `/articles/the-thing-about-failure/` was built on 2025-07-09T11:04:44.576Z -->
 		<script type="module" src="/sandbox/dist/H7jxC_LYWA.js"></script>
 		  
 	</body>
