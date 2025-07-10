@@ -183,7 +183,6 @@ blockquote {
 strong {
   color: var(--text-color-strong);
   font-weight: 700;
-  margin-left: 0.65rem;
 }
 
 h1 i[data-lucide],
@@ -228,7 +227,7 @@ h3 {
 
 hr {
   width: 75%;               /* leaves 12.5% on each side */
-  margin: 2rem auto;
+  margin: 1.25rem auto;
   border: none;
   border-top: 1px solid var(--text-color); /* or your theme */
 }
@@ -423,9 +422,10 @@ header {
   margin-bottom: 2rem;
 }
 
-.base-content p{
-margin-left: .65rem;
+.article-body p {
+  margin: 0.5rem 0 0.5rem 0.65rem;
 }
+
 
 .articles-page-intro p{
   margin-left: .65rem;
@@ -786,7 +786,7 @@ p.articles-page-excerpt {
   height: 1em;
   width: 1em;
   stroke-width: 2;
-  margin: 0 0.2rem;
+  margin: 0 0.2rem 0 0;
   color: var(--quip-color);
 }
 .articles-page-chevron svg{
@@ -799,6 +799,7 @@ p.articles-page-excerpt {
   justify-content: center;
   font-style: italic;
   font-weight: 600;
+  font-size: 0.95rem;
   flex-wrap: wrap; 
   row-gap: .1rem; 
   column-gap: .75rem;
@@ -863,7 +864,7 @@ p.articles-page-excerpt {
 }
 
 .article-body{
-  margin-top: 1rem;
+  margin-top: 1.5rem;
   margin-left: .65rem;
 }
 
@@ -958,13 +959,12 @@ html, body {
   <article class="main-block">
     <section class="articles-page-intro">
         <h1 id="articles">Articles</h1>
-<p><strong>Forward:</strong></p>
 <p>As you're reading, if you spot a<span class="quip-wrapper">
 <span class="articles-page-chevron">
 <i data-lucide="chevron-up"></i>
 </span>
 <span class="quip-tooltip">Yeah buddy</span>
-</span> , hover or tap it. It’ll reveal a tiny footnote, an easter egg, or a divergent thought.</p>
+</span>   hover or tap it. It’ll reveal a tiny footnote, an easter egg, or a divergent thought.</p>
 <aside class="articles-page-tag-line">
   <span class="tag-pair">
     <span class="tag-q">Helpful?</span>
@@ -987,31 +987,6 @@ html, body {
     <div class="articles-page-grid">
       
         <article class="articles-page-card">
-          <h2 id="rolling-spheres-and-budget-bricks">
-            <a href="/sandbox/articles/rolling-spheres-and-budget-bricks/">
-              
-              Rolling Spheres and Budget Bricks
-            </a>
-          </h2>
-
-          
-            <p class="articles-page-excerpt">How a question about cheap Chinese cars turned into a metaphor about structural honesty and the cost of cutting corners.</p>
-          
-
-
-          <div class="articles-page-flex-spacer"></div>
-
-          <div class="articles-page-footer-meta-row">
-            <span class="articles-page-post-date">
-              <i data-lucide="calendar"></i> 09-Jul-2025
-            </span>
-            <span class="articles-page-card-read-time">
-              <i data-lucide="clock"></i> 2 min read
-            </span>
-          </div>
-        </article>
-      
-        <article class="articles-page-card">
           <h2 id="the-thing-about-failure">
             <a href="/sandbox/articles/the-thing-about-failure/">
               
@@ -1020,7 +995,7 @@ html, body {
           </h2>
 
           
-            <p class="articles-page-excerpt">Failure isn&#39;t just about getting back up — it&#39;s about what you do before you stand again.</p>
+            <p class="articles-page-excerpt">Failure isn&#39;t just about getting back up - it&#39;s about what you do before you stand again.</p>
           
 
 
@@ -1099,7 +1074,7 @@ html, body {
 		</footer>
 		<script src="https://unpkg.com/lucide@latest"></script>
 		
-		<!-- This page `/articles/` was built on 2025-07-09T11:00:49.408Z -->
+		<!-- This page `/articles/` was built on 2025-07-10T11:42:40.880Z -->
 		<script type="module" src="/sandbox/dist/H7jxC_LYWA.js"></script>
 		  
 	</body>

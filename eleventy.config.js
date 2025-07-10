@@ -49,7 +49,10 @@ const wikilinkPlugin = (md) => {
 
 /** @param {import("@11ty/eleventy").UserConfig} eleventyConfig */
 export default async function(eleventyConfig) {
-  const mdLib = markdownIt({html: true}).use(wikilinkPlugin);
+  const mdLib = markdownIt({
+    html: true,
+  typography: false
+}).use(wikilinkPlugin);
   eleventyConfig.setLibrary("md", mdLib);
 
   // Reading time

@@ -10,7 +10,7 @@ tags:
 - SystemsThinking
 - IndustrialDesign
 
-eleventyExcludeFromCollections: false
+eleventyExcludeFromCollections: true
 ---
 
 # Rolling Spheres and Budget Bricks
@@ -18,16 +18,16 @@ eleventyExcludeFromCollections: false
 It started with a question:  
 **Why are GWM cars so cheap in Australia?**
 
-From there, the conversation unrolled like one of those very same cars — smooth at first, then a little bumpy, and finally somewhere unexpected: a LEGO metaphor, stretched and twisted until it held something real.
+From there, the conversation unrolled like one of those very same cars - smooth at first, then a little bumpy, and finally somewhere unexpected: a LEGO metaphor, stretched and twisted until it held something real.
 
 ### Step One: Cheaper ≠ Incompetent
 
 The answer wasn’t as simple as “Chinese cars are crap.” That kind of thinking flattens the real story.
 
-Turns out, brands like GWM often *license* real parts from big-name suppliers — **ZF**, **Getrag**, even **Bosch** — but what they **do with those parts** is where the cost-cutting shows up. It's not that they can't build good cars. It's that their priorities are different.
+Turns out, brands like GWM often *license* real parts from big-name suppliers - **ZF**, **Getrag**, even **Bosch** - but what they **do with those parts** is where the cost-cutting shows up. It's not that they can't build good cars. It's that their priorities are different.
 
 - BMW pays for top-tier gearboxes with fine-tuned firmware.
-- GWM gets the same architecture, but without the calibration, without the finishing flourishes — and builds the rest of the car around it as affordably as possible.
+- GWM gets the same architecture, but without the calibration, without the finishing flourishes - and builds the rest of the car around it as affordably as possible.
 
 It works. It gets the job done. But something doesn’t *feel* the same.
 
@@ -42,7 +42,7 @@ It doesn’t just have to *look* like a sphere. It has to *act* like one. Under 
 That’s what good engineering is.
 
 - Toyota’s sphere? It can roll for 20 years, through potholes and neglect, and still hold shape.
-- GWM’s? It rolls *once*. Maybe even impressively. But no one checked what happens on the tenth rotation under real pressure — or if they did, they didn’t care.
+- GWM’s? It rolls *once*. Maybe even impressively. But no one checked what happens on the tenth rotation under real pressure - or if they did, they didn’t care.
 
 Where a premium OEM uses calibrated sensors to detect *which bricks show stress*, and redesigns the structure accordingly, GWM builds something that works just enough to tick the box.
 
@@ -50,7 +50,7 @@ Where a premium OEM uses calibrated sensors to detect *which bricks show stress*
 
 ### Step Three: Building with What's Cheap vs Building What Lasts
 
-What stuck with me most wasn’t the answer to the original question — it was what the question *unlocked*:
+What stuck with me most wasn’t the answer to the original question - it was what the question *unlocked*:
 
 - You can have *all the right parts* and still end up with something misaligned.
 - You can build a thing that functions, but falls apart under pressure.
@@ -64,5 +64,5 @@ And maybe that doesn’t just apply to cars.
 
 <span class="quip-callout">
   <i data-lucide="wrench"></i> Want to know which bricks in your own systems might crack under pressure?  
-  Start by asking: *does this just look right — or does it last?*
+  Start by asking: *does this just look right - or does it last?*
 </span>
