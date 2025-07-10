@@ -183,7 +183,6 @@ blockquote {
 strong {
   color: var(--text-color-strong);
   font-weight: 700;
-  margin-left: 0.65rem;
 }
 
 h1 i[data-lucide],
@@ -228,7 +227,7 @@ h3 {
 
 hr {
   width: 75%;               /* leaves 12.5% on each side */
-  margin: 2rem auto;
+  margin: 1.25rem auto;
   border: none;
   border-top: 1px solid var(--text-color); /* or your theme */
 }
@@ -423,9 +422,10 @@ header {
   margin-bottom: 2rem;
 }
 
-.base-content p{
-margin-left: .65rem;
+.article-body p {
+  margin: 0.5rem 0 0.5rem 0.65rem;
 }
+
 
 .articles-page-intro p{
   margin-left: .65rem;
@@ -786,7 +786,7 @@ p.articles-page-excerpt {
   height: 1em;
   width: 1em;
   stroke-width: 2;
-  margin: 0 0.2rem;
+  margin: 0 0.2rem 0 0;
   color: var(--quip-color);
 }
 .articles-page-chevron svg{
@@ -799,6 +799,7 @@ p.articles-page-excerpt {
   justify-content: center;
   font-style: italic;
   font-weight: 600;
+  font-size: 0.95rem;
   flex-wrap: wrap; 
   row-gap: .1rem; 
   column-gap: .75rem;
@@ -863,7 +864,7 @@ p.articles-page-excerpt {
 }
 
 .article-body{
-  margin-top: 1rem;
+  margin-top: 1.5rem;
   margin-left: .65rem;
 }
 
@@ -1136,7 +1137,7 @@ pre[class*="language-diff-"] {
 
     <div class="article-meta-row">
       <span class="article-meta-date">
-        <i data-lucide="calendar"></i> 09-Jul-2025
+        <i data-lucide="calendar"></i> 10-Jul-2025
       </span>
       <span class="article-meta-read-time">
         <i data-lucide="clock"></i> 2 min read
@@ -1157,13 +1158,13 @@ pre[class*="language-diff-"] {
       <h1 id="rolling-spheres-and-budget-bricks-2">Rolling Spheres and Budget Bricks</h1>
 <p>It started with a question:<br>
 <strong>Why are GWM cars so cheap in Australia?</strong></p>
-<p>From there, the conversation unrolled like one of those very same cars — smooth at first, then a little bumpy, and finally somewhere unexpected: a LEGO metaphor, stretched and twisted until it held something real.</p>
+<p>From there, the conversation unrolled like one of those very same cars - smooth at first, then a little bumpy, and finally somewhere unexpected: a LEGO metaphor, stretched and twisted until it held something real.</p>
 <h3 id="step-one-cheaper-incompetent">Step One: Cheaper ≠ Incompetent</h3>
 <p>The answer wasn’t as simple as “Chinese cars are crap.” That kind of thinking flattens the real story.</p>
-<p>Turns out, brands like GWM often <em>license</em> real parts from big-name suppliers — <strong>ZF</strong>, <strong>Getrag</strong>, even <strong>Bosch</strong> — but what they <strong>do with those parts</strong> is where the cost-cutting shows up. It's not that they can't build good cars. It's that their priorities are different.</p>
+<p>Turns out, brands like GWM often <em>license</em> real parts from big-name suppliers - <strong>ZF</strong>, <strong>Getrag</strong>, even <strong>Bosch</strong> - but what they <strong>do with those parts</strong> is where the cost-cutting shows up. It's not that they can't build good cars. It's that their priorities are different.</p>
 <ul>
 <li>BMW pays for top-tier gearboxes with fine-tuned firmware.</li>
-<li>GWM gets the same architecture, but without the calibration, without the finishing flourishes — and builds the rest of the car around it as affordably as possible.</li>
+<li>GWM gets the same architecture, but without the calibration, without the finishing flourishes - and builds the rest of the car around it as affordably as possible.</li>
 </ul>
 <p>It works. It gets the job done. But something doesn’t <em>feel</em> the same.</p>
 <h3 id="step-two-enter-the-master-builder">Step Two: Enter the Master Builder</h3>
@@ -1175,12 +1176,12 @@ pre[class*="language-diff-"] {
 <p>That’s what good engineering is.</p>
 <ul>
 <li>Toyota’s sphere? It can roll for 20 years, through potholes and neglect, and still hold shape.</li>
-<li>GWM’s? It rolls <em>once</em>. Maybe even impressively. But no one checked what happens on the tenth rotation under real pressure — or if they did, they didn’t care.</li>
+<li>GWM’s? It rolls <em>once</em>. Maybe even impressively. But no one checked what happens on the tenth rotation under real pressure - or if they did, they didn’t care.</li>
 </ul>
 <p>Where a premium OEM uses calibrated sensors to detect <em>which bricks show stress</em>, and redesigns the structure accordingly, GWM builds something that works just enough to tick the box.</p>
 <p><strong>Same suppliers. Same starting bricks. Totally different integrity.</strong></p>
 <h3 id="step-three-building-with-whats-cheap-vs-building-what-lasts">Step Three: Building with What's Cheap vs Building What Lasts</h3>
-<p>What stuck with me most wasn’t the answer to the original question — it was what the question <em>unlocked</em>:</p>
+<p>What stuck with me most wasn’t the answer to the original question - it was what the question <em>unlocked</em>:</p>
 <ul>
 <li>You can have <em>all the right parts</em> and still end up with something misaligned.</li>
 <li>You can build a thing that functions, but falls apart under pressure.</li>
@@ -1191,7 +1192,7 @@ pre[class*="language-diff-"] {
 <hr>
 <span class="quip-callout">
   <i data-lucide="wrench"></i> Want to know which bricks in your own systems might crack under pressure?  
-  Start by asking: *does this just look right — or does it last?*
+  Start by asking: *does this just look right - or does it last?*
 </span>
 
     </div>
@@ -1199,15 +1200,6 @@ pre[class*="language-diff-"] {
     
       
       
-      
-        <ul class="article-nav-links">
-          
-            <li class="article-nav-prev">← Previous<br><a href="/sandbox/articles/the-thing-about-failure/">The Thing About Failure</a></li>
-          
-          
-            <li class="article-nav-next">Next →<br><a href="/sandbox/windshield-wipers/">Windshield Wipers</a></li>
-          
-        </ul>
       
     
   </article>
@@ -1222,7 +1214,7 @@ pre[class*="language-diff-"] {
 		</footer>
 		<script src="https://unpkg.com/lucide@latest"></script>
 		
-		<!-- This page `/articles/rolling-spheres-and-budget-bricks/` was built on 2025-07-09T11:04:44.574Z -->
+		<!-- This page `/articles/rolling-spheres-and-budget-bricks/` was built on 2025-07-10T12:37:17.154Z -->
 		<script type="module" src="/sandbox/dist/H7jxC_LYWA.js"></script>
 		  
 	</body>
